@@ -13,8 +13,13 @@ export class App {
     public initUI() {
         $("#balance-address-input").val(poolWallet);
         $("#flip-address-input").val(flipWallet);
-        $("#bcd-link").html(
+        $("#bcd-link-flip").html(
             "<a href='https://better-call.dev/mainnet/" + flipWallet + "/storage' target='_blank'>BCD</a>"
+        );
+        $("#bcd-link-pool").html(
+            "<a href='https://better-call.dev/mainnet/" +
+                poolWallet +
+                "/interact?entrypoint=withdraw' target='_blank'>BCD Withdraw</a>"
         );
         // this.getFlipCount(flipWallet);
         // this.getFlipTez(flipWallet);
