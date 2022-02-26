@@ -1,12 +1,11 @@
-# Taquito boilerplate
+# TDC Hodlers Dashboard
 
 ![Built with Taquito][logo]
 
-A minimal framework-agnostic setup for starting developing Tezos DApps quickly with Taquito.
-
-> If you are looking for the React template, please follow [this link](https://github.com/ecadlabs/taquito-react-template).
+A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic Taquito template.
 
 ## Dependencies
+
 1. jQuery - for simple manipulation and traversal of HTML documents.
 2. parcel-bundler - for packaging web applications quickly.
 
