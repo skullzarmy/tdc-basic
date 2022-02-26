@@ -1,30 +1,78 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="./app.css" />
-    <title>Taquito Boilerplate App</title>
-  </head>
-  <body>
-    <h1>Taquito Boilerplate App</h1>
-    <div id="dialog">
-      <div id="header">Show Balance</div>
-      <div id="content">
-        <div id="balance-form">
-          <input
-            id="address-input"
-            type="text"
-            id="address"
-            placeholder="Enter wallet address"
-          />
-          <a id="show-balance-button" href="#">Show</a>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="./app.css" />
+        <title>TDC Hodler Dashboard</title>
+    </head>
+    <body>
+        <img id="main-img" /src="../assets/coinlogo.png" />
+        <h1>TDC Hodler Dashboard</h1>
+        <div class="wrapper">
+            <div class="dialog" id="rp-dialog">
+                <div class="header" id="rp-header">Reward Pool</div>
+                <div class="content" id="rp-content">
+                    <div class="form" id="reward-pool-form">
+                        <input
+                            id="balance-address-input"
+                            type="text"
+                            class="address"
+                            placeholder="loading wallet address..."
+                            disabled="disabled"
+                        />
+                    </div>
+                    <div class="wrapper info">
+                        <div class="error-message" id="balance-error-message" class="hide"></div>
+                        <div id="balance-output" class="show">
+                            <span class="output"><span id="balance">0</span>ꜩ Balance</span>
+                        </div>
+                    </div>
+                    <!-- <div class="wrapper info">
+                        <hr />
+                        <div id="withdraw">
+                            <div class="header">Withdraw</div>
+                            <input
+                                id="withdraw-wallet"
+                                type="text"
+                                class="address"
+                                placeholder="enter your wallet address"
+                            />
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="dialog" id="flip-dialog">
+                <div class="header" id="flip-header">Coin Flip</div>
+                <div class="content" id="flip-content">
+                    <div class="form" id="flip-form">
+                        <input
+                            id="flip-address-input"
+                            type="text"
+                            class="address"
+                            placeholder="loading wallet address..."
+                            disabled="disabled"
+                        />
+                    </div>
+                    <div class="wrapper info">
+                        <div class="form">
+                            <div class="flip-count-wrap output"><span id="flip-count">&nbsp;</span> Games Played</div>
+                        </div>
+                        <div class="form">
+                            <div class="flip-tez-wrap output"><span id="flip-tez">&nbsp;</span>ꜩ Wagered</div>
+                        </div>
+                        <div class="error-message" id="flip-error-message" class="hide"></div>
+                        <div id="flip-output" class="show">
+                            <span class="output"><span id="flip">0</span>ꜩ Balance</span>
+                        </div>
+                        <div class="form" id="bcd-link"></div>
+                    </div>
+                    <div class="wrapper info">
+                        <div id="flip-games"></div>
+                    </div>
+                </div>
+            </div>
+            <textarea class="dialog hide" id="TheData" rows="5"></textarea>
         </div>
-        <div id="error-message" class="hide"></div>
-        <div id="balance-output" class="show"><span id="balance">0</span>ꜩ</div>
-      </div>
-    </div>
-    <div id="footer">
-      <img src="../assets/built-with-taquito.png" />
-    </div>
-    <script src="main.ts"></script>
-  </body>
+        <div id="footer"><a href="https://withkoji.com/@skllzrmy.tez">[Made by skllzrmy.tez with ❤️]</a></div>
+        <script src="main.ts"></script>
+    </body>
 </html>
