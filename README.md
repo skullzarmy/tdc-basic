@@ -1,5 +1,12 @@
 # TDC Hodlers Dashboard
 
+## Live Version
+
+This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.com
+[![Netlify Status](https://api.netlify.com/api/v1/badges/643316d9-36d8-4177-80e8-287db4062569/deploy-status)](https://app.netlify.com/sites/vigilant-golick-726bee/deploys)
+
+## Info
+
 ![Built with Taquito][logo]
 
 A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic Taquito template.
@@ -11,7 +18,7 @@ A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic
 
 ## Getting Started
 
-1. Create a new repository from taquito-boilerplate by clicking "Use this template".
+1. Fork this repository
 2. Clone your new repository:
 
     `git clone <YOUR_REPOSITORY_URL>`
