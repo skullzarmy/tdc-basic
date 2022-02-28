@@ -71,16 +71,19 @@ hr {
 #footer {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     width: 100%;
 }
 
 #footer a {
+    align-self: center;
     padding: 0px 5px;
 }
 
 .form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
 }
 
 .address {
