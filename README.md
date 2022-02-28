@@ -11,6 +11,14 @@ This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.c
 
 A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic Taquito template.
 
+## TODO
+
+1. Migrate to SvelteKit+Tailwind CSS application
+2. Wallet sync + access requires holding TDC NFTs
+3. Reading BigMap data and reporting on games played (i.e. wins/losses, luckiest player, least lucky, etc.)
+4. Data visualization and charts
+5. Withdraw through app UI
+
 ## Dependencies
 
 1. jQuery - for simple manipulation and traversal of HTML documents.
