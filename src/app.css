@@ -4,9 +4,10 @@ body {
     align-items: center;
     height: 100%;
     font-family: sans-serif;
-    padding-top: 100px;
+    padding-top: 10px;
     background-image: url("../assets/stars.jpg");
     background-repeat: repeat;
+    color: white;
 }
 a {
     color: white;
@@ -30,7 +31,7 @@ hr {
     flex-direction: row;
     width: 90%;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     align-self: center;
 }
 .wrapper.info {
@@ -43,10 +44,11 @@ hr {
 .dialog {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
+    max-width: 49%;
     border: 1px solid #f4a200ff;
     border-radius: 3px;
-    margin: 25px;
+    margin: 10px;
     background-color: #010000ff;
     color: white;
 }
@@ -70,6 +72,10 @@ hr {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+#footer a {
+    padding: 0px 5px;
 }
 
 .form {

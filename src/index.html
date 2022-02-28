@@ -17,7 +17,10 @@
         <h1>TDC Hodler Dashboard</h1>
         <div class="wrapper">
             <div class="dialog" id="rp-dialog">
-                <div class="header" id="rp-header">Reward Pool</div>
+                <div class="header" id="rp-header">
+                    Reward Pool -
+                    <span id="bcd-link-pool"></span>
+                </div>
                 <div class="content" id="rp-content">
                     <div class="form" id="reward-pool-form">
                         <input
@@ -33,7 +36,6 @@
                         <div id="balance-output" class="show">
                             <span class="output"><span id="balance">0</span>ꜩ Balance</span>
                         </div>
-                        <div class="form" id="bcd-link-pool"></div>
                     </div>
                     <!-- <div class="wrapper info">
                         <hr />
@@ -50,7 +52,7 @@
                 </div>
             </div>
             <div class="dialog" id="flip-dialog">
-                <div class="header" id="flip-header">Coin Flip</div>
+                <div class="header" id="flip-header">Coin Flip - <span id="bcd-link-flip"></span></div>
                 <div class="content" id="flip-content">
                     <div class="form" id="flip-form">
                         <input
@@ -72,7 +74,6 @@
                         <div id="flip-output" class="show">
                             <span class="output"><span id="flip">0</span>ꜩ Balance</span>
                         </div>
-                        <div class="form" id="bcd-link-flip"></div>
                     </div>
                     <div class="wrapper info">
                         <div id="flip-games"></div>
@@ -81,7 +82,11 @@
             </div>
             <textarea class="dialog hide" id="TheData" rows="5"></textarea>
         </div>
-        <div id="footer"><a href="https://withkoji.com/@skllzrmy.tez">[Made by skllzrmy.tez with ❤️]</a></div>
+        <div id="footer">
+            <a href="https://withkoji.com/@skllzrmy.tez">[Made by skllzrmy.tez with ❤️]</a>
+            <a href="https://github.com/skullzarmy/tdc-basic/issues">[Report a bug / request features]</a>
+            <a href="https://github.com/skullzarmy/tdc-basic">[Contribute on GitHub]</a>
+        </div>
         <script src="main.ts"></script>
     </body>
 </html>
