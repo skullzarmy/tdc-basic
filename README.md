@@ -1,45 +1,40 @@
-# TDC Hodlers Dashboard
+# create-svelte
 
-## Live Version
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.com
-[![Netlify Status](https://api.netlify.com/api/v1/badges/643316d9-36d8-4177-80e8-287db4062569/deploy-status)](https://app.netlify.com/sites/vigilant-golick-726bee/deploys)
+## Creating a project
 
-## Info
+If you're seeing this, you've probably already done this step. Congrats!
 
-![Built with Taquito][logo]
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic Taquito template.
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-## TODO
+> Note: the `@next` is temporary
 
-1. Migrate to SvelteKit+Tailwind CSS application
-2. Wallet sync + access requires holding TDC NFTs
-3. Reading BigMap data and reporting on games played (i.e. wins/losses, luckiest player, least lucky, etc.)
-4. Data visualization and charts
-5. Withdraw through app UI
+## Developing
 
-## Dependencies
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-1. jQuery - for simple manipulation and traversal of HTML documents.
-2. parcel-bundler - for packaging web applications quickly.
+```bash
+npm run dev
 
-## Getting Started
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-1. Fork this repository
-2. Clone your new repository:
+## Building
 
-    `git clone <YOUR_REPOSITORY_URL>`
+To create a production version of your app:
 
-3. Change your current working directory to the newly cloned repository directory.
-4. Install dependencies:
+```bash
+npm run build
+```
 
-    `npm install`
+You can preview the production build with `npm run preview`.
 
-5. Start development server:
-
-    `npm run watch`
-
-6. Open http://localhost:1234 in your browser to see a sample application.
-
-[logo]: https://raw.githubusercontent.com/ecadlabs/taquito-boilerplate/master/assets/built-with-taquito.png "Built with Taquito"
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

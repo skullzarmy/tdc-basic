@@ -1,35 +1,40 @@
 {
-  "name": "taquito-boilerplate-app",
-  "version": "1.0.0",
-  "description": "A boilerplate app for creating a DApp using Taquito",
-  "main": "index.js",
+  "name": "tdc-basic",
+  "version": "0.0.1",
   "scripts": {
-    "watch": "parcel src/index.html",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && parcel build ./src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ecadlabs/taquito-boilerplate-app.git"
-  },
-  "keywords": [
-    "tezos",
-    "taquito",
-    "ts",
-    "typescript",
-    "dapp",
-    "blockchain"
-  ],
-  "author": "ECAD Labs Inc.",
-  "license": "MIT",
   "devDependencies": {
-    "@types/jquery": "^3.5.5",
-    "jquery": "^3.5.1",
-    "parcel-bundler": "^1.12.4",
-    "typescript": "^4.1.5"
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-svelte": "^4.0.9",
+    "postcss": "^8.4.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
+    "svelte": "^3.46.4",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.10.1",
+    "tailwindcss": "^3.0.23",
+    "tslib": "^2.3.1",
+    "typescript": "~4.5.4"
   },
+  "type": "module",
   "dependencies": {
-    "@taquito/taquito": "^10.2.0"
+    "@taquito/taquito": "^11.2.0",
+    "taquito": "^1.0.0"
   }
 }
