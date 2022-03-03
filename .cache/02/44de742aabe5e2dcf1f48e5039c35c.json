@@ -1,0 +1,1751 @@
+{
+	"id": "angX",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/single.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786630
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/single.ts",
+			"includedInParent": true,
+			"mtime": 1645829787478
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/single.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subscriber",
+			"loc": { "line": 3, "column": 27 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/single.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subscriber.js"
+		},
+		{
+			"name": "../util/EmptyError",
+			"loc": { "line": 4, "column": 27 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/single.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/util/EmptyError.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.single=o;var e=i(require(\"tslib\")),t=require(\"../Subscriber\"),r=require(\"../util/EmptyError\");function n(){if(\"function\"!=typeof WeakMap)return null;var e=new WeakMap;return n=function(){return e},e}function i(e){if(e&&e.__esModule)return e;var t=n();if(t&&t.has(e))return t.get(e);var r={};if(null!=e){var i=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var o in e)if(Object.prototype.hasOwnProperty.call(e,o)){var u=i?Object.getOwnPropertyDescriptor(e,o):null;u&&(u.get||u.set)?Object.defineProperty(r,o,u):r[o]=e[o]}}return r.default=e,t&&t.set(e,r),r}function o(e){return function(t){return t.lift(new u(e,t))}}var u=function(){function e(e,t){this.predicate=e,this.source=t}return e.prototype.call=function(e,t){return t.subscribe(new s(e,this.predicate,this.source))},e}(),s=function(t){function n(e,r,n){var i=t.call(this,e)||this;return i.predicate=r,i.source=n,i.seenValue=!1,i.index=0,i}return e.__extends(n,t),n.prototype.applySingleValue=function(e){this.seenValue?this.destination.error(\"Sequence contains more than one element\"):(this.seenValue=!0,this.singleValue=e)},n.prototype._next=function(e){var t=this.index++;this.predicate?this.tryNext(e,t):this.applySingleValue(e)},n.prototype.tryNext=function(e,t){try{this.predicate(e,t,this.source)&&this.applySingleValue(e)}catch(r){this.destination.error(r)}},n.prototype._complete=function(){var e=this.destination;this.index>0?(e.next(this.seenValue?this.singleValue:void 0),e.complete()):e.error(new r.EmptyError)},n}(t.Subscriber);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 83 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 85 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 89 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 91 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 93 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 101 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 111 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 113 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 121 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 138 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 140 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 148 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 170 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 179 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 183 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 186 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 205 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 213 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 220 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 225 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 229 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 231 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 235 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 243 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 250 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 252 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 263 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 270 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 273 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 275 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 284 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 286 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 289 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 292 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 295 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 297 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 308 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 315 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 317 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 321 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 323 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 327 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 330 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 333 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 335 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 339 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 342 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 349 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 351 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 355 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 358 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 362 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 364 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 367 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 370 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 376 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 378 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 379 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 383 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 385 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 392 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 408 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 415 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 440 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 444 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 448 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 453 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 455 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 458 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 465 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 475 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 490 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 495 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 497 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 500 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 501 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 505 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 507 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 509 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 516 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 541 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 543 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 546 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 551 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 555 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 557 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 562 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 564 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 569 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 576 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 591 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 593 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 595 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 598 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 600 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 603 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 605 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 609 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 616 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 618 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 626 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 628 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 631 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 633 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 637 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 639 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 642 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 55, "column": 2 },
+					"generated": { "line": 1, "column": 644 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 55, "column": 9 },
+					"generated": { "line": 1, "column": 653 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 55, "column": 10 },
+					"generated": { "line": 1, "column": 655 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 658 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 665 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 674 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 677 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 684 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 686 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 691 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 695 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 697 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 56, "column": 1 },
+					"generated": { "line": 1, "column": 699 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 2 },
+					"generated": { "line": 1, "column": 704 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 2 },
+					"generated": { "line": 1, "column": 708 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 710 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 721 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 730 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 732 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 93 },
+					"generated": { "line": 1, "column": 734 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 60, "column": 22 },
+					"generated": { "line": 1, "column": 737 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 60, "column": 22 },
+					"generated": { "line": 1, "column": 742 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 60, "column": 22 },
+					"generated": { "line": 1, "column": 752 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 61, "column": 3 },
+					"generated": { "line": 1, "column": 754 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 61, "column": 3 },
+					"generated": { "line": 1, "column": 759 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 61, "column": 3 },
+					"generated": { "line": 1, "column": 766 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 66, "column": 1 },
+					"generated": { "line": 1, "column": 768 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 11 },
+					"generated": { "line": 1, "column": 775 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 11 },
+					"generated": { "line": 1, "column": 777 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 18 },
+					"generated": { "line": 1, "column": 787 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 32 },
+					"generated": { "line": 1, "column": 792 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 32 },
+					"generated": { "line": 1, "column": 801 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 64, "column": 49 },
+					"generated": { "line": 1, "column": 803 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 806 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 813 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 815 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 825 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 829 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 831 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 833 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 838 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 848 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 65, "column": 3 },
+					"generated": { "line": 1, "column": 853 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 66, "column": 1 },
+					"generated": { "line": 1, "column": 863 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 865 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 868 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 870 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 47 },
+					"generated": { "line": 1, "column": 879 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 882 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 891 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 81, "column": 4 },
+					"generated": { "line": 1, "column": 893 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 81, "column": 10 },
+					"generated": { "line": 1, "column": 895 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 81, "column": 22 },
+					"generated": { "line": 1, "column": 897 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 22 },
+					"generated": { "line": 1, "column": 900 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 22 },
+					"generated": { "line": 1, "column": 904 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 22 },
+					"generated": { "line": 1, "column": 906 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 22 },
+					"generated": { "line": 1, "column": 908 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 22 },
+					"generated": { "line": 1, "column": 913 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 93 },
+					"generated": { "line": 1, "column": 918 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 79, "column": 93 },
+					"generated": { "line": 1, "column": 922 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 82, "column": 3 },
+					"generated": { "line": 1, "column": 927 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 80, "column": 22 },
+					"generated": { "line": 1, "column": 934 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 80, "column": 22 },
+					"generated": { "line": 1, "column": 936 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 80, "column": 22 },
+					"generated": { "line": 1, "column": 946 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 74, "column": 10 },
+					"generated": { "line": 1, "column": 948 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 74, "column": 10 },
+					"generated": { "line": 1, "column": 950 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 74, "column": 19 },
+					"generated": { "line": 1, "column": 957 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 76, "column": 10 },
+					"generated": { "line": 1, "column": 959 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 76, "column": 10 },
+					"generated": { "line": 1, "column": 961 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 76, "column": 28 },
+					"generated": { "line": 1, "column": 972 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 974 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 976 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 982 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 82, "column": 3 },
+					"generated": { "line": 1, "column": 984 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 986 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 993 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 995 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 1005 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 78, "column": 14 },
+					"generated": { "line": 1, "column": 1007 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 85, "column": 13 },
+					"generated": { "line": 1, "column": 1010 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 85, "column": 13 },
+					"generated": { "line": 1, "column": 1012 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 85, "column": 24 },
+					"generated": { "line": 1, "column": 1022 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 85, "column": 24 },
+					"generated": { "line": 1, "column": 1039 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 85, "column": 24 },
+					"generated": { "line": 1, "column": 1048 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 86, "column": 6 },
+					"generated": { "line": 1, "column": 1051 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 86, "column": 11 },
+					"generated": { "line": 1, "column": 1056 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1066 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1071 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1083 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1089 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 89, "column": 11 },
+					"generated": { "line": 1, "column": 1133 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 89, "column": 11 },
+					"generated": { "line": 1, "column": 1138 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 89, "column": 22 },
+					"generated": { "line": 1, "column": 1149 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 90, "column": 5 },
+					"generated": { "line": 1, "column": 1151 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 90, "column": 5 },
+					"generated": { "line": 1, "column": 1156 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 90, "column": 5 },
+					"generated": { "line": 1, "column": 1168 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 94, "column": 18 },
+					"generated": { "line": 1, "column": 1172 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 94, "column": 18 },
+					"generated": { "line": 1, "column": 1174 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 94, "column": 28 },
+					"generated": { "line": 1, "column": 1184 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 94, "column": 31 },
+					"generated": { "line": 1, "column": 1190 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 94, "column": 31 },
+					"generated": { "line": 1, "column": 1199 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 96, "column": 8 },
+					"generated": { "line": 1, "column": 1202 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 96, "column": 8 },
+					"generated": { "line": 1, "column": 1206 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 96, "column": 13 },
+					"generated": { "line": 1, "column": 1208 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 96, "column": 13 },
+					"generated": { "line": 1, "column": 1213 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 97, "column": 6 },
+					"generated": { "line": 1, "column": 1221 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 97, "column": 11 },
+					"generated": { "line": 1, "column": 1226 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 98, "column": 5 },
+					"generated": { "line": 1, "column": 1236 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 98, "column": 5 },
+					"generated": { "line": 1, "column": 1241 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 98, "column": 5 },
+					"generated": { "line": 1, "column": 1249 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 98, "column": 5 },
+					"generated": { "line": 1, "column": 1251 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 100, "column": 5 },
+					"generated": { "line": 1, "column": 1254 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 100, "column": 5 },
+					"generated": { "line": 1, "column": 1259 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 100, "column": 5 },
+					"generated": { "line": 1, "column": 1276 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1280 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1282 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1292 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1300 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1309 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 104, "column": 8 },
+					"generated": { "line": 1, "column": 1311 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 105, "column": 6 },
+					"generated": { "line": 1, "column": 1314 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 8 },
+					"generated": { "line": 1, "column": 1318 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 13 },
+					"generated": { "line": 1, "column": 1323 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 13 },
+					"generated": { "line": 1, "column": 1333 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 30 },
+					"generated": { "line": 1, "column": 1335 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 37 },
+					"generated": { "line": 1, "column": 1337 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 106, "column": 37 },
+					"generated": { "line": 1, "column": 1342 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 107, "column": 7 },
+					"generated": { "line": 1, "column": 1351 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 107, "column": 7 },
+					"generated": { "line": 1, "column": 1356 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 107, "column": 7 },
+					"generated": { "line": 1, "column": 1373 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 109, "column": 6 },
+					"generated": { "line": 1, "column": 1376 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 109, "column": 6 },
+					"generated": { "line": 1, "column": 1382 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 110, "column": 5 },
+					"generated": { "line": 1, "column": 1385 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 110, "column": 5 },
+					"generated": { "line": 1, "column": 1390 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 110, "column": 5 },
+					"generated": { "line": 1, "column": 1402 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 110, "column": 5 },
+					"generated": { "line": 1, "column": 1408 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 114, "column": 10 },
+					"generated": { "line": 1, "column": 1413 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 114, "column": 10 },
+					"generated": { "line": 1, "column": 1415 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 114, "column": 29 },
+					"generated": { "line": 1, "column": 1425 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 114, "column": 41 },
+					"generated": { "line": 1, "column": 1435 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 116, "column": 8 },
+					"generated": { "line": 1, "column": 1446 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 116, "column": 8 },
+					"generated": { "line": 1, "column": 1450 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 116, "column": 22 },
+					"generated": { "line": 1, "column": 1452 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 116, "column": 24 },
+					"generated": { "line": 1, "column": 1457 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 117, "column": 6 },
+					"generated": { "line": 1, "column": 1469 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 117, "column": 6 },
+					"generated": { "line": 1, "column": 1474 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 117, "column": 18 },
+					"generated": { "line": 1, "column": 1480 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 6 },
+					"generated": { "line": 1, "column": 1483 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 18 },
+					"generated": { "line": 1, "column": 1485 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 18 },
+					"generated": { "line": 1, "column": 1490 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 28 },
+					"generated": { "line": 1, "column": 1495 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 29 },
+					"generated": { "line": 1, "column": 1505 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 29 },
+					"generated": { "line": 1, "column": 1510 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 118, "column": 29 },
+					"generated": { "line": 1, "column": 1527 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 119, "column": 5 },
+					"generated": { "line": 1, "column": 1530 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 119, "column": 5 },
+					"generated": { "line": 1, "column": 1532 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 121, "column": 5 },
+					"generated": { "line": 1, "column": 1544 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 121, "column": 5 },
+					"generated": { "line": 1, "column": 1546 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 121, "column": 5 },
+					"generated": { "line": 1, "column": 1552 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 121, "column": 5 },
+					"generated": { "line": 1, "column": 1556 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 121, "column": 5 },
+					"generated": { "line": 1, "column": 1558 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 1571 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 1573 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 1574 }
+				},
+				{
+					"source": "../../../src/internal/operators/single.ts",
+					"name": null,
+					"original": { "line": 73, "column": 34 },
+					"generated": { "line": 1, "column": 1576 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/single.ts": "import { Observable } from '../Observable';\nimport { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { EmptyError } from '../util/EmptyError';\n\nimport { Observer, MonoTypeOperatorFunction, TeardownLogic } from '../types';\n\n/**\n * Returns an Observable that emits the single item emitted by the source Observable that matches a specified\n * predicate, if that Observable emits one such item. If the source Observable emits more than one such item or no\n * items, notify of an IllegalArgumentException or NoSuchElementException respectively. If the source Observable\n * emits items but none match the specified predicate then `undefined` is emitted.\n *\n * <span class=\"informal\">Like {@link first}, but emit with error notification if there is more than one value.</span>\n * ![](single.png)\n *\n * ## Example\n * emits 'error'\n * ```ts\n * import { range } from 'rxjs';\n * import { single } from 'rxjs/operators';\n *\n * const numbers = range(1,5).pipe(single());\n * numbers.subscribe(x => console.log('never get called'), e => console.log('error'));\n * // result\n * // 'error'\n * ```\n *\n * emits 'undefined'\n * ```ts\n * import { range } from 'rxjs';\n * import { single } from 'rxjs/operators';\n *\n * const numbers = range(1,5).pipe(single(x => x === 10));\n * numbers.subscribe(x => console.log(x));\n * // result\n * // 'undefined'\n * ```\n *\n * @see {@link first}\n * @see {@link find}\n * @see {@link findIndex}\n * @see {@link elementAt}\n *\n * @throws {EmptyError} Delivers an EmptyError to the Observer's `error`\n * callback if the Observable completes before any `next` notification was sent.\n * @param {Function} predicate - A predicate function to evaluate items emitted by the source Observable.\n * @return {Observable<T>} An Observable that emits the single item emitted by the source Observable that matches\n * the predicate or `undefined` when no items match.\n *\n * @method single\n * @owner Observable\n */\nexport function single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): MonoTypeOperatorFunction<T> {\n  return (source: Observable<T>) => source.lift(new SingleOperator(predicate, source));\n}\n\nclass SingleOperator<T> implements Operator<T, T> {\n  constructor(private predicate?: (value: T, index: number, source: Observable<T>) => boolean,\n              private source?: Observable<T>) {\n  }\n\n  call(subscriber: Subscriber<T>, source: any): TeardownLogic {\n    return source.subscribe(new SingleSubscriber(subscriber, this.predicate, this.source));\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass SingleSubscriber<T> extends Subscriber<T> {\n  private seenValue: boolean = false;\n  private singleValue: T;\n  private index: number = 0;\n\n  constructor(destination: Observer<T>,\n              private predicate?: (value: T, index: number, source: Observable<T>) => boolean,\n              private source?: Observable<T>) {\n    super(destination);\n  }\n\n  private applySingleValue(value: T): void {\n    if (this.seenValue) {\n      this.destination.error('Sequence contains more than one element');\n    } else {\n      this.seenValue = true;\n      this.singleValue = value;\n    }\n  }\n\n  protected _next(value: T): void {\n    const index = this.index++;\n\n    if (this.predicate) {\n      this.tryNext(value, index);\n    } else {\n      this.applySingleValue(value);\n    }\n  }\n\n  private tryNext(value: T, index: number): void {\n    try {\n      if (this.predicate(value, index, this.source)) {\n        this.applySingleValue(value);\n      }\n    } catch (err) {\n      this.destination.error(err);\n    }\n  }\n\n  protected _complete(): void {\n    const destination = this.destination;\n\n    if (this.index > 0) {\n      destination.next(this.seenValue ? this.singleValue : undefined);\n      destination.complete();\n    } else {\n      destination.error(new EmptyError);\n    }\n  }\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "8db391e4e990cf494be6500fb05dcac4",
+	"cacheData": { "env": {} }
+}

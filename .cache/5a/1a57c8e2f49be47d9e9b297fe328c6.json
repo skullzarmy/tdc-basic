@@ -1,0 +1,2513 @@
+{
+	"id": "nFsM",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/mergeMap.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786435
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/mergeMap.ts",
+			"includedInParent": true,
+			"mtime": 1645829787354
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/mergeMap.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "./map",
+			"loc": { "line": 3, "column": 20 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/mergeMap.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/map.js"
+		},
+		{
+			"name": "../observable/from",
+			"loc": { "line": 4, "column": 21 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/mergeMap.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/observable/from.js"
+		},
+		{
+			"name": "../innerSubscribe",
+			"loc": { "line": 5, "column": 77 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/mergeMap.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/innerSubscribe.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.mergeMap=u,exports.flatMap=exports.MergeMapSubscriber=exports.MergeMapOperator=void 0;var t=o(require(\"tslib\")),e=require(\"./map\"),r=require(\"../observable/from\"),n=require(\"../innerSubscribe\");function i(){if(\"function\"!=typeof WeakMap)return null;var t=new WeakMap;return i=function(){return t},t}function o(t){if(t&&t.__esModule)return t;var e=i();if(e&&e.has(t))return e.get(t);var r={};if(null!=t){var n=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var o in t)if(Object.prototype.hasOwnProperty.call(t,o)){var u=n?Object.getOwnPropertyDescriptor(t,o):null;u&&(u.get||u.set)?Object.defineProperty(r,o,u):r[o]=t[o]}}return r.default=t,e&&e.set(t,r),r}function u(t,n,i){return void 0===i&&(i=Number.POSITIVE_INFINITY),\"function\"==typeof n?function(o){return o.pipe(u(function(i,o){return(0,r.from)(t(i,o)).pipe((0,e.map)(function(t,e){return n(i,t,o,e)}))},i))}:(\"number\"==typeof n&&(i=n),function(e){return e.lift(new s(t,i))})}var s=function(){function t(t,e){void 0===e&&(e=Number.POSITIVE_INFINITY),this.project=t,this.concurrent=e}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.project,this.concurrent))},t}();exports.MergeMapOperator=s;var p=function(e){function r(t,r,n){void 0===n&&(n=Number.POSITIVE_INFINITY);var i=e.call(this,t)||this;return i.project=r,i.concurrent=n,i.hasCompleted=!1,i.buffer=[],i.active=0,i.index=0,i}return t.__extends(r,e),r.prototype._next=function(t){this.active<this.concurrent?this._tryNext(t):this.buffer.push(t)},r.prototype._tryNext=function(t){var e,r=this.index++;try{e=this.project(t,r)}catch(n){return void this.destination.error(n)}this.active++,this._innerSub(e)},r.prototype._innerSub=function(t){var e=new n.SimpleInnerSubscriber(this),r=this.destination;r.add(e);var i=(0,n.innerSubscribe)(t,e);i!==e&&r.add(i)},r.prototype._complete=function(){this.hasCompleted=!0,0===this.active&&0===this.buffer.length&&this.destination.complete(),this.unsubscribe()},r.prototype.notifyNext=function(t){this.destination.next(t)},r.prototype.notifyComplete=function(){var t=this.buffer;this.active--,t.length>0?this._next(t.shift()):0===this.active&&this.hasCompleted&&this.destination.complete()},r}(n.SimpleOuterSubscriber);exports.MergeMapSubscriber=p;var c=u;exports.flatMap=c;"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 85 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 87 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 95 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 103 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 111 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 130 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 138 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 160 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 162 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 166 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 168 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 170 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 178 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 188 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 190 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 198 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 207 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 209 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 217 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 72, "column": 0 },
+					"generated": { "line": 1, "column": 239 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 72, "column": 0 },
+					"generated": { "line": 1, "column": 241 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 72, "column": 0 },
+					"generated": { "line": 1, "column": 249 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 270 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 279 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 283 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 286 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 305 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 313 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 320 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 325 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 329 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 331 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 335 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 343 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 350 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 352 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 363 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 370 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 373 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 375 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 384 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 386 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 389 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 392 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 395 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 397 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 408 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 415 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 417 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 421 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 423 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 427 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 430 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 433 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 435 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 439 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 442 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 449 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 451 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 455 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 458 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 462 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 464 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 467 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 470 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 476 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 478 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 479 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 483 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 485 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 492 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 508 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 515 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 540 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 544 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 548 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 553 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 555 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 558 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 565 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 575 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 590 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 595 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 597 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 600 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 601 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 605 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 607 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 609 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 616 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 641 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 643 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 646 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 651 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 655 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 657 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 662 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 664 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 669 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 676 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 691 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 693 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 695 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 698 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 700 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 703 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 705 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 709 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 716 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 718 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 726 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 728 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 731 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 733 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 737 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 739 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 742 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 75, "column": 2 },
+					"generated": { "line": 1, "column": 744 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 75, "column": 2 },
+					"generated": { "line": 1, "column": 753 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 75, "column": 2 },
+					"generated": { "line": 1, "column": 755 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 75, "column": 2 },
+					"generated": { "line": 1, "column": 757 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 75, "column": 23 },
+					"generated": { "line": 1, "column": 759 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 84, "column": 13 },
+					"generated": { "line": 1, "column": 762 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 77, "column": 13 },
+					"generated": { "line": 1, "column": 774 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 77, "column": 6 },
+					"generated": { "line": 1, "column": 778 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 79, "column": 4 },
+					"generated": { "line": 1, "column": 782 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 79, "column": 11 },
+					"generated": { "line": 1, "column": 784 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 79, "column": 12 },
+					"generated": { "line": 1, "column": 791 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 84, "column": 34 },
+					"generated": { "line": 1, "column": 810 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 84, "column": 13 },
+					"generated": { "line": 1, "column": 829 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 4 },
+					"generated": { "line": 1, "column": 831 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 17 },
+					"generated": { "line": 1, "column": 840 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 843 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 850 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 852 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 857 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 859 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 868 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 870 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 873 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 880 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 882 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 884 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 890 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 892 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 894 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 898 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 904 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 906 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 908 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 913 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 922 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 924 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 927 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 934 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 936 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 938 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 940 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 942 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 85, "column": 32 },
+					"generated": { "line": 1, "column": 949 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 87, "column": 36 },
+					"generated": { "line": 1, "column": 955 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 87, "column": 9 },
+					"generated": { "line": 1, "column": 972 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 88, "column": 1 },
+					"generated": { "line": 1, "column": 976 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 88, "column": 1 },
+					"generated": { "line": 1, "column": 978 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 981 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 990 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 78 },
+					"generated": { "line": 1, "column": 993 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 78 },
+					"generated": { "line": 1, "column": 1000 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 1002 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 67 },
+					"generated": { "line": 1, "column": 1007 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 67 },
+					"generated": { "line": 1, "column": 1011 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 67 },
+					"generated": { "line": 1, "column": 1013 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 67 },
+					"generated": { "line": 1, "column": 1015 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 29 },
+					"generated": { "line": 1, "column": 1021 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 29 },
+					"generated": { "line": 1, "column": 1025 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 78 },
+					"generated": { "line": 1, "column": 1027 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 1038 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 1047 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 1049 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 92, "column": 67 },
+					"generated": { "line": 1, "column": 1051 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 93, "column": 3 },
+					"generated": { "line": 1, "column": 1059 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 93, "column": 3 },
+					"generated": { "line": 1, "column": 1063 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 95, "column": 2 },
+					"generated": { "line": 1, "column": 1067 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 95, "column": 2 },
+					"generated": { "line": 1, "column": 1069 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 95, "column": 2 },
+					"generated": { "line": 1, "column": 1076 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 99, "column": 3 },
+					"generated": { "line": 1, "column": 1095 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 99, "column": 3 },
+					"generated": { "line": 1, "column": 1100 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 99, "column": 3 },
+					"generated": { "line": 1, "column": 1108 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 100, "column": 0 },
+					"generated": { "line": 1, "column": 1110 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 100, "column": 0 },
+					"generated": { "line": 1, "column": 1115 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 100, "column": 0 },
+					"generated": { "line": 1, "column": 1126 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 113, "column": 2 },
+					"generated": { "line": 1, "column": 1128 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1135 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1137 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1147 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1152 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1161 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1163 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1166 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1173 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1175 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1185 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1189 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1191 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1193 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1198 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1206 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 0 },
+					"generated": { "line": 1, "column": 1211 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 113, "column": 2 },
+					"generated": { "line": 1, "column": 1225 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 91, "column": 78 },
+					"generated": { "line": 1, "column": 1227 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1230 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1238 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1255 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 29 },
+					"generated": { "line": 1, "column": 1257 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 29 },
+					"generated": { "line": 1, "column": 1261 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1263 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1272 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 108, "column": 10 },
+					"generated": { "line": 1, "column": 1275 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 108, "column": 10 },
+					"generated": { "line": 1, "column": 1284 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 108, "column": 34 },
+					"generated": { "line": 1, "column": 1286 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 108, "column": 40 },
+					"generated": { "line": 1, "column": 1288 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 108, "column": 40 },
+					"generated": { "line": 1, "column": 1290 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 109, "column": 27 },
+					"generated": { "line": 1, "column": 1298 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 109, "column": 10 },
+					"generated": { "line": 1, "column": 1302 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 110, "column": 10 },
+					"generated": { "line": 1, "column": 1306 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 110, "column": 29 },
+					"generated": { "line": 1, "column": 1308 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 110, "column": 29 },
+					"generated": { "line": 1, "column": 1315 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1334 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1338 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1340 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1342 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1347 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1352 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1356 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 123, "column": 6 },
+					"generated": { "line": 1, "column": 1361 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 117, "column": 3 },
+					"generated": { "line": 1, "column": 1368 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 117, "column": 3 },
+					"generated": { "line": 1, "column": 1370 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 117, "column": 3 },
+					"generated": { "line": 1, "column": 1378 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 119, "column": 12 },
+					"generated": { "line": 1, "column": 1380 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 119, "column": 12 },
+					"generated": { "line": 1, "column": 1382 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 119, "column": 12 },
+					"generated": { "line": 1, "column": 1393 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 120, "column": 4 },
+					"generated": { "line": 1, "column": 1395 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 120, "column": 8 },
+					"generated": { "line": 1, "column": 1397 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 120, "column": 22 },
+					"generated": { "line": 1, "column": 1411 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 121, "column": 6 },
+					"generated": { "line": 1, "column": 1413 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 121, "column": 6 },
+					"generated": { "line": 1, "column": 1415 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 121, "column": 11 },
+					"generated": { "line": 1, "column": 1422 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 5 },
+					"generated": { "line": 1, "column": 1425 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 5 },
+					"generated": { "line": 1, "column": 1427 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 5 },
+					"generated": { "line": 1, "column": 1434 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 11 },
+					"generated": { "line": 1, "column": 1436 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 11 },
+					"generated": { "line": 1, "column": 1438 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 122, "column": 11 },
+					"generated": { "line": 1, "column": 1444 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 123, "column": 6 },
+					"generated": { "line": 1, "column": 1446 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 1448 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 115, "column": 22 },
+					"generated": { "line": 1, "column": 1455 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 115, "column": 22 },
+					"generated": { "line": 1, "column": 1457 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 115, "column": 22 },
+					"generated": { "line": 1, "column": 1467 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 115, "column": 67 },
+					"generated": { "line": 1, "column": 1469 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 125, "column": 2 },
+					"generated": { "line": 1, "column": 1472 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1474 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1484 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1490 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1499 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 127, "column": 12 },
+					"generated": { "line": 1, "column": 1502 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 127, "column": 12 },
+					"generated": { "line": 1, "column": 1507 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 127, "column": 12 },
+					"generated": { "line": 1, "column": 1514 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 127, "column": 12 },
+					"generated": { "line": 1, "column": 1519 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 128, "column": 8 },
+					"generated": { "line": 1, "column": 1530 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 128, "column": 8 },
+					"generated": { "line": 1, "column": 1535 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 128, "column": 35 },
+					"generated": { "line": 1, "column": 1544 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 131, "column": 6 },
+					"generated": { "line": 1, "column": 1547 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 131, "column": 6 },
+					"generated": { "line": 1, "column": 1552 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 131, "column": 15 },
+					"generated": { "line": 1, "column": 1559 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 131, "column": 20 },
+					"generated": { "line": 1, "column": 1564 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 133, "column": 11 },
+					"generated": { "line": 1, "column": 1568 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 133, "column": 11 },
+					"generated": { "line": 1, "column": 1570 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 133, "column": 23 },
+					"generated": { "line": 1, "column": 1580 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 133, "column": 35 },
+					"generated": { "line": 1, "column": 1589 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 133, "column": 35 },
+					"generated": { "line": 1, "column": 1598 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 134, "column": 6 },
+					"generated": { "line": 1, "column": 1601 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 134, "column": 6 },
+					"generated": { "line": 1, "column": 1605 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 135, "column": 5 },
+					"generated": { "line": 1, "column": 1607 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 135, "column": 5 },
+					"generated": { "line": 1, "column": 1609 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 135, "column": 5 },
+					"generated": { "line": 1, "column": 1614 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 136, "column": 8 },
+					"generated": { "line": 1, "column": 1622 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 137, "column": 8 },
+					"generated": { "line": 1, "column": 1626 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 137, "column": 9 },
+					"generated": { "line": 1, "column": 1628 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 137, "column": 19 },
+					"generated": { "line": 1, "column": 1633 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 137, "column": 27 },
+					"generated": { "line": 1, "column": 1641 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 137, "column": 27 },
+					"generated": { "line": 1, "column": 1643 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 140, "column": 10 },
+					"generated": { "line": 1, "column": 1646 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 140, "column": 10 },
+					"generated": { "line": 1, "column": 1652 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 142, "column": 10 },
+					"generated": { "line": 1, "column": 1655 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 141, "column": 10 },
+					"generated": { "line": 1, "column": 1667 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 141, "column": 10 },
+					"generated": { "line": 1, "column": 1672 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 141, "column": 25 },
+					"generated": { "line": 1, "column": 1684 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 141, "column": 32 },
+					"generated": { "line": 1, "column": 1690 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 144, "column": 10 },
+					"generated": { "line": 1, "column": 1693 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 144, "column": 10 },
+					"generated": { "line": 1, "column": 1698 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 148, "column": 8 },
+					"generated": { "line": 1, "column": 1707 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 148, "column": 8 },
+					"generated": { "line": 1, "column": 1712 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 148, "column": 8 },
+					"generated": { "line": 1, "column": 1722 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 150, "column": 5 },
+					"generated": { "line": 1, "column": 1726 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 150, "column": 5 },
+					"generated": { "line": 1, "column": 1728 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 150, "column": 5 },
+					"generated": { "line": 1, "column": 1738 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 150, "column": 5 },
+					"generated": { "line": 1, "column": 1748 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 150, "column": 5 },
+					"generated": { "line": 1, "column": 1757 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1760 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1764 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1766 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1770 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1772 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 151, "column": 3 },
+					"generated": { "line": 1, "column": 1794 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 153, "column": 12 },
+					"generated": { "line": 1, "column": 1800 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 153, "column": 12 },
+					"generated": { "line": 1, "column": 1802 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 153, "column": 12 },
+					"generated": { "line": 1, "column": 1807 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 154, "column": 4 },
+					"generated": { "line": 1, "column": 1819 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 154, "column": 9 },
+					"generated": { "line": 1, "column": 1821 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 154, "column": 9 },
+					"generated": { "line": 1, "column": 1825 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 8 },
+					"generated": { "line": 1, "column": 1828 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 8 },
+					"generated": { "line": 1, "column": 1832 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 25 },
+					"generated": { "line": 1, "column": 1835 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 41 },
+					"generated": { "line": 1, "column": 1837 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 41 },
+					"generated": { "line": 1, "column": 1839 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 41 },
+					"generated": { "line": 1, "column": 1855 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 155, "column": 47 },
+					"generated": { "line": 1, "column": 1857 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 156, "column": 6 },
+					"generated": { "line": 1, "column": 1860 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 156, "column": 23 },
+					"generated": { "line": 1, "column": 1864 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 157, "column": 5 },
+					"generated": { "line": 1, "column": 1867 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 157, "column": 5 },
+					"generated": { "line": 1, "column": 1869 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 157, "column": 5 },
+					"generated": { "line": 1, "column": 1873 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 161, "column": 2 },
+					"generated": { "line": 1, "column": 1877 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 161, "column": 2 },
+					"generated": { "line": 1, "column": 1879 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 161, "column": 2 },
+					"generated": { "line": 1, "column": 1889 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 161, "column": 12 },
+					"generated": { "line": 1, "column": 1899 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 162, "column": 9 },
+					"generated": { "line": 1, "column": 1910 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 162, "column": 9 },
+					"generated": { "line": 1, "column": 1915 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 162, "column": 21 },
+					"generated": { "line": 1, "column": 1929 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1931 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1935 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1940 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1948 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1952 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1957 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 163, "column": 3 },
+					"generated": { "line": 1, "column": 1964 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 165, "column": 2 },
+					"generated": { "line": 1, "column": 1972 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 165, "column": 2 },
+					"generated": { "line": 1, "column": 1977 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 165, "column": 2 },
+					"generated": { "line": 1, "column": 1989 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 167, "column": 9 },
+					"generated": { "line": 1, "column": 2000 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 167, "column": 9 },
+					"generated": { "line": 1, "column": 2005 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 169, "column": 16 },
+					"generated": { "line": 1, "column": 2020 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 169, "column": 17 },
+					"generated": { "line": 1, "column": 2022 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 169, "column": 24 },
+					"generated": { "line": 1, "column": 2032 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 169, "column": 34 },
+					"generated": { "line": 1, "column": 2043 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 169, "column": 34 },
+					"generated": { "line": 1, "column": 2052 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 170, "column": 5 },
+					"generated": { "line": 1, "column": 2055 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 170, "column": 5 },
+					"generated": { "line": 1, "column": 2060 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 170, "column": 5 },
+					"generated": { "line": 1, "column": 2072 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 170, "column": 5 },
+					"generated": { "line": 1, "column": 2077 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 171, "column": 11 },
+					"generated": { "line": 1, "column": 2081 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 171, "column": 11 },
+					"generated": { "line": 1, "column": 2083 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 171, "column": 23 },
+					"generated": { "line": 1, "column": 2093 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 171, "column": 35 },
+					"generated": { "line": 1, "column": 2108 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 172, "column": 5 },
+					"generated": { "line": 1, "column": 2119 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 172, "column": 5 },
+					"generated": { "line": 1, "column": 2123 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 172, "column": 5 },
+					"generated": { "line": 1, "column": 2125 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 172, "column": 5 },
+					"generated": { "line": 1, "column": 2130 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 173, "column": 3 },
+					"generated": { "line": 1, "column": 2137 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 173, "column": 3 },
+					"generated": { "line": 1, "column": 2142 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 174, "column": 0 },
+					"generated": { "line": 1, "column": 2151 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 174, "column": 0 },
+					"generated": { "line": 1, "column": 2153 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 174, "column": 0 },
+					"generated": { "line": 1, "column": 2160 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 46 },
+					"generated": { "line": 1, "column": 2162 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 46 },
+					"generated": { "line": 1, "column": 2167 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 107, "column": 67 },
+					"generated": { "line": 1, "column": 2173 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 174, "column": 1 },
+					"generated": { "line": 1, "column": 2175 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 179, "column": 32 },
+					"generated": { "line": 1, "column": 2184 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 179, "column": 13 },
+					"generated": { "line": 1, "column": 2188 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 179, "column": 23 },
+					"generated": { "line": 1, "column": 2193 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 179, "column": 32 },
+					"generated": { "line": 1, "column": 2201 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 179, "column": 32 },
+					"generated": { "line": 1, "column": 2206 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2220 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2225 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2237 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2249 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2251 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2252 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2254 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2277 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2285 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2304 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2306 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2310 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2312 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2314 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2322 }
+				},
+				{
+					"source": "../../../src/internal/operators/mergeMap.ts",
+					"name": null,
+					"original": { "line": 114, "column": 78 },
+					"generated": { "line": 1, "column": 2330 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/mergeMap.ts": "import { Observable } from '../Observable';\nimport { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { Subscription } from '../Subscription';\nimport { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';\nimport { map } from './map';\nimport { from } from '../observable/from';\nimport { SimpleOuterSubscriber, SimpleInnerSubscriber, innerSubscribe } from '../innerSubscribe';\n\n/* tslint:disable:max-line-length */\nexport function mergeMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>;\n/** @deprecated resultSelector no longer supported, use inner map instead */\nexport function mergeMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: undefined, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>;\n/** @deprecated resultSelector no longer supported, use inner map instead */\nexport function mergeMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>;\n/* tslint:enable:max-line-length */\n\n/**\n * Projects each source value to an Observable which is merged in the output\n * Observable.\n *\n * <span class=\"informal\">Maps each value to an Observable, then flattens all of\n * these inner Observables using {@link mergeAll}.</span>\n *\n * ![](mergeMap.png)\n *\n * Returns an Observable that emits items based on applying a function that you\n * supply to each item emitted by the source Observable, where that function\n * returns an Observable, and then merging those resulting Observables and\n * emitting the results of this merger.\n *\n * ## Example\n * Map and flatten each letter to an Observable ticking every 1 second\n * ```ts\n * import { of, interval } from 'rxjs';\n * import { mergeMap, map } from 'rxjs/operators';\n *\n * const letters = of('a', 'b', 'c');\n * const result = letters.pipe(\n *   mergeMap(x => interval(1000).pipe(map(i => x+i))),\n * );\n * result.subscribe(x => console.log(x));\n *\n * // Results in the following:\n * // a0\n * // b0\n * // c0\n * // a1\n * // b1\n * // c1\n * // continues to list a,b,c with respective ascending integers\n * ```\n *\n * @see {@link concatMap}\n * @see {@link exhaustMap}\n * @see {@link merge}\n * @see {@link mergeAll}\n * @see {@link mergeMapTo}\n * @see {@link mergeScan}\n * @see {@link switchMap}\n *\n * @param {function(value: T, ?index: number): ObservableInput} project A function\n * that, when applied to an item emitted by the source Observable, returns an\n * Observable.\n * @param {number} [concurrent=Number.POSITIVE_INFINITY] Maximum number of input\n * Observables being subscribed to concurrently.\n * @return {Observable} An Observable that emits the result of applying the\n * projection function (and the optional deprecated `resultSelector`) to each item\n * emitted by the source Observable and merging the results of the Observables\n * obtained from this transformation.\n */\nexport function mergeMap<T, R, O extends ObservableInput<any>>(\n  project: (value: T, index: number) => O,\n  resultSelector?: ((outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R) | number,\n  concurrent: number = Number.POSITIVE_INFINITY\n): OperatorFunction<T, ObservedValueOf<O>|R> {\n  if (typeof resultSelector === 'function') {\n    // DEPRECATED PATH\n    return (source: Observable<T>) => source.pipe(\n      mergeMap((a, i) => from(project(a, i)).pipe(\n        map((b: any, ii: number) => resultSelector(a, b, i, ii)),\n      ), concurrent)\n    );\n  } else if (typeof resultSelector === 'number') {\n    concurrent = resultSelector;\n  }\n  return (source: Observable<T>) => source.lift(new MergeMapOperator(project, concurrent));\n}\n\nexport class MergeMapOperator<T, R> implements Operator<T, R> {\n  constructor(private project: (value: T, index: number) => ObservableInput<R>,\n              private concurrent: number = Number.POSITIVE_INFINITY) {\n  }\n\n  call(observer: Subscriber<R>, source: any): any {\n    return source.subscribe(new MergeMapSubscriber(\n      observer, this.project, this.concurrent\n    ));\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nexport class MergeMapSubscriber<T, R> extends SimpleOuterSubscriber<T, R> {\n  private hasCompleted: boolean = false;\n  private buffer: T[] = [];\n  private active: number = 0;\n  protected index: number = 0;\n\n  constructor(destination: Subscriber<R>,\n              private project: (value: T, index: number) => ObservableInput<R>,\n              private concurrent: number = Number.POSITIVE_INFINITY) {\n    super(destination);\n  }\n\n  protected _next(value: T): void {\n    if (this.active < this.concurrent) {\n      this._tryNext(value);\n    } else {\n      this.buffer.push(value);\n    }\n  }\n\n  protected _tryNext(value: T) {\n    let result: ObservableInput<R>;\n    const index = this.index++;\n    try {\n      result = this.project(value, index);\n    } catch (err) {\n      this.destination.error!(err);\n      return;\n    }\n    this.active++;\n    this._innerSub(result);\n  }\n\n  private _innerSub(ish: ObservableInput<R>): void {\n    const innerSubscriber = new SimpleInnerSubscriber(this);\n    const destination = this.destination as Subscription;\n    destination.add(innerSubscriber);\n    const innerSubscription = innerSubscribe(ish, innerSubscriber);\n    // The returned subscription will usually be the subscriber that was\n    // passed. However, interop subscribers will be wrapped and for\n    // unsubscriptions to chain correctly, the wrapper needs to be added, too.\n    if (innerSubscription !== innerSubscriber) {\n      destination.add(innerSubscription);\n    }\n  }\n\n  protected _complete(): void {\n    this.hasCompleted = true;\n    if (this.active === 0 && this.buffer.length === 0) {\n      this.destination.complete!();\n    }\n    this.unsubscribe();\n  }\n\n  notifyNext(innerValue: R): void {\n    this.destination.next!(innerValue);\n  }\n\n  notifyComplete(): void {\n    const buffer = this.buffer;\n    this.active--;\n    if (buffer.length > 0) {\n      this._next(buffer.shift()!);\n    } else if (this.active === 0 && this.hasCompleted) {\n      this.destination.complete!();\n    }\n  }\n}\n\n/**\n * @deprecated renamed. Use {@link mergeMap}\n */\nexport const flatMap = mergeMap;"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "de4ae528c1afe35f01d8560295708549",
+	"cacheData": { "env": {} }
+}

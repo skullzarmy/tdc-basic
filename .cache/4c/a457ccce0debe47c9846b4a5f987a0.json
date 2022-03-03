@@ -1,0 +1,73 @@
+{
+	"id": "index.html",
+	"dependencies": [
+		{
+			"name": "./../assets/apple-touch-icon.png",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/apple-touch-icon.png",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/favicon-32x32.png",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/favicon-32x32.png",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/favicon-16x16.png",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/favicon-16x16.png",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/site.webmanifest",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/site.webmanifest",
+			"entry": true,
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/safari-pinned-tab.svg",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/safari-pinned-tab.svg",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/favicon.ico",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/favicon.ico",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/browserconfig.xml",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/browserconfig.xml",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./app.css",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/app.css",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/coinlogo.png",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/coinlogo.png",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./main.ts",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/main.ts",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		}
+	],
+	"generated": {
+		"html": "<html>\n    <head>\n        <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/34df24a9a2cac49863bfdf70a09604ac.png\"> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/b95079c2f699031e4b83bdc6d2f577a7.png\"> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/9d332a6362275818c0a400056eef4654.png\"> <link rel=\"manifest\" href=\"/22755f32e7ac7768abd45bc844f59f59.webmanifest\">\n        <link rel=\"mask-icon\" href=\"/9fb038954953db685ece2e9c613acbfd.svg\" color=\"#5bbad5\"> <link rel=\"shortcut icon\" href=\"/012a7544efc238e91356dd9ec541301f.ico\">\n        <meta name=\"msapplication-TileColor\" content=\"#da532c\">\n        <meta name=\"msapplication-config\" content=\"/94dee10c9a297e6048ddfb609bec2a75.xml\">\n        <meta name=\"theme-color\" content=\"#ffffff\">\n        <meta charset=\"UTF-8\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"/a4a1075348c18f6b7dcfea46ae05fb60.css\">\n        <title>TDC Hodler Dashboard</title>\n    </head>\n    <body>\n        <img id=\"main-img\" src=\"/fdec708460a829c794ebedc5418fcf10.png\">\n        <h1>TDC Hodler Dashboard</h1>\n        <div class=\"wrapper\">\n            <div class=\"dialog\" id=\"rp-dialog\">\n                <div class=\"header\" id=\"rp-header\">\n                    Reward Pool -\n                    <span id=\"bcd-link-pool\"></span>\n                </div>\n                <div class=\"content\" id=\"rp-content\">\n                    <div class=\"form\" id=\"reward-pool-form\">\n                        <input id=\"balance-address-input\" type=\"text\" class=\"address\" placeholder=\"loading wallet address...\" disabled=\"disabled\">\n                    </div>\n                    <div class=\"wrapper info\">\n                        <div class=\"error-message\" id=\"balance-error-message\"></div>\n                        <div id=\"balance-output\" class=\"show\">\n                            <span class=\"output\"><span id=\"balance\">0</span>ꜩ Balance</span>\n                        </div>\n                    </div>\n                    <!-- <div class=\"wrapper info\">\n                        <hr />\n                        <div id=\"withdraw\">\n                            <div class=\"header\">Withdraw</div>\n                            <input\n                                id=\"withdraw-wallet\"\n                                type=\"text\"\n                                class=\"address\"\n                                placeholder=\"enter your wallet address\"\n                            />\n                        </div>\n                    </div> -->\n                </div>\n            </div>\n            <div class=\"dialog\" id=\"flip-dialog\">\n                <div class=\"header\" id=\"flip-header\">Coin Flip - <span id=\"bcd-link-flip\"></span></div>\n                <div class=\"content\" id=\"flip-content\">\n                    <div class=\"form\" id=\"flip-form\">\n                        <input id=\"flip-address-input\" type=\"text\" class=\"address\" placeholder=\"loading wallet address...\" disabled=\"disabled\">\n                    </div>\n                    <div class=\"wrapper info\">\n                        <div class=\"form\">\n                            <div class=\"flip-count-wrap output\"><span id=\"flip-count\">&nbsp;</span> Games Played</div>\n                        </div>\n                        <div class=\"form\">\n                            <div class=\"flip-tez-wrap output\"><span id=\"flip-tez\">&nbsp;</span>ꜩ Wagered</div>\n                        </div>\n                        <div class=\"error-message\" id=\"flip-error-message\"></div>\n                        <div id=\"flip-output\" class=\"show\">\n                            <span class=\"output\"><span id=\"flip\">0</span>ꜩ Balance</span>\n                        </div>\n                    </div>\n                    <div class=\"wrapper info\">\n                        <div id=\"flip-games\"></div>\n                    </div>\n                </div>\n            </div>\n            <textarea class=\"dialog hide\" id=\"TheData\" rows=\"5\"></textarea>\n        </div>\n        <div id=\"footer\">\n            <a href=\"https://www.skllzrmy.com/\" target=\"_blank\">[Made by skllzrmy.tez with ❤️]</a>\n            <a href=\"https://github.com/skullzarmy/tdc-basic/issues\" target=\"_blank\">\n                [Report a bug / request features]\n            </a>\n            <a href=\"https://github.com/skullzarmy/tdc-basic\" target=\"_blank\">[Contribute on GitHub]</a>\n            <a href=\"https://tzkt.io/tz1Qi77tcJn9foeHHP1QHj6UX1m1vLVLMbuY/operations/\" target=\"_blank\">\n                [Tips appreciated @ skllzrmy.tez 😉]\n            </a>\n        </div>\n        <script src=\"/6427dc610ec40c788cba04a9c39d6dcf.js\"></script>\n    </body>\n</html>\n"
+	},
+	"sourceMaps": null,
+	"error": null,
+	"hash": "e22a89a3d21be526c1d9c7be3e7b5442",
+	"cacheData": {}
+}

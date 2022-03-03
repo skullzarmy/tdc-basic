@@ -1,0 +1,15 @@
+{
+	"id": "../assets/browserconfig.xml",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		}
+	],
+	"generated": { "js": "module.exports = \"/94dee10c9a297e6048ddfb609bec2a75.xml\";" },
+	"sourceMaps": null,
+	"error": null,
+	"hash": "a493ba0aa0b8ec8068d786d7248bb92c",
+	"cacheData": { "env": {} }
+}

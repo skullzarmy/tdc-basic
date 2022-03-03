@@ -1,0 +1,2069 @@
+{
+	"id": "CT9q",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/repeatWhen.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786550
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/repeatWhen.ts",
+			"includedInParent": true,
+			"mtime": 1645829787463
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/repeatWhen.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subject",
+			"loc": { "line": 3, "column": 24 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/repeatWhen.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subject.js"
+		},
+		{
+			"name": "../innerSubscribe",
+			"loc": { "line": 4, "column": 77 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/repeatWhen.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/innerSubscribe.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.repeatWhen=n;var t=s(require(\"tslib\")),e=require(\"../Subject\"),i=require(\"../innerSubscribe\");function r(){if(\"function\"!=typeof WeakMap)return null;var t=new WeakMap;return r=function(){return t},t}function s(t){if(t&&t.__esModule)return t;var e=r();if(e&&e.has(t))return e.get(t);var i={};if(null!=t){var s=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var n in t)if(Object.prototype.hasOwnProperty.call(t,n)){var o=s?Object.getOwnPropertyDescriptor(t,n):null;o&&(o.get||o.set)?Object.defineProperty(i,n,o):i[n]=t[n]}}return i.default=t,e&&e.set(t,i),i}function n(t){return function(e){return e.lift(new o(t))}}var o=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){return e.subscribe(new u(t,this.notifier,e))},t}(),u=function(r){function s(t,e,i){var s=r.call(this,t)||this;return s.notifier=e,s.source=i,s.sourceIsBeingSubscribedTo=!0,s}return t.__extends(s,r),s.prototype.notifyNext=function(){this.sourceIsBeingSubscribedTo=!0,this.source.subscribe(this)},s.prototype.notifyComplete=function(){if(!1===this.sourceIsBeingSubscribedTo)return r.prototype.complete.call(this)},s.prototype.complete=function(){if(this.sourceIsBeingSubscribedTo=!1,!this.isStopped){if(this.retries||this.subscribeToRetries(),!this.retriesSubscription||this.retriesSubscription.closed)return r.prototype.complete.call(this);this._unsubscribeAndRecycle(),this.notifications.next(void 0)}},s.prototype._unsubscribe=function(){var t=this.notifications,e=this.retriesSubscription;t&&(t.unsubscribe(),this.notifications=void 0),e&&(e.unsubscribe(),this.retriesSubscription=void 0),this.retries=void 0},s.prototype._unsubscribeAndRecycle=function(){var t=this._unsubscribe;return this._unsubscribe=null,r.prototype._unsubscribeAndRecycle.call(this),this._unsubscribe=t,this},s.prototype.subscribeToRetries=function(){var t;this.notifications=new e.Subject;try{t=(0,this.notifier)(this.notifications)}catch(s){return r.prototype.complete.call(this)}this.retries=t,this.retriesSubscription=(0,i.innerSubscribe)(t,new i.SimpleInnerSubscriber(this))},s}(i.SimpleOuterSubscriber);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 87 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 89 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 93 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 95 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 97 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 105 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 115 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 117 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 125 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 40, "column": 0 },
+					"generated": { "line": 1, "column": 139 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 40, "column": 0 },
+					"generated": { "line": 1, "column": 141 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 40, "column": 0 },
+					"generated": { "line": 1, "column": 149 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 170 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 179 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 183 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 186 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 205 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 213 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 220 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 225 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 229 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 231 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 235 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 243 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 250 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 252 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 263 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 270 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 273 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 275 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 284 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 286 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 289 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 292 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 295 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 297 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 308 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 315 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 317 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 321 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 323 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 327 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 330 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 333 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 335 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 339 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 342 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 349 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 351 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 355 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 358 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 362 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 364 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 367 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 370 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 376 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 378 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 379 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 383 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 385 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 392 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 408 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 415 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 440 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 444 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 448 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 453 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 455 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 458 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 465 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 475 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 490 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 495 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 497 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 500 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 501 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 505 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 507 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 509 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 516 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 541 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 543 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 546 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 551 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 555 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 557 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 562 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 564 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 569 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 576 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 591 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 593 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 595 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 598 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 600 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 603 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 605 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 609 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 616 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 618 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 626 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 628 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 631 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 633 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 637 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 639 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 642 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 41, "column": 2 },
+					"generated": { "line": 1, "column": 644 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 41, "column": 9 },
+					"generated": { "line": 1, "column": 653 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 41, "column": 31 },
+					"generated": { "line": 1, "column": 655 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 658 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 665 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 674 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 677 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 684 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 686 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 691 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 695 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 42, "column": 1 },
+					"generated": { "line": 1, "column": 697 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 2 },
+					"generated": { "line": 1, "column": 702 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 2 },
+					"generated": { "line": 1, "column": 706 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 85 },
+					"generated": { "line": 1, "column": 708 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 24 },
+					"generated": { "line": 1, "column": 719 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 24 },
+					"generated": { "line": 1, "column": 728 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 32 },
+					"generated": { "line": 1, "column": 730 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 46, "column": 3 },
+					"generated": { "line": 1, "column": 733 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 46, "column": 3 },
+					"generated": { "line": 1, "column": 738 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 46, "column": 3 },
+					"generated": { "line": 1, "column": 747 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 51, "column": 1 },
+					"generated": { "line": 1, "column": 749 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 18 },
+					"generated": { "line": 1, "column": 756 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 18 },
+					"generated": { "line": 1, "column": 758 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 28 },
+					"generated": { "line": 1, "column": 768 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 32 },
+					"generated": { "line": 1, "column": 773 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 32 },
+					"generated": { "line": 1, "column": 782 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 49, "column": 53 },
+					"generated": { "line": 1, "column": 784 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 787 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 794 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 796 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 806 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 810 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 812 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 814 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 819 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 50, "column": 3 },
+					"generated": { "line": 1, "column": 828 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 51, "column": 1 },
+					"generated": { "line": 1, "column": 833 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 45, "column": 85 },
+					"generated": { "line": 1, "column": 835 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 838 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 840 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 68 },
+					"generated": { "line": 1, "column": 849 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 852 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 861 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 68, "column": 4 },
+					"generated": { "line": 1, "column": 863 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 68, "column": 10 },
+					"generated": { "line": 1, "column": 865 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 68, "column": 22 },
+					"generated": { "line": 1, "column": 867 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 870 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 874 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 876 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 878 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 883 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 83 },
+					"generated": { "line": 1, "column": 888 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 66, "column": 83 },
+					"generated": { "line": 1, "column": 892 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 69, "column": 3 },
+					"generated": { "line": 1, "column": 897 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 904 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 906 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 915 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 63, "column": 10 },
+					"generated": { "line": 1, "column": 917 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 63, "column": 10 },
+					"generated": { "line": 1, "column": 919 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 63, "column": 10 },
+					"generated": { "line": 1, "column": 926 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 928 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 930 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 957 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 69, "column": 3 },
+					"generated": { "line": 1, "column": 959 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 961 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 968 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 970 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 980 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 65, "column": 14 },
+					"generated": { "line": 1, "column": 982 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 72, "column": 9 },
+					"generated": { "line": 1, "column": 985 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 72, "column": 9 },
+					"generated": { "line": 1, "column": 987 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 72, "column": 9 },
+					"generated": { "line": 1, "column": 997 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 72, "column": 42 },
+					"generated": { "line": 1, "column": 1008 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 73, "column": 9 },
+					"generated": { "line": 1, "column": 1019 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 73, "column": 9 },
+					"generated": { "line": 1, "column": 1024 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 73, "column": 32 },
+					"generated": { "line": 1, "column": 1051 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 1053 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 1058 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 1065 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 1075 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 77, "column": 13 },
+					"generated": { "line": 1, "column": 1082 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 77, "column": 13 },
+					"generated": { "line": 1, "column": 1084 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 77, "column": 13 },
+					"generated": { "line": 1, "column": 1094 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 77, "column": 48 },
+					"generated": { "line": 1, "column": 1109 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 78, "column": 6 },
+					"generated": { "line": 1, "column": 1120 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 78, "column": 27 },
+					"generated": { "line": 1, "column": 1124 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 78, "column": 6 },
+					"generated": { "line": 1, "column": 1128 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 78, "column": 6 },
+					"generated": { "line": 1, "column": 1133 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1159 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1166 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1168 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1178 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1187 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 79, "column": 5 },
+					"generated": { "line": 1, "column": 1192 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 83, "column": 9 },
+					"generated": { "line": 1, "column": 1199 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 83, "column": 9 },
+					"generated": { "line": 1, "column": 1201 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 83, "column": 9 },
+					"generated": { "line": 1, "column": 1211 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 83, "column": 42 },
+					"generated": { "line": 1, "column": 1220 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 86, "column": 6 },
+					"generated": { "line": 1, "column": 1231 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 85, "column": 9 },
+					"generated": { "line": 1, "column": 1234 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 85, "column": 9 },
+					"generated": { "line": 1, "column": 1239 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 85, "column": 25 },
+					"generated": { "line": 1, "column": 1266 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 86, "column": 6 },
+					"generated": { "line": 1, "column": 1269 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 86, "column": 11 },
+					"generated": { "line": 1, "column": 1274 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 86, "column": 23 },
+					"generated": { "line": 1, "column": 1284 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 8 },
+					"generated": { "line": 1, "column": 1285 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 87, "column": 8 },
+					"generated": { "line": 1, "column": 1288 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 87, "column": 13 },
+					"generated": { "line": 1, "column": 1293 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 88, "column": 7 },
+					"generated": { "line": 1, "column": 1302 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 88, "column": 7 },
+					"generated": { "line": 1, "column": 1307 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 8 },
+					"generated": { "line": 1, "column": 1329 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 8 },
+					"generated": { "line": 1, "column": 1334 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 21 },
+					"generated": { "line": 1, "column": 1355 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 29 },
+					"generated": { "line": 1, "column": 1360 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 90, "column": 32 },
+					"generated": { "line": 1, "column": 1380 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1387 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1394 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1396 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1406 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1415 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 91, "column": 7 },
+					"generated": { "line": 1, "column": 1420 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 94, "column": 11 },
+					"generated": { "line": 1, "column": 1426 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 94, "column": 11 },
+					"generated": { "line": 1, "column": 1431 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 95, "column": 5 },
+					"generated": { "line": 1, "column": 1456 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 95, "column": 5 },
+					"generated": { "line": 1, "column": 1461 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 95, "column": 5 },
+					"generated": { "line": 1, "column": 1475 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 95, "column": 5 },
+					"generated": { "line": 1, "column": 1485 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 100, "column": 12 },
+					"generated": { "line": 1, "column": 1490 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 100, "column": 12 },
+					"generated": { "line": 1, "column": 1492 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 100, "column": 12 },
+					"generated": { "line": 1, "column": 1502 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 100, "column": 12 },
+					"generated": { "line": 1, "column": 1515 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 8 },
+					"generated": { "line": 1, "column": 1526 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 8 },
+					"generated": { "line": 1, "column": 1530 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 8 },
+					"generated": { "line": 1, "column": 1532 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 23 },
+					"generated": { "line": 1, "column": 1537 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 23 },
+					"generated": { "line": 1, "column": 1551 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 8 },
+					"generated": { "line": 1, "column": 1553 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 101, "column": 23 },
+					"generated": { "line": 1, "column": 1558 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 102, "column": 6 },
+					"generated": { "line": 1, "column": 1578 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 103, "column": 6 },
+					"generated": { "line": 1, "column": 1582 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 103, "column": 11 },
+					"generated": { "line": 1, "column": 1584 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 104, "column": 5 },
+					"generated": { "line": 1, "column": 1598 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 104, "column": 5 },
+					"generated": { "line": 1, "column": 1603 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 104, "column": 5 },
+					"generated": { "line": 1, "column": 1622 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 106, "column": 6 },
+					"generated": { "line": 1, "column": 1625 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 107, "column": 6 },
+					"generated": { "line": 1, "column": 1629 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 107, "column": 11 },
+					"generated": { "line": 1, "column": 1631 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 108, "column": 5 },
+					"generated": { "line": 1, "column": 1645 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 108, "column": 5 },
+					"generated": { "line": 1, "column": 1650 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 108, "column": 5 },
+					"generated": { "line": 1, "column": 1675 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 1678 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 1683 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 1696 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 114, "column": 12 },
+					"generated": { "line": 1, "column": 1699 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 114, "column": 12 },
+					"generated": { "line": 1, "column": 1701 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 114, "column": 12 },
+					"generated": { "line": 1, "column": 1711 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 114, "column": 34 },
+					"generated": { "line": 1, "column": 1734 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 116, "column": 8 },
+					"generated": { "line": 1, "column": 1745 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 116, "column": 8 },
+					"generated": { "line": 1, "column": 1749 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 116, "column": 21 },
+					"generated": { "line": 1, "column": 1751 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 116, "column": 29 },
+					"generated": { "line": 1, "column": 1756 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 121, "column": 3 },
+					"generated": { "line": 1, "column": 1769 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 117, "column": 4 },
+					"generated": { "line": 1, "column": 1776 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 117, "column": 4 },
+					"generated": { "line": 1, "column": 1781 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 117, "column": 10 },
+					"generated": { "line": 1, "column": 1794 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 118, "column": 4 },
+					"generated": { "line": 1, "column": 1799 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 118, "column": 9 },
+					"generated": { "line": 1, "column": 1801 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 118, "column": 21 },
+					"generated": { "line": 1, "column": 1811 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 118, "column": 37 },
+					"generated": { "line": 1, "column": 1834 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 118, "column": 37 },
+					"generated": { "line": 1, "column": 1839 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 120, "column": 4 },
+					"generated": { "line": 1, "column": 1845 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 120, "column": 4 },
+					"generated": { "line": 1, "column": 1850 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 120, "column": 16 },
+					"generated": { "line": 1, "column": 1863 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 121, "column": 3 },
+					"generated": { "line": 1, "column": 1865 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 124, "column": 9 },
+					"generated": { "line": 1, "column": 1871 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 124, "column": 9 },
+					"generated": { "line": 1, "column": 1873 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 124, "column": 29 },
+					"generated": { "line": 1, "column": 1883 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 124, "column": 39 },
+					"generated": { "line": 1, "column": 1902 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 126, "column": 8 },
+					"generated": { "line": 1, "column": 1913 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 126, "column": 8 },
+					"generated": { "line": 1, "column": 1917 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 125, "column": 8 },
+					"generated": { "line": 1, "column": 1919 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 125, "column": 8 },
+					"generated": { "line": 1, "column": 1924 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 125, "column": 16 },
+					"generated": { "line": 1, "column": 1938 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 125, "column": 16 },
+					"generated": { "line": 1, "column": 1942 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 125, "column": 16 },
+					"generated": { "line": 1, "column": 1944 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 127, "column": 14 },
+					"generated": { "line": 1, "column": 1952 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 129, "column": 5 },
+					"generated": { "line": 1, "column": 1956 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 129, "column": 5 },
+					"generated": { "line": 1, "column": 1959 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 128, "column": 16 },
+					"generated": { "line": 1, "column": 1961 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 128, "column": 25 },
+					"generated": { "line": 1, "column": 1966 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 129, "column": 5 },
+					"generated": { "line": 1, "column": 1976 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 129, "column": 5 },
+					"generated": { "line": 1, "column": 1981 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 130, "column": 6 },
+					"generated": { "line": 1, "column": 1996 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 130, "column": 6 },
+					"generated": { "line": 1, "column": 2002 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2005 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2012 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2014 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2024 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2033 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 131, "column": 5 },
+					"generated": { "line": 1, "column": 2038 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 133, "column": 9 },
+					"generated": { "line": 1, "column": 2044 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 133, "column": 9 },
+					"generated": { "line": 1, "column": 2049 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 133, "column": 9 },
+					"generated": { "line": 1, "column": 2057 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2059 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2064 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2085 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2087 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2089 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2105 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2107 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2111 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2113 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 134, "column": 3 },
+					"generated": { "line": 1, "column": 2135 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 2143 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 2145 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 2146 }
+				},
+				{
+					"source": "../../../src/internal/operators/repeatWhen.ts",
+					"name": null,
+					"original": { "line": 58, "column": 41 },
+					"generated": { "line": 1, "column": 2148 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/repeatWhen.ts": "import { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { Observable } from '../Observable';\nimport { Subject } from '../Subject';\nimport { Subscription } from '../Subscription';\n\nimport { MonoTypeOperatorFunction, TeardownLogic } from '../types';\nimport { SimpleOuterSubscriber, innerSubscribe, SimpleInnerSubscriber } from '../innerSubscribe';\n\n/**\n * Returns an Observable that mirrors the source Observable with the exception of a `complete`. If the source\n * Observable calls `complete`, this method will emit to the Observable returned from `notifier`. If that Observable\n * calls `complete` or `error`, then this method will call `complete` or `error` on the child subscription. Otherwise\n * this method will resubscribe to the source Observable.\n *\n * ![](repeatWhen.png)\n *\n * ## Example\n * Repeat a message stream on click\n * ```ts\n * import { of, fromEvent } from 'rxjs';\n * import { repeatWhen } from 'rxjs/operators';\n *\n * const source = of('Repeat message');\n * const documentClick$ = fromEvent(document, 'click');\n *\n * source.pipe(repeatWhen(() => documentClick$)\n * ).subscribe(data => console.log(data))\n * ```\n * @see {@link repeat}\n * @see {@link retry}\n * @see {@link retryWhen}\n *\n * @param {function(notifications: Observable): Observable} notifier - Receives an Observable of notifications with\n * which a user can `complete` or `error`, aborting the repetition.\n * @return {Observable} The source Observable modified with repeat logic.\n * @method repeatWhen\n * @owner Observable\n */\nexport function repeatWhen<T>(notifier: (notifications: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T> {\n  return (source: Observable<T>) => source.lift(new RepeatWhenOperator(notifier));\n}\n\nclass RepeatWhenOperator<T> implements Operator<T, T> {\n  constructor(protected notifier: (notifications: Observable<any>) => Observable<any>) {\n  }\n\n  call(subscriber: Subscriber<T>, source: any): TeardownLogic {\n    return source.subscribe(new RepeatWhenSubscriber(subscriber, this.notifier, source));\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass RepeatWhenSubscriber<T, R> extends SimpleOuterSubscriber<T, R> {\n\n  private notifications?: Subject<any>;\n  private retries?: Observable<any>;\n  private retriesSubscription?: Subscription;\n  private sourceIsBeingSubscribedTo: boolean = true;\n\n  constructor(destination: Subscriber<R>,\n              private notifier: (notifications: Observable<any>) => Observable<any>,\n              private source: Observable<T>) {\n    super(destination);\n  }\n\n  notifyNext(): void {\n    this.sourceIsBeingSubscribedTo = true;\n    this.source.subscribe(this);\n  }\n\n  notifyComplete(): void {\n    if (this.sourceIsBeingSubscribedTo === false) {\n      return super.complete();\n    }\n  }\n\n  complete() {\n    this.sourceIsBeingSubscribedTo = false;\n\n    if (!this.isStopped) {\n      if (!this.retries) {\n        this.subscribeToRetries();\n      }\n      if (!this.retriesSubscription || this.retriesSubscription.closed) {\n        return super.complete();\n      }\n\n      this._unsubscribeAndRecycle();\n      this.notifications!.next(undefined);\n    }\n  }\n\n  /** @deprecated This is an internal implementation detail, do not use. */\n  _unsubscribe() {\n    const { notifications, retriesSubscription } = this;\n    if (notifications) {\n      notifications.unsubscribe();\n      this.notifications = undefined;\n    }\n    if (retriesSubscription) {\n      retriesSubscription.unsubscribe();\n      this.retriesSubscription = undefined;\n    }\n    this.retries = undefined;\n  }\n\n  /** @deprecated This is an internal implementation detail, do not use. */\n  _unsubscribeAndRecycle(): Subscriber<T> {\n    const { _unsubscribe } = this;\n\n    this._unsubscribe = null!;\n    super._unsubscribeAndRecycle();\n    this._unsubscribe = _unsubscribe;\n\n    return this;\n  }\n\n  private subscribeToRetries() {\n    this.notifications = new Subject();\n    let retries;\n    try {\n      const { notifier } = this;\n      retries = notifier(this.notifications);\n    } catch (e) {\n      return super.complete();\n    }\n    this.retries = retries;\n    this.retriesSubscription = innerSubscribe(retries, new SimpleInnerSubscriber(this));\n  }\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "c76369e7fe78ee09f907efe5cb607175",
+	"cacheData": { "env": {} }
+}

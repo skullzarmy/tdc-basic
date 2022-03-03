@@ -1,0 +1,229 @@
+{
+	"id": "main.ts",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/tsconfig.json",
+			"includedInParent": true,
+			"mtime": 1645829368581
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "./app",
+			"loc": { "line": 3, "column": 20 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/main.ts",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/app.ts"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar app_1 = require(\"./app\");\n\nnew app_1.App().initUI();\nwindow.setInterval(function () {\n  new app_1.App().initUI();\n}, 30000);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 4 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 9 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 12 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 19 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 20 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 27 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 7, "column": 28 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 9, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 4 },
+					"generated": { "line": 9, "column": 4 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 4 },
+					"generated": { "line": 9, "column": 9 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 4 },
+					"generated": { "line": 9, "column": 10 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 9, "column": 13 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 10 },
+					"generated": { "line": 9, "column": 16 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 9, "column": 22 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 10, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 6 },
+					"generated": { "line": 10, "column": 6 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 7 },
+					"generated": { "line": 10, "column": 7 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 10, "column": 18 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 19 },
+					"generated": { "line": 10, "column": 19 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 19 },
+					"generated": { "line": 10, "column": 31 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 4 },
+					"generated": { "line": 11, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 8 },
+					"generated": { "line": 11, "column": 6 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 8 },
+					"generated": { "line": 11, "column": 11 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 8 },
+					"generated": { "line": 11, "column": 12 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 4 },
+					"generated": { "line": 11, "column": 15 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 14 },
+					"generated": { "line": 11, "column": 18 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 4, "column": 4 },
+					"generated": { "line": 11, "column": 24 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 5, "column": 1 },
+					"generated": { "line": 12, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 12, "column": 1 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 5, "column": 3 },
+					"generated": { "line": 12, "column": 3 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 12, "column": 8 }
+				}
+			],
+			"sources": {
+				"main.ts": "import { App } from \"./app\";\nnew App().initUI();\nwindow.setInterval(function () {\n    new App().initUI();\n}, 30000);\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "6b2cf9b47b710881482068700854f888",
+	"cacheData": { "env": {} }
+}

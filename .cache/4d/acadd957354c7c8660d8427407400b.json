@@ -1,0 +1,3749 @@
+{
+	"id": "Okss",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786829
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/windowTime.ts",
+			"includedInParent": true,
+			"mtime": 1645829787690
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subject",
+			"loc": { "line": 3, "column": 24 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subject.js"
+		},
+		{
+			"name": "../scheduler/async",
+			"loc": { "line": 4, "column": 22 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/scheduler/async.js"
+		},
+		{
+			"name": "../Subscriber",
+			"loc": { "line": 5, "column": 27 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subscriber.js"
+		},
+		{
+			"name": "../util/isNumeric",
+			"loc": { "line": 6, "column": 26 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/util/isNumeric.js"
+		},
+		{
+			"name": "../util/isScheduler",
+			"loc": { "line": 7, "column": 28 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowTime.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/util/isScheduler.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.windowTime=c;var e=u(require(\"tslib\")),n=require(\"../Subject\"),i=require(\"../scheduler/async\"),t=require(\"../Subscriber\"),r=require(\"../util/isNumeric\"),o=require(\"../util/isScheduler\");function s(){if(\"function\"!=typeof WeakMap)return null;var e=new WeakMap;return s=function(){return e},e}function u(e){if(e&&e.__esModule)return e;var n=s();if(n&&n.has(e))return n.get(e);var i={};if(null!=e){var t=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var r in e)if(Object.prototype.hasOwnProperty.call(e,r)){var o=t?Object.getOwnPropertyDescriptor(e,r):null;o&&(o.get||o.set)?Object.defineProperty(i,r,o):i[r]=e[r]}}return i.default=e,n&&n.set(e,i),i}function c(e){var n=i.async,t=null,s=Number.POSITIVE_INFINITY;return(0,o.isScheduler)(arguments[3])&&(n=arguments[3]),(0,o.isScheduler)(arguments[2])?n=arguments[2]:(0,r.isNumeric)(arguments[2])&&(s=Number(arguments[2])),(0,o.isScheduler)(arguments[1])?n=arguments[1]:(0,r.isNumeric)(arguments[1])&&(t=Number(arguments[1])),function(i){return i.lift(new d(e,t,s,n))}}var d=function(){function e(e,n,i,t){this.windowTimeSpan=e,this.windowCreationInterval=n,this.maxWindowSize=i,this.scheduler=t}return e.prototype.call=function(e,n){return n.subscribe(new l(e,this.windowTimeSpan,this.windowCreationInterval,this.maxWindowSize,this.scheduler))},e}(),a=function(n){function i(){var e=null!==n&&n.apply(this,arguments)||this;return e._numberOfNextedValues=0,e}return e.__extends(i,n),i.prototype.next=function(e){this._numberOfNextedValues++,n.prototype.next.call(this,e)},Object.defineProperty(i.prototype,\"numberOfNextedValues\",{get:function(){return this._numberOfNextedValues},enumerable:!0,configurable:!0}),i}(n.Subject),l=function(n){function i(e,i,t,r,o){var s=n.call(this,e)||this;s.destination=e,s.windowTimeSpan=i,s.windowCreationInterval=t,s.maxWindowSize=r,s.scheduler=o,s.windows=[];var u=s.openWindow();if(null!==t&&t>=0){var c={subscriber:s,window:u,context:null},d={windowTimeSpan:i,windowCreationInterval:t,subscriber:s,scheduler:o};s.add(o.schedule(h,i,c)),s.add(o.schedule(p,t,d))}else{var a={subscriber:s,window:u,windowTimeSpan:i};s.add(o.schedule(w,i,a))}return s}return e.__extends(i,n),i.prototype._next=function(e){for(var n=this.windows,i=n.length,t=0;t<i;t++){var r=n[t];r.closed||(r.next(e),r.numberOfNextedValues>=this.maxWindowSize&&this.closeWindow(r))}},i.prototype._error=function(e){for(var n=this.windows;n.length>0;)n.shift().error(e);this.destination.error(e)},i.prototype._complete=function(){for(var e=this.windows;e.length>0;){var n=e.shift();n.closed||n.complete()}this.destination.complete()},i.prototype.openWindow=function(){var e=new a;return this.windows.push(e),this.destination.next(e),e},i.prototype.closeWindow=function(e){e.complete();var n=this.windows;n.splice(n.indexOf(e),1)},i}(t.Subscriber);function w(e){var n=e.subscriber,i=e.windowTimeSpan,t=e.window;t&&n.closeWindow(t),e.window=n.openWindow(),this.schedule(e,i)}function p(e){var n=e.windowTimeSpan,i=e.subscriber,t=e.scheduler,r=e.windowCreationInterval,o=i.openWindow(),s={action:this,subscription:null},u={subscriber:i,window:o,context:s};s.subscription=t.schedule(h,n,u),this.add(s.subscription),this.schedule(e,r)}function h(e){var n=e.subscriber,i=e.window,t=e.context;t&&t.action&&t.subscription&&t.action.remove(t.subscription),n.closeWindow(i)}"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 87 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 89 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 93 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 95 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 97 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 105 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 115 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 117 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 125 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 139 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 141 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 149 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 171 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 173 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 1, "column": 181 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 198 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 200 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 208 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 103, "column": 0 },
+					"generated": { "line": 1, "column": 229 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 103, "column": 0 },
+					"generated": { "line": 1, "column": 231 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 103, "column": 0 },
+					"generated": { "line": 1, "column": 239 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 262 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 271 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 275 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 278 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 297 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 305 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 312 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 317 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 321 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 323 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 327 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 335 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 342 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 344 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 355 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 362 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 365 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 367 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 376 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 378 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 381 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 384 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 387 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 389 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 400 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 407 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 409 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 413 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 415 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 419 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 422 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 425 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 427 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 431 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 434 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 441 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 443 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 447 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 450 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 454 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 456 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 459 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 462 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 468 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 470 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 471 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 475 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 477 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 484 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 500 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 507 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 532 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 536 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 540 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 545 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 547 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 550 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 557 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 567 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 582 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 587 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 589 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 592 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 593 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 597 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 599 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 601 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 608 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 633 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 635 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 638 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 643 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 647 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 649 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 654 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 656 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 661 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 668 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 683 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 685 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 687 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 690 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 692 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 695 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 697 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 701 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 708 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 710 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 718 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 720 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 723 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 725 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 729 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 731 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 734 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 104, "column": 2 },
+					"generated": { "line": 1, "column": 736 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 104, "column": 6 },
+					"generated": { "line": 1, "column": 745 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 104, "column": 39 },
+					"generated": { "line": 1, "column": 747 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 105, "column": 6 },
+					"generated": { "line": 1, "column": 750 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 105, "column": 6 },
+					"generated": { "line": 1, "column": 754 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 105, "column": 6 },
+					"generated": { "line": 1, "column": 756 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 105, "column": 2 },
+					"generated": { "line": 1, "column": 758 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 106, "column": 6 },
+					"generated": { "line": 1, "column": 764 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 106, "column": 37 },
+					"generated": { "line": 1, "column": 766 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 108, "column": 6 },
+					"generated": { "line": 1, "column": 771 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 108, "column": 18 },
+					"generated": { "line": 1, "column": 773 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 108, "column": 29 },
+					"generated": { "line": 1, "column": 780 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 125, "column": 4 },
+					"generated": { "line": 1, "column": 798 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 109, "column": 4 },
+					"generated": { "line": 1, "column": 805 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 109, "column": 16 },
+					"generated": { "line": 1, "column": 807 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 109, "column": 16 },
+					"generated": { "line": 1, "column": 809 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 109, "column": 16 },
+					"generated": { "line": 1, "column": 822 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 109, "column": 26 },
+					"generated": { "line": 1, "column": 832 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 838 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 840 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 110, "column": 3 },
+					"generated": { "line": 1, "column": 850 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 113, "column": 4 },
+					"generated": { "line": 1, "column": 855 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 113, "column": 16 },
+					"generated": { "line": 1, "column": 857 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 113, "column": 16 },
+					"generated": { "line": 1, "column": 859 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 113, "column": 16 },
+					"generated": { "line": 1, "column": 872 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 113, "column": 26 },
+					"generated": { "line": 1, "column": 882 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 114, "column": 3 },
+					"generated": { "line": 1, "column": 886 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 114, "column": 3 },
+					"generated": { "line": 1, "column": 888 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 114, "column": 3 },
+					"generated": { "line": 1, "column": 898 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 115, "column": 4 },
+					"generated": { "line": 1, "column": 902 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 115, "column": 17 },
+					"generated": { "line": 1, "column": 904 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 115, "column": 17 },
+					"generated": { "line": 1, "column": 906 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 115, "column": 17 },
+					"generated": { "line": 1, "column": 917 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 115, "column": 27 },
+					"generated": { "line": 1, "column": 927 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 116, "column": 3 },
+					"generated": { "line": 1, "column": 933 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 116, "column": 3 },
+					"generated": { "line": 1, "column": 935 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 116, "column": 3 },
+					"generated": { "line": 1, "column": 942 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 116, "column": 3 },
+					"generated": { "line": 1, "column": 952 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 119, "column": 4 },
+					"generated": { "line": 1, "column": 958 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 119, "column": 16 },
+					"generated": { "line": 1, "column": 960 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 119, "column": 16 },
+					"generated": { "line": 1, "column": 962 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 119, "column": 16 },
+					"generated": { "line": 1, "column": 975 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 119, "column": 26 },
+					"generated": { "line": 1, "column": 985 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 120, "column": 3 },
+					"generated": { "line": 1, "column": 989 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 120, "column": 3 },
+					"generated": { "line": 1, "column": 991 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 120, "column": 3 },
+					"generated": { "line": 1, "column": 1001 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 121, "column": 4 },
+					"generated": { "line": 1, "column": 1005 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 121, "column": 4 },
+					"generated": { "line": 1, "column": 1007 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 121, "column": 4 },
+					"generated": { "line": 1, "column": 1009 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 121, "column": 4 },
+					"generated": { "line": 1, "column": 1020 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 121, "column": 29 },
+					"generated": { "line": 1, "column": 1030 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 122, "column": 3 },
+					"generated": { "line": 1, "column": 1036 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 122, "column": 3 },
+					"generated": { "line": 1, "column": 1038 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 122, "column": 3 },
+					"generated": { "line": 1, "column": 1045 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 122, "column": 3 },
+					"generated": { "line": 1, "column": 1055 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 125, "column": 4 },
+					"generated": { "line": 1, "column": 1060 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 125, "column": 27 },
+					"generated": { "line": 1, "column": 1069 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1072 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1079 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1081 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1086 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1090 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1092 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1094 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1096 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 126, "column": 4 },
+					"generated": { "line": 1, "column": 1098 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 2 },
+					"generated": { "line": 1, "column": 1103 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 2 },
+					"generated": { "line": 1, "column": 1107 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 22 },
+					"generated": { "line": 1, "column": 1109 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 22 },
+					"generated": { "line": 1, "column": 1120 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 22 },
+					"generated": { "line": 1, "column": 1129 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 22 },
+					"generated": { "line": 1, "column": 1131 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 44 },
+					"generated": { "line": 1, "column": 1133 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 44 },
+					"generated": { "line": 1, "column": 1135 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 44 },
+					"generated": { "line": 1, "column": 1137 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 132, "column": 22 },
+					"generated": { "line": 1, "column": 1140 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 132, "column": 22 },
+					"generated": { "line": 1, "column": 1145 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 132, "column": 22 },
+					"generated": { "line": 1, "column": 1160 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 133, "column": 22 },
+					"generated": { "line": 1, "column": 1162 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 133, "column": 22 },
+					"generated": { "line": 1, "column": 1167 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 133, "column": 22 },
+					"generated": { "line": 1, "column": 1190 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 134, "column": 22 },
+					"generated": { "line": 1, "column": 1192 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 134, "column": 22 },
+					"generated": { "line": 1, "column": 1197 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 134, "column": 22 },
+					"generated": { "line": 1, "column": 1211 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 135, "column": 3 },
+					"generated": { "line": 1, "column": 1213 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 135, "column": 3 },
+					"generated": { "line": 1, "column": 1218 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 135, "column": 3 },
+					"generated": { "line": 1, "column": 1228 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 142, "column": 1 },
+					"generated": { "line": 1, "column": 1230 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 138, "column": 18 },
+					"generated": { "line": 1, "column": 1237 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 138, "column": 18 },
+					"generated": { "line": 1, "column": 1239 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 138, "column": 28 },
+					"generated": { "line": 1, "column": 1249 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 138, "column": 32 },
+					"generated": { "line": 1, "column": 1254 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 138, "column": 32 },
+					"generated": { "line": 1, "column": 1263 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 139, "column": 6 },
+					"generated": { "line": 1, "column": 1265 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1268 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1275 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1277 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1287 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1291 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1293 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1295 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1300 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1315 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1320 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1343 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1348 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1362 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 141, "column": 3 },
+					"generated": { "line": 1, "column": 1367 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 142, "column": 1 },
+					"generated": { "line": 1, "column": 1380 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 131, "column": 22 },
+					"generated": { "line": 1, "column": 1382 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 32 },
+					"generated": { "line": 1, "column": 1385 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 32 },
+					"generated": { "line": 1, "column": 1387 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 42 },
+					"generated": { "line": 1, "column": 1396 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1399 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1408 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 10 },
+					"generated": { "line": 1, "column": 1412 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 10 },
+					"generated": { "line": 1, "column": 1416 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 10 },
+					"generated": { "line": 1, "column": 1418 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 10 },
+					"generated": { "line": 1, "column": 1425 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 43 },
+					"generated": { "line": 1, "column": 1428 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 44 },
+					"generated": { "line": 1, "column": 1430 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 44 },
+					"generated": { "line": 1, "column": 1436 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 44 },
+					"generated": { "line": 1, "column": 1441 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 169, "column": 44 },
+					"generated": { "line": 1, "column": 1453 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 179, "column": 1 },
+					"generated": { "line": 1, "column": 1458 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 1465 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 1467 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 1489 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 179, "column": 1 },
+					"generated": { "line": 1, "column": 1491 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 39 },
+					"generated": { "line": 1, "column": 1493 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1500 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1502 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1512 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 0 },
+					"generated": { "line": 1, "column": 1514 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 172, "column": 9 },
+					"generated": { "line": 1, "column": 1517 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 172, "column": 9 },
+					"generated": { "line": 1, "column": 1519 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 172, "column": 9 },
+					"generated": { "line": 1, "column": 1529 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 172, "column": 32 },
+					"generated": { "line": 1, "column": 1534 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 172, "column": 33 },
+					"generated": { "line": 1, "column": 1543 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 173, "column": 4 },
+					"generated": { "line": 1, "column": 1546 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 173, "column": 4 },
+					"generated": { "line": 1, "column": 1551 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1575 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1577 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1587 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1592 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1597 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 174, "column": 3 },
+					"generated": { "line": 1, "column": 1602 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1606 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1613 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1628 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1630 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1640 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1663 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 177, "column": 4 },
+					"generated": { "line": 1, "column": 1664 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 177, "column": 4 },
+					"generated": { "line": 1, "column": 1668 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 178, "column": 3 },
+					"generated": { "line": 1, "column": 1679 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 178, "column": 3 },
+					"generated": { "line": 1, "column": 1686 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 178, "column": 3 },
+					"generated": { "line": 1, "column": 1691 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1714 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 176, "column": 2 },
+					"generated": { "line": 1, "column": 1726 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 178, "column": 3 },
+					"generated": { "line": 1, "column": 1728 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 178, "column": 3 },
+					"generated": { "line": 1, "column": 1742 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 39 },
+					"generated": { "line": 1, "column": 1746 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 32 },
+					"generated": { "line": 1, "column": 1748 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 0 },
+					"generated": { "line": 1, "column": 1749 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 168, "column": 32 },
+					"generated": { "line": 1, "column": 1751 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 1760 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 1762 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 51 },
+					"generated": { "line": 1, "column": 1771 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 2 },
+					"generated": { "line": 1, "column": 1774 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 2 },
+					"generated": { "line": 1, "column": 1783 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 194, "column": 4 },
+					"generated": { "line": 1, "column": 1785 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 194, "column": 10 },
+					"generated": { "line": 1, "column": 1787 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 206, "column": 3 },
+					"generated": { "line": 1, "column": 1789 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 206, "column": 3 },
+					"generated": { "line": 1, "column": 1791 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 206, "column": 3 },
+					"generated": { "line": 1, "column": 1793 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 1796 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 1800 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 1802 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 35 },
+					"generated": { "line": 1, "column": 1804 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 1809 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 1814 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 62 },
+					"generated": { "line": 1, "column": 1818 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 190, "column": 22 },
+					"generated": { "line": 1, "column": 1823 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 190, "column": 22 },
+					"generated": { "line": 1, "column": 1825 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 190, "column": 36 },
+					"generated": { "line": 1, "column": 1837 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 191, "column": 22 },
+					"generated": { "line": 1, "column": 1839 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 191, "column": 22 },
+					"generated": { "line": 1, "column": 1841 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 191, "column": 22 },
+					"generated": { "line": 1, "column": 1856 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 192, "column": 22 },
+					"generated": { "line": 1, "column": 1858 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 192, "column": 22 },
+					"generated": { "line": 1, "column": 1860 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 192, "column": 22 },
+					"generated": { "line": 1, "column": 1883 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 193, "column": 22 },
+					"generated": { "line": 1, "column": 1885 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 193, "column": 22 },
+					"generated": { "line": 1, "column": 1887 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 193, "column": 22 },
+					"generated": { "line": 1, "column": 1901 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 187, "column": 10 },
+					"generated": { "line": 1, "column": 1903 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 187, "column": 10 },
+					"generated": { "line": 1, "column": 1905 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 187, "column": 43 },
+					"generated": { "line": 1, "column": 1915 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 196, "column": 4 },
+					"generated": { "line": 1, "column": 1917 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 196, "column": 10 },
+					"generated": { "line": 1, "column": 1919 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 196, "column": 19 },
+					"generated": { "line": 1, "column": 1927 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 197, "column": 8 },
+					"generated": { "line": 1, "column": 1930 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 197, "column": 8 },
+					"generated": { "line": 1, "column": 1934 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 197, "column": 8 },
+					"generated": { "line": 1, "column": 1936 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 197, "column": 8 },
+					"generated": { "line": 1, "column": 1938 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 6 },
+					"generated": { "line": 1, "column": 1951 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 42 },
+					"generated": { "line": 1, "column": 1954 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 6 },
+					"generated": { "line": 1, "column": 1961 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 54 },
+					"generated": { "line": 1, "column": 1964 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 75 },
+					"generated": { "line": 1, "column": 1967 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 198, "column": 82 },
+					"generated": { "line": 1, "column": 1969 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 12 },
+					"generated": { "line": 1, "column": 1970 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 12 },
+					"generated": { "line": 1, "column": 1974 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 25 },
+					"generated": { "line": 1, "column": 1976 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 25 },
+					"generated": { "line": 1, "column": 1977 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 48 },
+					"generated": { "line": 1, "column": 1988 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 62 },
+					"generated": { "line": 1, "column": 1990 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 62 },
+					"generated": { "line": 1, "column": 1997 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 64 },
+					"generated": { "line": 1, "column": 1999 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 199, "column": 64 },
+					"generated": { "line": 1, "column": 2007 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 6 },
+					"generated": { "line": 1, "column": 2013 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 25 },
+					"generated": { "line": 1, "column": 2015 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 25 },
+					"generated": { "line": 1, "column": 2016 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 49 },
+					"generated": { "line": 1, "column": 2031 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 70 },
+					"generated": { "line": 1, "column": 2033 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 98 },
+					"generated": { "line": 1, "column": 2056 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 99 },
+					"generated": { "line": 1, "column": 2058 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 99 },
+					"generated": { "line": 1, "column": 2069 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 99 },
+					"generated": { "line": 1, "column": 2071 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 200, "column": 99 },
+					"generated": { "line": 1, "column": 2081 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 6 },
+					"generated": { "line": 1, "column": 2084 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 11 },
+					"generated": { "line": 1, "column": 2086 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 15 },
+					"generated": { "line": 1, "column": 2090 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 25 },
+					"generated": { "line": 1, "column": 2092 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 52 },
+					"generated": { "line": 1, "column": 2101 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 52 },
+					"generated": { "line": 1, "column": 2103 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 201, "column": 76 },
+					"generated": { "line": 1, "column": 2105 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2109 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2111 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2115 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2117 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2126 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2128 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 202, "column": 5 },
+					"generated": { "line": 1, "column": 2130 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 203, "column": 6 },
+					"generated": { "line": 1, "column": 2138 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 6 },
+					"generated": { "line": 1, "column": 2139 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 6 },
+					"generated": { "line": 1, "column": 2143 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 25 },
+					"generated": { "line": 1, "column": 2145 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 25 },
+					"generated": { "line": 1, "column": 2146 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 56 },
+					"generated": { "line": 1, "column": 2157 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 56 },
+					"generated": { "line": 1, "column": 2159 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 56 },
+					"generated": { "line": 1, "column": 2166 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 84 },
+					"generated": { "line": 1, "column": 2168 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 204, "column": 100 },
+					"generated": { "line": 1, "column": 2183 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2186 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2188 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2192 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2194 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2203 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2205 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 205, "column": 5 },
+					"generated": { "line": 1, "column": 2207 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 206, "column": 3 },
+					"generated": { "line": 1, "column": 2211 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 206, "column": 3 },
+					"generated": { "line": 1, "column": 2218 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 2220 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 2 },
+					"generated": { "line": 1, "column": 2227 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 2 },
+					"generated": { "line": 1, "column": 2229 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 2 },
+					"generated": { "line": 1, "column": 2239 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 189, "column": 24 },
+					"generated": { "line": 1, "column": 2241 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 209, "column": 20 },
+					"generated": { "line": 1, "column": 2244 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 209, "column": 20 },
+					"generated": { "line": 1, "column": 2246 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 209, "column": 33 },
+					"generated": { "line": 1, "column": 2256 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 209, "column": 33 },
+					"generated": { "line": 1, "column": 2262 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 209, "column": 33 },
+					"generated": { "line": 1, "column": 2271 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 6 },
+					"generated": { "line": 1, "column": 2274 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 210, "column": 10 },
+					"generated": { "line": 1, "column": 2278 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 210, "column": 10 },
+					"generated": { "line": 1, "column": 2282 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 210, "column": 16 },
+					"generated": { "line": 1, "column": 2284 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 210, "column": 24 },
+					"generated": { "line": 1, "column": 2289 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 211, "column": 4 },
+					"generated": { "line": 1, "column": 2297 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 211, "column": 14 },
+					"generated": { "line": 1, "column": 2299 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 211, "column": 21 },
+					"generated": { "line": 1, "column": 2301 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 12 },
+					"generated": { "line": 1, "column": 2308 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 12 },
+					"generated": { "line": 1, "column": 2310 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 18 },
+					"generated": { "line": 1, "column": 2312 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 21 },
+					"generated": { "line": 1, "column": 2314 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 21 },
+					"generated": { "line": 1, "column": 2316 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 212, "column": 32 },
+					"generated": { "line": 1, "column": 2320 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 213, "column": 10 },
+					"generated": { "line": 1, "column": 2321 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 213, "column": 10 },
+					"generated": { "line": 1, "column": 2325 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 213, "column": 18 },
+					"generated": { "line": 1, "column": 2327 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 213, "column": 26 },
+					"generated": { "line": 1, "column": 2329 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 214, "column": 8 },
+					"generated": { "line": 1, "column": 2332 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 214, "column": 15 },
+					"generated": { "line": 1, "column": 2334 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 215, "column": 8 },
+					"generated": { "line": 1, "column": 2343 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 215, "column": 12 },
+					"generated": { "line": 1, "column": 2345 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 215, "column": 19 },
+					"generated": { "line": 1, "column": 2350 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 216, "column": 10 },
+					"generated": { "line": 1, "column": 2353 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 216, "column": 15 },
+					"generated": { "line": 1, "column": 2355 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 216, "column": 35 },
+					"generated": { "line": 1, "column": 2377 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 216, "column": 35 },
+					"generated": { "line": 1, "column": 2382 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 217, "column": 9 },
+					"generated": { "line": 1, "column": 2397 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 217, "column": 9 },
+					"generated": { "line": 1, "column": 2402 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 217, "column": 9 },
+					"generated": { "line": 1, "column": 2414 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 223, "column": 20 },
+					"generated": { "line": 1, "column": 2420 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 223, "column": 20 },
+					"generated": { "line": 1, "column": 2422 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 223, "column": 33 },
+					"generated": { "line": 1, "column": 2432 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 223, "column": 33 },
+					"generated": { "line": 1, "column": 2439 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 223, "column": 33 },
+					"generated": { "line": 1, "column": 2448 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 225, "column": 6 },
+					"generated": { "line": 1, "column": 2451 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 224, "column": 4 },
+					"generated": { "line": 1, "column": 2455 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 224, "column": 4 },
+					"generated": { "line": 1, "column": 2459 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 224, "column": 18 },
+					"generated": { "line": 1, "column": 2461 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 224, "column": 19 },
+					"generated": { "line": 1, "column": 2466 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 225, "column": 6 },
+					"generated": { "line": 1, "column": 2474 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 225, "column": 14 },
+					"generated": { "line": 1, "column": 2476 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 225, "column": 22 },
+					"generated": { "line": 1, "column": 2483 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 226, "column": 5 },
+					"generated": { "line": 1, "column": 2486 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 226, "column": 5 },
+					"generated": { "line": 1, "column": 2488 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 226, "column": 5 },
+					"generated": { "line": 1, "column": 2496 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 226, "column": 5 },
+					"generated": { "line": 1, "column": 2502 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 228, "column": 3 },
+					"generated": { "line": 1, "column": 2505 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 228, "column": 3 },
+					"generated": { "line": 1, "column": 2510 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 228, "column": 3 },
+					"generated": { "line": 1, "column": 2522 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 228, "column": 3 },
+					"generated": { "line": 1, "column": 2528 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 231, "column": 20 },
+					"generated": { "line": 1, "column": 2532 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 231, "column": 20 },
+					"generated": { "line": 1, "column": 2534 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 231, "column": 33 },
+					"generated": { "line": 1, "column": 2544 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 231, "column": 33 },
+					"generated": { "line": 1, "column": 2554 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 233, "column": 6 },
+					"generated": { "line": 1, "column": 2565 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 232, "column": 4 },
+					"generated": { "line": 1, "column": 2569 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 232, "column": 4 },
+					"generated": { "line": 1, "column": 2573 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 232, "column": 18 },
+					"generated": { "line": 1, "column": 2575 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 232, "column": 19 },
+					"generated": { "line": 1, "column": 2580 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 233, "column": 6 },
+					"generated": { "line": 1, "column": 2588 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 233, "column": 12 },
+					"generated": { "line": 1, "column": 2590 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 233, "column": 21 },
+					"generated": { "line": 1, "column": 2597 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 233, "column": 29 },
+					"generated": { "line": 1, "column": 2600 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 234, "column": 10 },
+					"generated": { "line": 1, "column": 2601 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 234, "column": 10 },
+					"generated": { "line": 1, "column": 2605 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 234, "column": 18 },
+					"generated": { "line": 1, "column": 2607 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 234, "column": 26 },
+					"generated": { "line": 1, "column": 2609 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 235, "column": 8 },
+					"generated": { "line": 1, "column": 2617 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 235, "column": 15 },
+					"generated": { "line": 1, "column": 2619 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 236, "column": 7 },
+					"generated": { "line": 1, "column": 2627 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 236, "column": 7 },
+					"generated": { "line": 1, "column": 2629 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 239, "column": 3 },
+					"generated": { "line": 1, "column": 2640 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 239, "column": 3 },
+					"generated": { "line": 1, "column": 2645 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 239, "column": 3 },
+					"generated": { "line": 1, "column": 2657 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 242, "column": 19 },
+					"generated": { "line": 1, "column": 2669 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 242, "column": 23 },
+					"generated": { "line": 1, "column": 2671 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 242, "column": 23 },
+					"generated": { "line": 1, "column": 2681 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 242, "column": 43 },
+					"generated": { "line": 1, "column": 2692 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 243, "column": 8 },
+					"generated": { "line": 1, "column": 2703 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 243, "column": 8 },
+					"generated": { "line": 1, "column": 2707 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 243, "column": 17 },
+					"generated": { "line": 1, "column": 2709 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 243, "column": 21 },
+					"generated": { "line": 1, "column": 2713 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 247, "column": 3 },
+					"generated": { "line": 1, "column": 2715 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 244, "column": 10 },
+					"generated": { "line": 1, "column": 2722 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 244, "column": 10 },
+					"generated": { "line": 1, "column": 2727 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 244, "column": 10 },
+					"generated": { "line": 1, "column": 2735 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 244, "column": 24 },
+					"generated": { "line": 1, "column": 2740 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 245, "column": 21 },
+					"generated": { "line": 1, "column": 2743 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 245, "column": 27 },
+					"generated": { "line": 1, "column": 2748 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 246, "column": 11 },
+					"generated": { "line": 1, "column": 2760 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 246, "column": 18 },
+					"generated": { "line": 1, "column": 2765 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 247, "column": 3 },
+					"generated": { "line": 1, "column": 2768 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 250, "column": 19 },
+					"generated": { "line": 1, "column": 2771 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 250, "column": 21 },
+					"generated": { "line": 1, "column": 2773 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 250, "column": 22 },
+					"generated": { "line": 1, "column": 2783 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 250, "column": 22 },
+					"generated": { "line": 1, "column": 2795 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 250, "column": 22 },
+					"generated": { "line": 1, "column": 2804 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 251, "column": 4 },
+					"generated": { "line": 1, "column": 2807 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 251, "column": 10 },
+					"generated": { "line": 1, "column": 2809 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 252, "column": 4 },
+					"generated": { "line": 1, "column": 2820 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 252, "column": 4 },
+					"generated": { "line": 1, "column": 2824 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 252, "column": 18 },
+					"generated": { "line": 1, "column": 2826 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 252, "column": 19 },
+					"generated": { "line": 1, "column": 2831 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2839 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2841 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2848 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2850 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2858 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 253, "column": 3 },
+					"generated": { "line": 1, "column": 2861 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 2865 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 2867 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 256, "column": 0 },
+					"generated": { "line": 1, "column": 2868 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 186, "column": 38 },
+					"generated": { "line": 1, "column": 2870 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 257, "column": 10 },
+					"generated": { "line": 1, "column": 2882 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 257, "column": 10 },
+					"generated": { "line": 1, "column": 2891 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 257, "column": 10 },
+					"generated": { "line": 1, "column": 2893 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 6 },
+					"generated": { "line": 1, "column": 2896 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 6 },
+					"generated": { "line": 1, "column": 2900 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2902 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2904 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2915 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2917 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2919 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2934 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2936 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 258, "column": 14 },
+					"generated": { "line": 1, "column": 2938 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 259, "column": 4 },
+					"generated": { "line": 1, "column": 2945 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 260, "column": 3 },
+					"generated": { "line": 1, "column": 2948 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 260, "column": 3 },
+					"generated": { "line": 1, "column": 2950 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 260, "column": 3 },
+					"generated": { "line": 1, "column": 2962 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 262, "column": 2 },
+					"generated": { "line": 1, "column": 2965 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 262, "column": 7 },
+					"generated": { "line": 1, "column": 2967 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 262, "column": 16 },
+					"generated": { "line": 1, "column": 2974 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 262, "column": 23 },
+					"generated": { "line": 1, "column": 2976 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 263, "column": 1 },
+					"generated": { "line": 1, "column": 2989 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 263, "column": 1 },
+					"generated": { "line": 1, "column": 2994 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 263, "column": 1 },
+					"generated": { "line": 1, "column": 3003 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 263, "column": 1 },
+					"generated": { "line": 1, "column": 3005 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 266, "column": 10 },
+					"generated": { "line": 1, "column": 3008 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 266, "column": 10 },
+					"generated": { "line": 1, "column": 3017 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 266, "column": 10 },
+					"generated": { "line": 1, "column": 3019 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 8 },
+					"generated": { "line": 1, "column": 3022 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 8 },
+					"generated": { "line": 1, "column": 3026 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 17 },
+					"generated": { "line": 1, "column": 3028 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 28 },
+					"generated": { "line": 1, "column": 3030 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3045 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3047 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3049 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3060 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3062 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3064 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3074 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3076 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 267, "column": 41 },
+					"generated": { "line": 1, "column": 3078 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 268, "column": 8 },
+					"generated": { "line": 1, "column": 3101 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 268, "column": 17 },
+					"generated": { "line": 1, "column": 3103 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 268, "column": 22 },
+					"generated": { "line": 1, "column": 3105 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 270, "column": 8 },
+					"generated": { "line": 1, "column": 3118 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 270, "column": 8 },
+					"generated": { "line": 1, "column": 3120 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 270, "column": 8 },
+					"generated": { "line": 1, "column": 3121 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 269, "column": 13 },
+					"generated": { "line": 1, "column": 3128 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 270, "column": 51 },
+					"generated": { "line": 1, "column": 3133 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 270, "column": 53 },
+					"generated": { "line": 1, "column": 3146 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 2 },
+					"generated": { "line": 1, "column": 3152 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 22 },
+					"generated": { "line": 1, "column": 3154 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 22 },
+					"generated": { "line": 1, "column": 3155 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 35 },
+					"generated": { "line": 1, "column": 3166 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 59 },
+					"generated": { "line": 1, "column": 3168 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 59 },
+					"generated": { "line": 1, "column": 3175 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 78 },
+					"generated": { "line": 1, "column": 3177 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 271, "column": 80 },
+					"generated": { "line": 1, "column": 3185 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 2 },
+					"generated": { "line": 1, "column": 3188 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 9 },
+					"generated": { "line": 1, "column": 3190 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 21 },
+					"generated": { "line": 1, "column": 3203 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 35 },
+					"generated": { "line": 1, "column": 3205 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 35 },
+					"generated": { "line": 1, "column": 3214 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 35 },
+					"generated": { "line": 1, "column": 3216 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 272, "column": 35 },
+					"generated": { "line": 1, "column": 3218 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 269, "column": 13 },
+					"generated": { "line": 1, "column": 3221 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 273, "column": 9 },
+					"generated": { "line": 1, "column": 3226 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 273, "column": 9 },
+					"generated": { "line": 1, "column": 3230 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 273, "column": 18 },
+					"generated": { "line": 1, "column": 3232 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 269, "column": 13 },
+					"generated": { "line": 1, "column": 3246 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 274, "column": 1 },
+					"generated": { "line": 1, "column": 3251 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 274, "column": 1 },
+					"generated": { "line": 1, "column": 3260 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 274, "column": 1 },
+					"generated": { "line": 1, "column": 3262 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 277, "column": 10 },
+					"generated": { "line": 1, "column": 3265 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 277, "column": 10 },
+					"generated": { "line": 1, "column": 3274 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 277, "column": 10 },
+					"generated": { "line": 1, "column": 3276 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 6 },
+					"generated": { "line": 1, "column": 3279 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 6 },
+					"generated": { "line": 1, "column": 3283 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 17 },
+					"generated": { "line": 1, "column": 3285 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 25 },
+					"generated": { "line": 1, "column": 3287 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 35 },
+					"generated": { "line": 1, "column": 3298 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 43 },
+					"generated": { "line": 1, "column": 3300 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 43 },
+					"generated": { "line": 1, "column": 3302 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 57 },
+					"generated": { "line": 1, "column": 3309 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 57 },
+					"generated": { "line": 1, "column": 3311 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 278, "column": 57 },
+					"generated": { "line": 1, "column": 3313 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 279, "column": 4 },
+					"generated": { "line": 1, "column": 3321 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 279, "column": 12 },
+					"generated": { "line": 1, "column": 3324 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 279, "column": 19 },
+					"generated": { "line": 1, "column": 3326 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 279, "column": 33 },
+					"generated": { "line": 1, "column": 3334 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 279, "column": 34 },
+					"generated": { "line": 1, "column": 3336 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 280, "column": 3 },
+					"generated": { "line": 1, "column": 3350 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 280, "column": 3 },
+					"generated": { "line": 1, "column": 3352 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 280, "column": 3 },
+					"generated": { "line": 1, "column": 3359 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 280, "column": 3 },
+					"generated": { "line": 1, "column": 3366 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 280, "column": 3 },
+					"generated": { "line": 1, "column": 3368 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 3382 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 3384 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowTime.ts",
+					"name": null,
+					"original": { "line": 282, "column": 1 },
+					"generated": { "line": 1, "column": 3396 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/windowTime.ts": "import { Subject } from '../Subject';\nimport { Operator } from '../Operator';\nimport { async } from '../scheduler/async';\nimport { Subscriber } from '../Subscriber';\nimport { Observable } from '../Observable';\nimport { Subscription } from '../Subscription';\nimport { isNumeric } from '../util/isNumeric';\nimport { isScheduler } from '../util/isScheduler';\nimport { OperatorFunction, SchedulerLike, SchedulerAction } from '../types';\n\n/**\n * Branch out the source Observable values as a nested Observable periodically\n * in time.\n *\n * <span class=\"informal\">It's like {@link bufferTime}, but emits a nested\n * Observable instead of an array.</span>\n *\n * ![](windowTime.png)\n *\n * Returns an Observable that emits windows of items it collects from the source\n * Observable. The output Observable starts a new window periodically, as\n * determined by the `windowCreationInterval` argument. It emits each window\n * after a fixed timespan, specified by the `windowTimeSpan` argument. When the\n * source Observable completes or encounters an error, the output Observable\n * emits the current window and propagates the notification from the source\n * Observable. If `windowCreationInterval` is not provided, the output\n * Observable starts a new window when the previous window of duration\n * `windowTimeSpan` completes. If `maxWindowCount` is provided, each window\n * will emit at most fixed number of values. Window will complete immediately\n * after emitting last value and next one still will open as specified by\n * `windowTimeSpan` and `windowCreationInterval` arguments.\n *\n * ## Examples\n * In every window of 1 second each, emit at most 2 click events\n * ```ts\n * import { fromEvent } from 'rxjs';\n * import { windowTime, map, mergeAll, take } from 'rxjs/operators';\n *\n * const clicks = fromEvent(document, 'click');\n * const result = clicks.pipe(\n *   windowTime(1000),\n *   map(win => win.pipe(take(2))), // each window has at most 2 emissions\n *   mergeAll(),                    // flatten the Observable-of-Observables\n * );\n * result.subscribe(x => console.log(x));\n * ```\n *\n * Every 5 seconds start a window 1 second long, and emit at most 2 click events per window\n * ```ts\n * import { fromEvent } from 'rxjs';\n * import { windowTime, map, mergeAll, take } from 'rxjs/operators';\n *\n * const clicks = fromEvent(document, 'click');\n * const result = clicks.pipe(\n *   windowTime(1000, 5000),\n *   map(win => win.pipe(take(2))), // each window has at most 2 emissions\n *   mergeAll(),                    // flatten the Observable-of-Observables\n * );\n * result.subscribe(x => console.log(x));\n * ```\n *\n * Same as example above but with maxWindowCount instead of take\n * ```ts\n * import { fromEvent } from 'rxjs';\n * import { windowTime, mergeAll } from 'rxjs/operators';\n *\n * const clicks = fromEvent(document, 'click');\n * const result = clicks.pipe(\n *   windowTime(1000, 5000, 2), // each window has still at most 2 emissions\n *   mergeAll(),                // flatten the Observable-of-Observables\n * );\n * result.subscribe(x => console.log(x));\n * ```\n *\n * @see {@link window}\n * @see {@link windowCount}\n * @see {@link windowToggle}\n * @see {@link windowWhen}\n * @see {@link bufferTime}\n *\n * @param {number} windowTimeSpan The amount of time to fill each window.\n * @param {number} [windowCreationInterval] The interval at which to start new\n * windows.\n * @param {number} [maxWindowSize=Number.POSITIVE_INFINITY] Max number of\n * values each window can emit before completion.\n * @param {SchedulerLike} [scheduler=async] The scheduler on which to schedule the\n * intervals that determine window boundaries.\n * @return {Observable<Observable<T>>} An observable of windows, which in turn\n * are Observables.\n * @method windowTime\n * @owner Observable\n */\nexport function windowTime<T>(windowTimeSpan: number,\n                              scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>;\nexport function windowTime<T>(windowTimeSpan: number,\n                              windowCreationInterval: number,\n                              scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>;\nexport function windowTime<T>(windowTimeSpan: number,\n                              windowCreationInterval: number,\n                              maxWindowSize: number,\n                              scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>;\n\nexport function windowTime<T>(windowTimeSpan: number): OperatorFunction<T, Observable<T>> {\n  let scheduler: SchedulerLike = async;\n  let windowCreationInterval: number = null;\n  let maxWindowSize: number = Number.POSITIVE_INFINITY;\n\n  if (isScheduler(arguments[3])) {\n    scheduler = arguments[3];\n  }\n\n  if (isScheduler(arguments[2])) {\n    scheduler = arguments[2];\n  } else if (isNumeric(arguments[2])) {\n    maxWindowSize = Number(arguments[2]);\n  }\n\n  if (isScheduler(arguments[1])) {\n    scheduler = arguments[1];\n  } else if (isNumeric(arguments[1])) {\n    windowCreationInterval = Number(arguments[1]);\n  }\n\n  return function windowTimeOperatorFunction(source: Observable<T>) {\n    return source.lift(new WindowTimeOperator<T>(windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler));\n  };\n}\n\nclass WindowTimeOperator<T> implements Operator<T, Observable<T>> {\n\n  constructor(private windowTimeSpan: number,\n              private windowCreationInterval: number | null,\n              private maxWindowSize: number,\n              private scheduler: SchedulerLike) {\n  }\n\n  call(subscriber: Subscriber<Observable<T>>, source: any): any {\n    return source.subscribe(new WindowTimeSubscriber(\n      subscriber, this.windowTimeSpan, this.windowCreationInterval, this.maxWindowSize, this.scheduler\n    ));\n  }\n}\n\ninterface CreationState<T> {\n  windowTimeSpan: number;\n  windowCreationInterval: number;\n  subscriber: WindowTimeSubscriber<T>;\n  scheduler: SchedulerLike;\n}\n\ninterface TimeSpanOnlyState<T> {\n    window: CountedSubject<T>;\n    windowTimeSpan: number;\n    subscriber: WindowTimeSubscriber<T>;\n  }\n\ninterface CloseWindowContext<T> {\n  action: SchedulerAction<CreationState<T>>;\n  subscription: Subscription;\n}\n\ninterface CloseState<T> {\n  subscriber: WindowTimeSubscriber<T>;\n  window: CountedSubject<T>;\n  context: CloseWindowContext<T>;\n}\n\nclass CountedSubject<T> extends Subject<T> {\n  private _numberOfNextedValues: number = 0;\n\n  next(value?: T): void {\n    this._numberOfNextedValues++;\n    super.next(value);\n  }\n\n  get numberOfNextedValues(): number {\n    return this._numberOfNextedValues;\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass WindowTimeSubscriber<T> extends Subscriber<T> {\n  private windows: CountedSubject<T>[] = [];\n\n  constructor(protected destination: Subscriber<Observable<T>>,\n              private windowTimeSpan: number,\n              private windowCreationInterval: number | null,\n              private maxWindowSize: number,\n              private scheduler: SchedulerLike) {\n    super(destination);\n\n    const window = this.openWindow();\n    if (windowCreationInterval !== null && windowCreationInterval >= 0) {\n      const closeState: CloseState<T> = { subscriber: this, window, context: <any>null };\n      const creationState: CreationState<T> = { windowTimeSpan, windowCreationInterval, subscriber: this, scheduler };\n      this.add(scheduler.schedule<CloseState<T>>(dispatchWindowClose, windowTimeSpan, closeState));\n      this.add(scheduler.schedule<CreationState<T>>(dispatchWindowCreation, windowCreationInterval, creationState));\n    } else {\n      const timeSpanOnlyState: TimeSpanOnlyState<T> = { subscriber: this, window, windowTimeSpan };\n      this.add(scheduler.schedule<TimeSpanOnlyState<T>>(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));\n    }\n  }\n\n  protected _next(value: T): void {\n    const windows = this.windows;\n    const len = windows.length;\n    for (let i = 0; i < len; i++) {\n      const window = windows[i];\n      if (!window.closed) {\n        window.next(value);\n        if (window.numberOfNextedValues >= this.maxWindowSize) {\n          this.closeWindow(window);\n        }\n      }\n    }\n  }\n\n  protected _error(err: any): void {\n    const windows = this.windows;\n    while (windows.length > 0) {\n      windows.shift().error(err);\n    }\n    this.destination.error(err);\n  }\n\n  protected _complete(): void {\n    const windows = this.windows;\n    while (windows.length > 0) {\n      const window = windows.shift();\n      if (!window.closed) {\n        window.complete();\n      }\n    }\n    this.destination.complete();\n  }\n\n  public openWindow(): CountedSubject<T> {\n    const window = new CountedSubject<T>();\n    this.windows.push(window);\n    const destination = this.destination;\n    destination.next(window);\n    return window;\n  }\n\n  public closeWindow(window: CountedSubject<T>): void {\n    window.complete();\n    const windows = this.windows;\n    windows.splice(windows.indexOf(window), 1);\n  }\n}\n\nfunction dispatchWindowTimeSpanOnly<T>(this: SchedulerAction<TimeSpanOnlyState<T>>, state: TimeSpanOnlyState<T>): void {\n  const { subscriber, windowTimeSpan, window } = state;\n  if (window) {\n    subscriber.closeWindow(window);\n  }\n  state.window = subscriber.openWindow();\n  this.schedule(state, windowTimeSpan);\n}\n\nfunction dispatchWindowCreation<T>(this: SchedulerAction<CreationState<T>>, state: CreationState<T>): void {\n  const { windowTimeSpan, subscriber, scheduler, windowCreationInterval } = state;\n  const window = subscriber.openWindow();\n  const action = this;\n  let context: CloseWindowContext<T> = { action, subscription: <any>null };\n  const timeSpanState: CloseState<T> = { subscriber, window, context };\n  context.subscription = scheduler.schedule<CloseState<T>>(dispatchWindowClose, windowTimeSpan, timeSpanState);\n  action.add(context.subscription);\n  action.schedule(state, windowCreationInterval);\n}\n\nfunction dispatchWindowClose<T>(state: CloseState<T>): void {\n  const { subscriber, window, context } = state;\n  if (context && context.action && context.subscription) {\n    context.action.remove(context.subscription);\n  }\n  subscriber.closeWindow(window);\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "0395d62ff1863b09018a22c10f94bbbc",
+	"cacheData": { "env": {} }
+}

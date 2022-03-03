@@ -1,0 +1,1251 @@
+{
+	"id": "rCwF",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/blakejs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829784006
+		},
+		{
+			"name": "buffer",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/blakejs/util.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/node-libs-browser/node_modules/buffer/index.js"
+		}
+	],
+	"generated": {
+		"js": "var Buffer = require(\"buffer\").Buffer;\nvar e=require(\"buffer\").Buffer;const n=\"Input must be an string, Buffer or Uint8Array\";function t(t){let r;if(t instanceof Uint8Array)r=t;else if(t instanceof e)r=new Uint8Array(t);else{if(\"string\"!=typeof t)throw new Error(n);r=new Uint8Array(e.from(t,\"utf8\"))}return r}function r(e){return Array.prototype.map.call(e,function(e){return(e<16?\"0\":\"\")+e.toString(16)}).join(\"\")}function o(e){return(4294967296+e).toString(16).substring(1)}function i(e,n,t){let r=\"\\n\"+e+\" = \";for(let i=0;i<n.length;i+=2){if(32===t)r+=o(n[i]).toUpperCase(),r+=\" \",r+=o(n[i+1]).toUpperCase();else{if(64!==t)throw new Error(\"Invalid size \"+t);r+=o(n[i+1]).toUpperCase(),r+=o(n[i]).toUpperCase()}i%6==4?r+=\"\\n\"+new Array(e.length+4).join(\" \"):i<n.length-2&&(r+=\" \")}console.log(r)}function s(e,n,t){let r=(new Date).getTime();const o=new Uint8Array(n);for(let s=0;s<n;s++)o[s]=s%256;const i=(new Date).getTime();console.log(\"Generated random input in \"+(i-r)+\"ms\"),r=i;for(let s=0;s<t;s++){const t=e(o),i=(new Date).getTime(),s=i-r;r=i,console.log(\"Hashed in \"+s+\"ms: \"+t.substring(0,20)+\"...\"),console.log(Math.round(n/(1<<20)/(s/1e3)*100)/100+\" MB PER SECOND\")}}module.exports={normalizeInput:t,toHex:r,debugPrint:i,testSpeed:s};"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 86, "column": 0 },
+					"generated": { "line": 2, "column": 0 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 86, "column": 0 },
+					"generated": { "line": 2, "column": 4 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 86, "column": 0 },
+					"generated": { "line": 2, "column": 6 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 86, "column": 0 },
+					"generated": { "line": 2, "column": 14 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 86, "column": 0 },
+					"generated": { "line": 2, "column": 24 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 2, "column": 31 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 2, "column": 37 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 2, "column": 39 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 2, "column": 87 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 2, "column": 96 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 2, "column": 98 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 5, "column": 0 },
+					"generated": { "line": 2, "column": 101 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 5, "column": 0 },
+					"generated": { "line": 2, "column": 105 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 2, "column": 107 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 2, "column": 110 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 2, "column": 123 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 2, "column": 134 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 7, "column": 0 },
+					"generated": { "line": 2, "column": 136 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 2, "column": 143 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 2, "column": 146 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 2, "column": 159 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 9, "column": 0 },
+					"generated": { "line": 2, "column": 161 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 9, "column": 0 },
+					"generated": { "line": 2, "column": 163 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 9, "column": 0 },
+					"generated": { "line": 2, "column": 167 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 9, "column": 0 },
+					"generated": { "line": 2, "column": 178 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 10, "column": 0 },
+					"generated": { "line": 2, "column": 185 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 10, "column": 0 },
+					"generated": { "line": 2, "column": 186 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 10, "column": 0 },
+					"generated": { "line": 2, "column": 189 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 10, "column": 0 },
+					"generated": { "line": 2, "column": 206 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 13, "column": 0 },
+					"generated": { "line": 2, "column": 208 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 13, "column": 0 },
+					"generated": { "line": 2, "column": 214 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 13, "column": 0 },
+					"generated": { "line": 2, "column": 218 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 13, "column": 0 },
+					"generated": { "line": 2, "column": 224 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 227 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 229 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 233 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 244 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 246 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 251 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 11, "column": 0 },
+					"generated": { "line": 2, "column": 253 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 15, "column": 0 },
+					"generated": { "line": 2, "column": 262 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 15, "column": 0 },
+					"generated": { "line": 2, "column": 269 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 20, "column": 0 },
+					"generated": { "line": 2, "column": 271 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 20, "column": 0 },
+					"generated": { "line": 2, "column": 280 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 20, "column": 0 },
+					"generated": { "line": 2, "column": 282 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 21, "column": 0 },
+					"generated": { "line": 2, "column": 285 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 21, "column": 0 },
+					"generated": { "line": 2, "column": 292 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 21, "column": 0 },
+					"generated": { "line": 2, "column": 298 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 21, "column": 0 },
+					"generated": { "line": 2, "column": 308 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 22, "column": 0 },
+					"generated": { "line": 2, "column": 312 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 22, "column": 0 },
+					"generated": { "line": 2, "column": 317 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 22, "column": 0 },
+					"generated": { "line": 2, "column": 319 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 22, "column": 0 },
+					"generated": { "line": 2, "column": 328 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 331 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 338 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 340 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 343 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 347 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 351 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 353 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 23, "column": 0 },
+					"generated": { "line": 2, "column": 362 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 25, "column": 0 },
+					"generated": { "line": 2, "column": 368 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 25, "column": 0 },
+					"generated": { "line": 2, "column": 373 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 29, "column": 0 },
+					"generated": { "line": 2, "column": 377 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 29, "column": 0 },
+					"generated": { "line": 2, "column": 386 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 29, "column": 0 },
+					"generated": { "line": 2, "column": 388 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 391 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 398 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 409 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 412 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 421 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 425 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 30, "column": 0 },
+					"generated": { "line": 2, "column": 435 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 35, "column": 0 },
+					"generated": { "line": 2, "column": 438 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 35, "column": 0 },
+					"generated": { "line": 2, "column": 447 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 35, "column": 0 },
+					"generated": { "line": 2, "column": 449 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 35, "column": 0 },
+					"generated": { "line": 2, "column": 451 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 35, "column": 0 },
+					"generated": { "line": 2, "column": 453 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 36, "column": 0 },
+					"generated": { "line": 2, "column": 456 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 36, "column": 0 },
+					"generated": { "line": 2, "column": 460 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 36, "column": 0 },
+					"generated": { "line": 2, "column": 462 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 36, "column": 0 },
+					"generated": { "line": 2, "column": 467 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 36, "column": 0 },
+					"generated": { "line": 2, "column": 469 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 475 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 479 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 483 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 485 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 487 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 489 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 491 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 498 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 501 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 37, "column": 0 },
+					"generated": { "line": 2, "column": 503 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 38, "column": 0 },
+					"generated": { "line": 2, "column": 504 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 38, "column": 0 },
+					"generated": { "line": 2, "column": 507 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 38, "column": 0 },
+					"generated": { "line": 2, "column": 512 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 39, "column": 0 },
+					"generated": { "line": 2, "column": 514 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 39, "column": 0 },
+					"generated": { "line": 2, "column": 517 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 39, "column": 0 },
+					"generated": { "line": 2, "column": 519 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 39, "column": 0 },
+					"generated": { "line": 2, "column": 521 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 39, "column": 0 },
+					"generated": { "line": 2, "column": 525 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 40, "column": 0 },
+					"generated": { "line": 2, "column": 539 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 40, "column": 0 },
+					"generated": { "line": 2, "column": 542 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 546 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 549 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 551 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 553 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 555 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 41, "column": 0 },
+					"generated": { "line": 2, "column": 559 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 42, "column": 0 },
+					"generated": { "line": 2, "column": 577 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 42, "column": 0 },
+					"generated": { "line": 2, "column": 578 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 42, "column": 0 },
+					"generated": { "line": 2, "column": 581 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 42, "column": 0 },
+					"generated": { "line": 2, "column": 586 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 45, "column": 0 },
+					"generated": { "line": 2, "column": 588 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 45, "column": 0 },
+					"generated": { "line": 2, "column": 594 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 45, "column": 0 },
+					"generated": { "line": 2, "column": 598 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 45, "column": 0 },
+					"generated": { "line": 2, "column": 604 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 45, "column": 0 },
+					"generated": { "line": 2, "column": 620 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 623 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 626 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 628 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 630 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 632 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 43, "column": 0 },
+					"generated": { "line": 2, "column": 636 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 44, "column": 0 },
+					"generated": { "line": 2, "column": 650 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 44, "column": 0 },
+					"generated": { "line": 2, "column": 653 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 44, "column": 0 },
+					"generated": { "line": 2, "column": 655 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 44, "column": 0 },
+					"generated": { "line": 2, "column": 657 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 44, "column": 0 },
+					"generated": { "line": 2, "column": 661 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 46, "column": 0 },
+					"generated": { "line": 2, "column": 675 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 46, "column": 0 },
+					"generated": { "line": 2, "column": 677 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 46, "column": 0 },
+					"generated": { "line": 2, "column": 680 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 682 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 685 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 690 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 694 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 700 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 702 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 709 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 712 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 47, "column": 0 },
+					"generated": { "line": 2, "column": 717 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 48, "column": 0 },
+					"generated": { "line": 2, "column": 722 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 48, "column": 0 },
+					"generated": { "line": 2, "column": 724 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 48, "column": 0 },
+					"generated": { "line": 2, "column": 726 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 48, "column": 0 },
+					"generated": { "line": 2, "column": 733 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 49, "column": 0 },
+					"generated": { "line": 2, "column": 737 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 49, "column": 0 },
+					"generated": { "line": 2, "column": 740 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 52, "column": 0 },
+					"generated": { "line": 2, "column": 745 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 52, "column": 0 },
+					"generated": { "line": 2, "column": 753 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 52, "column": 0 },
+					"generated": { "line": 2, "column": 757 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 57, "column": 0 },
+					"generated": { "line": 2, "column": 760 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 57, "column": 0 },
+					"generated": { "line": 2, "column": 769 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 57, "column": 0 },
+					"generated": { "line": 2, "column": 771 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 57, "column": 0 },
+					"generated": { "line": 2, "column": 773 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 57, "column": 0 },
+					"generated": { "line": 2, "column": 775 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 58, "column": 0 },
+					"generated": { "line": 2, "column": 778 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 58, "column": 0 },
+					"generated": { "line": 2, "column": 782 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 58, "column": 0 },
+					"generated": { "line": 2, "column": 785 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 58, "column": 0 },
+					"generated": { "line": 2, "column": 789 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 58, "column": 0 },
+					"generated": { "line": 2, "column": 795 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 60, "column": 0 },
+					"generated": { "line": 2, "column": 805 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 60, "column": 0 },
+					"generated": { "line": 2, "column": 811 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 60, "column": 0 },
+					"generated": { "line": 2, "column": 813 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 60, "column": 0 },
+					"generated": { "line": 2, "column": 817 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 60, "column": 0 },
+					"generated": { "line": 2, "column": 828 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 831 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 835 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 839 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 841 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 843 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 845 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 61, "column": 0 },
+					"generated": { "line": 2, "column": 847 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 62, "column": 0 },
+					"generated": { "line": 2, "column": 851 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 62, "column": 0 },
+					"generated": { "line": 2, "column": 853 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 62, "column": 0 },
+					"generated": { "line": 2, "column": 856 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 62, "column": 0 },
+					"generated": { "line": 2, "column": 858 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 64, "column": 0 },
+					"generated": { "line": 2, "column": 862 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 64, "column": 0 },
+					"generated": { "line": 2, "column": 868 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 64, "column": 0 },
+					"generated": { "line": 2, "column": 871 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 64, "column": 0 },
+					"generated": { "line": 2, "column": 875 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 64, "column": 0 },
+					"generated": { "line": 2, "column": 881 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 891 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 899 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 903 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 933 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 935 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 2, "column": 938 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 66, "column": 0 },
+					"generated": { "line": 2, "column": 944 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 66, "column": 0 },
+					"generated": { "line": 2, "column": 946 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 948 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 952 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 956 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 958 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 960 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 962 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 964 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 68, "column": 0 },
+					"generated": { "line": 2, "column": 968 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 69, "column": 0 },
+					"generated": { "line": 2, "column": 969 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 69, "column": 0 },
+					"generated": { "line": 2, "column": 975 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 69, "column": 0 },
+					"generated": { "line": 2, "column": 977 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 69, "column": 0 },
+					"generated": { "line": 2, "column": 979 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 70, "column": 0 },
+					"generated": { "line": 2, "column": 982 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 70, "column": 0 },
+					"generated": { "line": 2, "column": 985 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 70, "column": 0 },
+					"generated": { "line": 2, "column": 989 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 70, "column": 0 },
+					"generated": { "line": 2, "column": 995 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 71, "column": 0 },
+					"generated": { "line": 2, "column": 1005 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 71, "column": 0 },
+					"generated": { "line": 2, "column": 1007 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 71, "column": 0 },
+					"generated": { "line": 2, "column": 1009 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 72, "column": 0 },
+					"generated": { "line": 2, "column": 1011 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 72, "column": 0 },
+					"generated": { "line": 2, "column": 1013 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1015 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1023 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1027 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1040 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1042 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1049 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1051 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1061 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1063 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 73, "column": 0 },
+					"generated": { "line": 2, "column": 1067 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 74, "column": 0 },
+					"generated": { "line": 2, "column": 1074 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 74, "column": 0 },
+					"generated": { "line": 2, "column": 1082 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1086 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1091 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1097 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1100 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1103 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1108 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1110 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1115 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1120 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 75, "column": 0 },
+					"generated": { "line": 2, "column": 1124 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 80, "column": 0 },
+					"generated": { "line": 2, "column": 1143 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 80, "column": 0 },
+					"generated": { "line": 2, "column": 1150 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 80, "column": 0 },
+					"generated": { "line": 2, "column": 1158 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 81, "column": 0 },
+					"generated": { "line": 2, "column": 1159 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 81, "column": 0 },
+					"generated": { "line": 2, "column": 1174 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 82, "column": 0 },
+					"generated": { "line": 2, "column": 1176 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 82, "column": 0 },
+					"generated": { "line": 2, "column": 1182 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 83, "column": 0 },
+					"generated": { "line": 2, "column": 1184 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 83, "column": 0 },
+					"generated": { "line": 2, "column": 1195 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 84, "column": 0 },
+					"generated": { "line": 2, "column": 1197 }
+				},
+				{
+					"source": "../node_modules/blakejs/util.js",
+					"original": { "line": 84, "column": 0 },
+					"generated": { "line": 2, "column": 1207 }
+				}
+			],
+			"sources": {
+				"../node_modules/blakejs/util.js": "const ERROR_MSG_INPUT = 'Input must be an string, Buffer or Uint8Array'\n\n// For convenience, let people hash a string, not just a Uint8Array\nfunction normalizeInput (input) {\n  let ret\n  if (input instanceof Uint8Array) {\n    ret = input\n  } else if (input instanceof Buffer) {\n    ret = new Uint8Array(input)\n  } else if (typeof input === 'string') {\n    ret = new Uint8Array(Buffer.from(input, 'utf8'))\n  } else {\n    throw new Error(ERROR_MSG_INPUT)\n  }\n  return ret\n}\n\n// Converts a Uint8Array to a hexadecimal string\n// For example, toHex([255, 0, 255]) returns \"ff00ff\"\nfunction toHex (bytes) {\n  return Array.prototype.map\n    .call(bytes, function (n) {\n      return (n < 16 ? '0' : '') + n.toString(16)\n    })\n    .join('')\n}\n\n// Converts any value in [0...2^32-1] to an 8-character hex string\nfunction uint32ToHex (val) {\n  return (0x100000000 + val).toString(16).substring(1)\n}\n\n// For debugging: prints out hash state in the same format as the RFC\n// sample computation exactly, so that you can diff\nfunction debugPrint (label, arr, size) {\n  let msg = '\\n' + label + ' = '\n  for (let i = 0; i < arr.length; i += 2) {\n    if (size === 32) {\n      msg += uint32ToHex(arr[i]).toUpperCase()\n      msg += ' '\n      msg += uint32ToHex(arr[i + 1]).toUpperCase()\n    } else if (size === 64) {\n      msg += uint32ToHex(arr[i + 1]).toUpperCase()\n      msg += uint32ToHex(arr[i]).toUpperCase()\n    } else throw new Error('Invalid size ' + size)\n    if (i % 6 === 4) {\n      msg += '\\n' + new Array(label.length + 4).join(' ')\n    } else if (i < arr.length - 2) {\n      msg += ' '\n    }\n  }\n  console.log(msg)\n}\n\n// For performance testing: generates N bytes of input, hashes M times\n// Measures and prints MB/second hash performance each time\nfunction testSpeed (hashFn, N, M) {\n  let startMs = new Date().getTime()\n\n  const input = new Uint8Array(N)\n  for (let i = 0; i < N; i++) {\n    input[i] = i % 256\n  }\n  const genMs = new Date().getTime()\n  console.log('Generated random input in ' + (genMs - startMs) + 'ms')\n  startMs = genMs\n\n  for (let i = 0; i < M; i++) {\n    const hashHex = hashFn(input)\n    const hashMs = new Date().getTime()\n    const ms = hashMs - startMs\n    startMs = hashMs\n    console.log('Hashed in ' + ms + 'ms: ' + hashHex.substring(0, 20) + '...')\n    console.log(\n      Math.round((N / (1 << 20) / (ms / 1000)) * 100) / 100 + ' MB PER SECOND'\n    )\n  }\n}\n\nmodule.exports = {\n  normalizeInput: normalizeInput,\n  toHex: toHex,\n  debugPrint: debugPrint,\n  testSpeed: testSpeed\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "c91abbe960980cb3bb1832c8e1258382",
+	"cacheData": { "env": {} }
+}

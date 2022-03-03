@@ -1,0 +1,2981 @@
+{
+	"id": "JiQj",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786833
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/windowToggle.ts",
+			"includedInParent": true,
+			"mtime": 1645829787702
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subject",
+			"loc": { "line": 3, "column": 24 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subject.js"
+		},
+		{
+			"name": "../Subscription",
+			"loc": { "line": 4, "column": 29 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subscription.js"
+		},
+		{
+			"name": "../OuterSubscriber",
+			"loc": { "line": 5, "column": 32 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/OuterSubscriber.js"
+		},
+		{
+			"name": "../util/subscribeToResult",
+			"loc": { "line": 6, "column": 34 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/windowToggle.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/util/subscribeToResult.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.windowToggle=c;var t=s(require(\"tslib\")),e=require(\"../Subject\"),r=require(\"../Subscription\"),n=require(\"../OuterSubscriber\"),o=require(\"../util/subscribeToResult\");function i(){if(\"function\"!=typeof WeakMap)return null;var t=new WeakMap;return i=function(){return t},t}function s(t){if(t&&t.__esModule)return t;var e=i();if(e&&e.has(t))return e.get(t);var r={};if(null!=t){var n=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var o in t)if(Object.prototype.hasOwnProperty.call(t,o)){var s=n?Object.getOwnPropertyDescriptor(t,o):null;s&&(s.get||s.set)?Object.defineProperty(r,o,s):r[o]=t[o]}}return r.default=t,e&&e.set(t,r),r}function c(t,e){return function(r){return r.lift(new u(t,e))}}var u=function(){function t(t,e){this.openings=t,this.closingSelector=e}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.openings,this.closingSelector))},t}(),p=function(n){function i(t,e,r){var i=n.call(this,t)||this;return i.openings=e,i.closingSelector=r,i.contexts=[],i.add(i.openSubscription=(0,o.subscribeToResult)(i,e,e)),i}return t.__extends(i,n),i.prototype._next=function(t){var e=this.contexts;if(e)for(var r=e.length,n=0;n<r;n++)e[n].window.next(t)},i.prototype._error=function(t){var e=this.contexts;if(this.contexts=null,e)for(var r=e.length,o=-1;++o<r;){var i=e[o];i.window.error(t),i.subscription.unsubscribe()}n.prototype._error.call(this,t)},i.prototype._complete=function(){var t=this.contexts;if(this.contexts=null,t)for(var e=t.length,r=-1;++r<e;){var o=t[r];o.window.complete(),o.subscription.unsubscribe()}n.prototype._complete.call(this)},i.prototype._unsubscribe=function(){var t=this.contexts;if(this.contexts=null,t)for(var e=t.length,r=-1;++r<e;){var n=t[r];n.window.unsubscribe(),n.subscription.unsubscribe()}},i.prototype.notifyNext=function(t,n,i,s,c){if(t===this.openings){var u=void 0;try{u=(0,this.closingSelector)(n)}catch(a){return this.error(a)}var p=new e.Subject,l=new r.Subscription,f={window:p,subscription:l};this.contexts.push(f);var b=(0,o.subscribeToResult)(this,u,f);b.closed?this.closeWindow(this.contexts.length-1):(b.context=f,l.add(b)),this.destination.next(p)}else this.closeWindow(this.contexts.indexOf(t))},i.prototype.notifyError=function(t){this.error(t)},i.prototype.notifyComplete=function(t){t!==this.openSubscription&&this.closeWindow(this.contexts.indexOf(t.context))},i.prototype.closeWindow=function(t){if(-1!==t){var e=this.contexts,r=e[t],n=r.window,o=r.subscription;e.splice(t,1),n.complete(),o.unsubscribe()}},i}(n.OuterSubscriber);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 89 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 91 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 95 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 97 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 99 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 107 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 5, "column": 0 },
+					"generated": { "line": 1, "column": 117 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 5, "column": 0 },
+					"generated": { "line": 1, "column": 119 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 5, "column": 0 },
+					"generated": { "line": 1, "column": 127 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 141 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 143 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 6, "column": 0 },
+					"generated": { "line": 1, "column": 151 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 170 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 172 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 8, "column": 0 },
+					"generated": { "line": 1, "column": 180 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 59, "column": 0 },
+					"generated": { "line": 1, "column": 202 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 59, "column": 0 },
+					"generated": { "line": 1, "column": 204 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 59, "column": 0 },
+					"generated": { "line": 1, "column": 212 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 241 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 250 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 254 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 257 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 276 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 284 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 291 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 296 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 300 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 302 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 306 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 314 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 321 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 323 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 334 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 341 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 344 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 346 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 355 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 357 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 360 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 363 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 366 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 368 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 379 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 386 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 388 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 392 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 394 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 398 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 401 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 404 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 406 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 410 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 413 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 420 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 422 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 426 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 429 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 433 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 435 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 438 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 441 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 447 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 449 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 450 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 454 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 456 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 463 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 479 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 486 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 511 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 515 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 519 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 524 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 526 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 529 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 536 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 546 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 561 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 566 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 568 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 571 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 572 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 576 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 578 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 580 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 587 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 612 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 614 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 617 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 622 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 626 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 628 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 633 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 635 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 640 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 647 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 662 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 664 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 666 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 669 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 671 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 674 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 676 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 680 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 687 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 689 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 697 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 699 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 702 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 704 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 708 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 710 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 713 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 61, "column": 2 },
+					"generated": { "line": 1, "column": 715 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 61, "column": 9 },
+					"generated": { "line": 1, "column": 724 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 61, "column": 31 },
+					"generated": { "line": 1, "column": 726 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 61, "column": 36 },
+					"generated": { "line": 1, "column": 728 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 731 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 738 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 747 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 750 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 757 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 759 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 764 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 768 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 770 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 62, "column": 1 },
+					"generated": { "line": 1, "column": 772 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 2 },
+					"generated": { "line": 1, "column": 777 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 2 },
+					"generated": { "line": 1, "column": 781 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 45 },
+					"generated": { "line": 1, "column": 783 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 794 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 22 },
+					"generated": { "line": 1, "column": 803 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 45 },
+					"generated": { "line": 1, "column": 805 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 45 },
+					"generated": { "line": 1, "column": 807 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 810 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 815 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 67, "column": 22 },
+					"generated": { "line": 1, "column": 824 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 68, "column": 3 },
+					"generated": { "line": 1, "column": 826 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 68, "column": 3 },
+					"generated": { "line": 1, "column": 831 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 68, "column": 3 },
+					"generated": { "line": 1, "column": 847 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 75, "column": 1 },
+					"generated": { "line": 1, "column": 849 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 71, "column": 18 },
+					"generated": { "line": 1, "column": 856 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 71, "column": 18 },
+					"generated": { "line": 1, "column": 858 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 71, "column": 28 },
+					"generated": { "line": 1, "column": 868 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 71, "column": 32 },
+					"generated": { "line": 1, "column": 873 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 71, "column": 32 },
+					"generated": { "line": 1, "column": 882 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 72, "column": 6 },
+					"generated": { "line": 1, "column": 884 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 887 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 894 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 896 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 906 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 910 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 912 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 914 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 919 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 928 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 74, "column": 3 },
+					"generated": { "line": 1, "column": 933 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 75, "column": 1 },
+					"generated": { "line": 1, "column": 952 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 66, "column": 45 },
+					"generated": { "line": 1, "column": 954 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 957 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 959 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 66 },
+					"generated": { "line": 1, "column": 968 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 971 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 980 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 94, "column": 4 },
+					"generated": { "line": 1, "column": 982 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 94, "column": 21 },
+					"generated": { "line": 1, "column": 984 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 96, "column": 3 },
+					"generated": { "line": 1, "column": 986 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 989 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 993 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 995 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 997 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 22 },
+					"generated": { "line": 1, "column": 1002 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 45 },
+					"generated": { "line": 1, "column": 1007 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 92, "column": 45 },
+					"generated": { "line": 1, "column": 1011 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 96, "column": 3 },
+					"generated": { "line": 1, "column": 1016 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 93, "column": 22 },
+					"generated": { "line": 1, "column": 1023 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 93, "column": 22 },
+					"generated": { "line": 1, "column": 1025 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 93, "column": 22 },
+					"generated": { "line": 1, "column": 1034 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 88, "column": 10 },
+					"generated": { "line": 1, "column": 1036 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 88, "column": 10 },
+					"generated": { "line": 1, "column": 1038 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 88, "column": 44 },
+					"generated": { "line": 1, "column": 1054 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 95, "column": 4 },
+					"generated": { "line": 1, "column": 1056 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 95, "column": 9 },
+					"generated": { "line": 1, "column": 1058 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 95, "column": 18 },
+					"generated": { "line": 1, "column": 1067 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1070 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1072 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1076 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1078 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1096 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1098 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1100 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1119 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1121 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1123 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 96, "column": 3 },
+					"generated": { "line": 1, "column": 1127 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 1129 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 1136 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 1138 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 2 },
+					"generated": { "line": 1, "column": 1148 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 91, "column": 14 },
+					"generated": { "line": 1, "column": 1150 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 99, "column": 12 },
+					"generated": { "line": 1, "column": 1153 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 99, "column": 12 },
+					"generated": { "line": 1, "column": 1155 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 99, "column": 30 },
+					"generated": { "line": 1, "column": 1165 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 99, "column": 30 },
+					"generated": { "line": 1, "column": 1171 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 99, "column": 30 },
+					"generated": { "line": 1, "column": 1180 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 100, "column": 8 },
+					"generated": { "line": 1, "column": 1183 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 100, "column": 8 },
+					"generated": { "line": 1, "column": 1187 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 100, "column": 18 },
+					"generated": { "line": 1, "column": 1189 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 100, "column": 18 },
+					"generated": { "line": 1, "column": 1194 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 101, "column": 6 },
+					"generated": { "line": 1, "column": 1203 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 101, "column": 6 },
+					"generated": { "line": 1, "column": 1206 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 8 },
+					"generated": { "line": 1, "column": 1208 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 102, "column": 6 },
+					"generated": { "line": 1, "column": 1212 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 102, "column": 6 },
+					"generated": { "line": 1, "column": 1216 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 102, "column": 16 },
+					"generated": { "line": 1, "column": 1218 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 102, "column": 23 },
+					"generated": { "line": 1, "column": 1220 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 8 },
+					"generated": { "line": 1, "column": 1227 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 17 },
+					"generated": { "line": 1, "column": 1229 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 20 },
+					"generated": { "line": 1, "column": 1231 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 20 },
+					"generated": { "line": 1, "column": 1233 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 103, "column": 27 },
+					"generated": { "line": 1, "column": 1235 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 104, "column": 7 },
+					"generated": { "line": 1, "column": 1239 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 104, "column": 7 },
+					"generated": { "line": 1, "column": 1241 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 104, "column": 7 },
+					"generated": { "line": 1, "column": 1244 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 104, "column": 7 },
+					"generated": { "line": 1, "column": 1251 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 104, "column": 7 },
+					"generated": { "line": 1, "column": 1256 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 110, "column": 12 },
+					"generated": { "line": 1, "column": 1260 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 110, "column": 12 },
+					"generated": { "line": 1, "column": 1262 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 110, "column": 30 },
+					"generated": { "line": 1, "column": 1272 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 110, "column": 30 },
+					"generated": { "line": 1, "column": 1279 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 110, "column": 30 },
+					"generated": { "line": 1, "column": 1288 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 111, "column": 8 },
+					"generated": { "line": 1, "column": 1291 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 111, "column": 8 },
+					"generated": { "line": 1, "column": 1295 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 111, "column": 17 },
+					"generated": { "line": 1, "column": 1297 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 111, "column": 24 },
+					"generated": { "line": 1, "column": 1302 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 114, "column": 6 },
+					"generated": { "line": 1, "column": 1311 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 113, "column": 8 },
+					"generated": { "line": 1, "column": 1314 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 113, "column": 8 },
+					"generated": { "line": 1, "column": 1319 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 113, "column": 18 },
+					"generated": { "line": 1, "column": 1328 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 114, "column": 6 },
+					"generated": { "line": 1, "column": 1333 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 118, "column": 8 },
+					"generated": { "line": 1, "column": 1335 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 115, "column": 10 },
+					"generated": { "line": 1, "column": 1339 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 115, "column": 10 },
+					"generated": { "line": 1, "column": 1343 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 115, "column": 15 },
+					"generated": { "line": 1, "column": 1345 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 115, "column": 21 },
+					"generated": { "line": 1, "column": 1347 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 117, "column": 6 },
+					"generated": { "line": 1, "column": 1354 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 117, "column": 15 },
+					"generated": { "line": 1, "column": 1357 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 118, "column": 14 },
+					"generated": { "line": 1, "column": 1361 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 118, "column": 21 },
+					"generated": { "line": 1, "column": 1363 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 118, "column": 24 },
+					"generated": { "line": 1, "column": 1366 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 119, "column": 8 },
+					"generated": { "line": 1, "column": 1367 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 119, "column": 8 },
+					"generated": { "line": 1, "column": 1371 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 119, "column": 22 },
+					"generated": { "line": 1, "column": 1373 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 119, "column": 29 },
+					"generated": { "line": 1, "column": 1375 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 120, "column": 8 },
+					"generated": { "line": 1, "column": 1378 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 120, "column": 16 },
+					"generated": { "line": 1, "column": 1380 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 120, "column": 16 },
+					"generated": { "line": 1, "column": 1387 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 120, "column": 29 },
+					"generated": { "line": 1, "column": 1393 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 121, "column": 7 },
+					"generated": { "line": 1, "column": 1396 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 121, "column": 7 },
+					"generated": { "line": 1, "column": 1398 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 121, "column": 7 },
+					"generated": { "line": 1, "column": 1411 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1425 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1427 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1437 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1444 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1449 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 125, "column": 3 },
+					"generated": { "line": 1, "column": 1454 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 128, "column": 12 },
+					"generated": { "line": 1, "column": 1458 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 128, "column": 12 },
+					"generated": { "line": 1, "column": 1460 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 128, "column": 30 },
+					"generated": { "line": 1, "column": 1470 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 128, "column": 30 },
+					"generated": { "line": 1, "column": 1480 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 129, "column": 8 },
+					"generated": { "line": 1, "column": 1491 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 129, "column": 8 },
+					"generated": { "line": 1, "column": 1495 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 129, "column": 17 },
+					"generated": { "line": 1, "column": 1497 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 129, "column": 24 },
+					"generated": { "line": 1, "column": 1502 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 131, "column": 6 },
+					"generated": { "line": 1, "column": 1511 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 130, "column": 8 },
+					"generated": { "line": 1, "column": 1514 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 130, "column": 8 },
+					"generated": { "line": 1, "column": 1519 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 130, "column": 18 },
+					"generated": { "line": 1, "column": 1528 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 131, "column": 6 },
+					"generated": { "line": 1, "column": 1533 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 134, "column": 8 },
+					"generated": { "line": 1, "column": 1535 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 132, "column": 10 },
+					"generated": { "line": 1, "column": 1539 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 132, "column": 10 },
+					"generated": { "line": 1, "column": 1543 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 132, "column": 15 },
+					"generated": { "line": 1, "column": 1545 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 132, "column": 21 },
+					"generated": { "line": 1, "column": 1547 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 133, "column": 6 },
+					"generated": { "line": 1, "column": 1554 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 133, "column": 15 },
+					"generated": { "line": 1, "column": 1557 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 134, "column": 14 },
+					"generated": { "line": 1, "column": 1561 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 134, "column": 21 },
+					"generated": { "line": 1, "column": 1563 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 134, "column": 24 },
+					"generated": { "line": 1, "column": 1566 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 135, "column": 8 },
+					"generated": { "line": 1, "column": 1567 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 135, "column": 8 },
+					"generated": { "line": 1, "column": 1571 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 135, "column": 22 },
+					"generated": { "line": 1, "column": 1573 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 135, "column": 31 },
+					"generated": { "line": 1, "column": 1575 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 136, "column": 8 },
+					"generated": { "line": 1, "column": 1578 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 136, "column": 16 },
+					"generated": { "line": 1, "column": 1580 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 136, "column": 16 },
+					"generated": { "line": 1, "column": 1587 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 137, "column": 7 },
+					"generated": { "line": 1, "column": 1598 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 137, "column": 7 },
+					"generated": { "line": 1, "column": 1600 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 137, "column": 7 },
+					"generated": { "line": 1, "column": 1613 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 140, "column": 3 },
+					"generated": { "line": 1, "column": 1627 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 140, "column": 3 },
+					"generated": { "line": 1, "column": 1629 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 140, "column": 3 },
+					"generated": { "line": 1, "column": 1639 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 140, "column": 3 },
+					"generated": { "line": 1, "column": 1649 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 140, "column": 3 },
+					"generated": { "line": 1, "column": 1654 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 144, "column": 12 },
+					"generated": { "line": 1, "column": 1661 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 144, "column": 12 },
+					"generated": { "line": 1, "column": 1663 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 144, "column": 30 },
+					"generated": { "line": 1, "column": 1673 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 144, "column": 30 },
+					"generated": { "line": 1, "column": 1686 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 145, "column": 8 },
+					"generated": { "line": 1, "column": 1697 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 145, "column": 8 },
+					"generated": { "line": 1, "column": 1701 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 145, "column": 17 },
+					"generated": { "line": 1, "column": 1703 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 145, "column": 24 },
+					"generated": { "line": 1, "column": 1708 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 147, "column": 6 },
+					"generated": { "line": 1, "column": 1717 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 146, "column": 8 },
+					"generated": { "line": 1, "column": 1720 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 146, "column": 8 },
+					"generated": { "line": 1, "column": 1725 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 146, "column": 18 },
+					"generated": { "line": 1, "column": 1734 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 147, "column": 6 },
+					"generated": { "line": 1, "column": 1739 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 150, "column": 8 },
+					"generated": { "line": 1, "column": 1741 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 148, "column": 10 },
+					"generated": { "line": 1, "column": 1745 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 148, "column": 10 },
+					"generated": { "line": 1, "column": 1749 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 148, "column": 15 },
+					"generated": { "line": 1, "column": 1751 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 148, "column": 21 },
+					"generated": { "line": 1, "column": 1753 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 149, "column": 6 },
+					"generated": { "line": 1, "column": 1760 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 149, "column": 15 },
+					"generated": { "line": 1, "column": 1763 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 150, "column": 14 },
+					"generated": { "line": 1, "column": 1767 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 150, "column": 21 },
+					"generated": { "line": 1, "column": 1769 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 150, "column": 24 },
+					"generated": { "line": 1, "column": 1772 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 151, "column": 8 },
+					"generated": { "line": 1, "column": 1773 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 151, "column": 8 },
+					"generated": { "line": 1, "column": 1777 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 151, "column": 22 },
+					"generated": { "line": 1, "column": 1779 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 151, "column": 23 },
+					"generated": { "line": 1, "column": 1781 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 152, "column": 8 },
+					"generated": { "line": 1, "column": 1784 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 152, "column": 16 },
+					"generated": { "line": 1, "column": 1786 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 152, "column": 16 },
+					"generated": { "line": 1, "column": 1793 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 153, "column": 7 },
+					"generated": { "line": 1, "column": 1807 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 153, "column": 7 },
+					"generated": { "line": 1, "column": 1809 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 153, "column": 7 },
+					"generated": { "line": 1, "column": 1822 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 18 },
+					"generated": { "line": 1, "column": 1838 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 23 },
+					"generated": { "line": 1, "column": 1840 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 28 },
+					"generated": { "line": 1, "column": 1850 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1861 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1870 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1872 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1874 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1876 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 161, "column": 38 },
+					"generated": { "line": 1, "column": 1878 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 162, "column": 6 },
+					"generated": { "line": 1, "column": 1881 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 162, "column": 6 },
+					"generated": { "line": 1, "column": 1884 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 162, "column": 10 },
+					"generated": { "line": 1, "column": 1888 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 162, "column": 25 },
+					"generated": { "line": 1, "column": 1893 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 162, "column": 26 },
+					"generated": { "line": 1, "column": 1902 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 163, "column": 10 },
+					"generated": { "line": 1, "column": 1903 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 163, "column": 10 },
+					"generated": { "line": 1, "column": 1907 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 163, "column": 10 },
+					"generated": { "line": 1, "column": 1914 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 164, "column": 16 },
+					"generated": { "line": 1, "column": 1916 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 166, "column": 7 },
+					"generated": { "line": 1, "column": 1920 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 166, "column": 7 },
+					"generated": { "line": 1, "column": 1923 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 165, "column": 26 },
+					"generated": { "line": 1, "column": 1925 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 165, "column": 26 },
+					"generated": { "line": 1, "column": 1930 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 166, "column": 7 },
+					"generated": { "line": 1, "column": 1947 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 167, "column": 8 },
+					"generated": { "line": 1, "column": 1950 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 167, "column": 8 },
+					"generated": { "line": 1, "column": 1956 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 168, "column": 7 },
+					"generated": { "line": 1, "column": 1959 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 168, "column": 7 },
+					"generated": { "line": 1, "column": 1966 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 168, "column": 7 },
+					"generated": { "line": 1, "column": 1971 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 168, "column": 7 },
+					"generated": { "line": 1, "column": 1977 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 171, "column": 12 },
+					"generated": { "line": 1, "column": 1980 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 171, "column": 12 },
+					"generated": { "line": 1, "column": 1984 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 171, "column": 12 },
+					"generated": { "line": 1, "column": 1986 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 171, "column": 27 },
+					"generated": { "line": 1, "column": 1990 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 171, "column": 12 },
+					"generated": { "line": 1, "column": 1992 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 172, "column": 12 },
+					"generated": { "line": 1, "column": 2000 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 172, "column": 24 },
+					"generated": { "line": 1, "column": 2002 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 172, "column": 24 },
+					"generated": { "line": 1, "column": 2006 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 172, "column": 24 },
+					"generated": { "line": 1, "column": 2008 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 10 },
+					"generated": { "line": 1, "column": 2021 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 20 },
+					"generated": { "line": 1, "column": 2023 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 24 },
+					"generated": { "line": 1, "column": 2024 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 25 },
+					"generated": { "line": 1, "column": 2031 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 34 },
+					"generated": { "line": 1, "column": 2033 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 173, "column": 34 },
+					"generated": { "line": 1, "column": 2046 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 174, "column": 12 },
+					"generated": { "line": 1, "column": 2049 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 174, "column": 12 },
+					"generated": { "line": 1, "column": 2054 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 174, "column": 12 },
+					"generated": { "line": 1, "column": 2063 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 174, "column": 12 },
+					"generated": { "line": 1, "column": 2068 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 10 },
+					"generated": { "line": 1, "column": 2071 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 10 },
+					"generated": { "line": 1, "column": 2075 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 28 },
+					"generated": { "line": 1, "column": 2078 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 36 },
+					"generated": { "line": 1, "column": 2080 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 36 },
+					"generated": { "line": 1, "column": 2082 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 36 },
+					"generated": { "line": 1, "column": 2101 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 36 },
+					"generated": { "line": 1, "column": 2106 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 176, "column": 36 },
+					"generated": { "line": 1, "column": 2108 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 177, "column": 8 },
+					"generated": { "line": 1, "column": 2111 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 177, "column": 25 },
+					"generated": { "line": 1, "column": 2113 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2120 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2125 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2137 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2142 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2151 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 178, "column": 7 },
+					"generated": { "line": 1, "column": 2158 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 180, "column": 8 },
+					"generated": { "line": 1, "column": 2162 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 180, "column": 25 },
+					"generated": { "line": 1, "column": 2164 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 180, "column": 25 },
+					"generated": { "line": 1, "column": 2172 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 181, "column": 7 },
+					"generated": { "line": 1, "column": 2174 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 181, "column": 7 },
+					"generated": { "line": 1, "column": 2176 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 181, "column": 7 },
+					"generated": { "line": 1, "column": 2180 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 184, "column": 5 },
+					"generated": { "line": 1, "column": 2184 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 184, "column": 5 },
+					"generated": { "line": 1, "column": 2189 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 184, "column": 5 },
+					"generated": { "line": 1, "column": 2201 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 184, "column": 5 },
+					"generated": { "line": 1, "column": 2206 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2214 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2219 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2231 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2236 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2245 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 186, "column": 5 },
+					"generated": { "line": 1, "column": 2253 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 190, "column": 20 },
+					"generated": { "line": 1, "column": 2258 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 190, "column": 20 },
+					"generated": { "line": 1, "column": 2260 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 190, "column": 20 },
+					"generated": { "line": 1, "column": 2270 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 190, "column": 20 },
+					"generated": { "line": 1, "column": 2282 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 190, "column": 20 },
+					"generated": { "line": 1, "column": 2291 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 191, "column": 3 },
+					"generated": { "line": 1, "column": 2294 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 191, "column": 3 },
+					"generated": { "line": 1, "column": 2299 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 191, "column": 3 },
+					"generated": { "line": 1, "column": 2305 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 194, "column": 22 },
+					"generated": { "line": 1, "column": 2309 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 194, "column": 23 },
+					"generated": { "line": 1, "column": 2311 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 194, "column": 23 },
+					"generated": { "line": 1, "column": 2321 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 194, "column": 41 },
+					"generated": { "line": 1, "column": 2336 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 194, "column": 41 },
+					"generated": { "line": 1, "column": 2345 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 195, "column": 6 },
+					"generated": { "line": 1, "column": 2348 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 195, "column": 11 },
+					"generated": { "line": 1, "column": 2352 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 195, "column": 11 },
+					"generated": { "line": 1, "column": 2357 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2375 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2380 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2392 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2397 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2406 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2414 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 196, "column": 5 },
+					"generated": { "line": 1, "column": 2416 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 200, "column": 22 },
+					"generated": { "line": 1, "column": 2427 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 200, "column": 22 },
+					"generated": { "line": 1, "column": 2429 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 200, "column": 22 },
+					"generated": { "line": 1, "column": 2439 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 200, "column": 22 },
+					"generated": { "line": 1, "column": 2451 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 200, "column": 22 },
+					"generated": { "line": 1, "column": 2460 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 201, "column": 6 },
+					"generated": { "line": 1, "column": 2463 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 201, "column": 13 },
+					"generated": { "line": 1, "column": 2467 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 201, "column": 6 },
+					"generated": { "line": 1, "column": 2471 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 201, "column": 6 },
+					"generated": { "line": 1, "column": 2473 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 205, "column": 10 },
+					"generated": { "line": 1, "column": 2474 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 205, "column": 10 },
+					"generated": { "line": 1, "column": 2478 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 205, "column": 20 },
+					"generated": { "line": 1, "column": 2480 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 205, "column": 20 },
+					"generated": { "line": 1, "column": 2485 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 206, "column": 12 },
+					"generated": { "line": 1, "column": 2494 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 206, "column": 12 },
+					"generated": { "line": 1, "column": 2496 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 206, "column": 12 },
+					"generated": { "line": 1, "column": 2498 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 4 },
+					"generated": { "line": 1, "column": 2501 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 13 },
+					"generated": { "line": 1, "column": 2503 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 25 },
+					"generated": { "line": 1, "column": 2505 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 30 },
+					"generated": { "line": 1, "column": 2512 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 30 },
+					"generated": { "line": 1, "column": 2514 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 207, "column": 30 },
+					"generated": { "line": 1, "column": 2516 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 208, "column": 4 },
+					"generated": { "line": 1, "column": 2529 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 208, "column": 11 },
+					"generated": { "line": 1, "column": 2531 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 208, "column": 19 },
+					"generated": { "line": 1, "column": 2538 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 208, "column": 22 },
+					"generated": { "line": 1, "column": 2540 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 209, "column": 4 },
+					"generated": { "line": 1, "column": 2543 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 209, "column": 4 },
+					"generated": { "line": 1, "column": 2545 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 210, "column": 3 },
+					"generated": { "line": 1, "column": 2556 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 210, "column": 3 },
+					"generated": { "line": 1, "column": 2558 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 2574 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 2576 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 2577 }
+				},
+				{
+					"source": "../../../src/internal/operators/windowToggle.ts",
+					"name": null,
+					"original": { "line": 87, "column": 43 },
+					"generated": { "line": 1, "column": 2579 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/windowToggle.ts": "import { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { Observable } from '../Observable';\nimport { Subject } from '../Subject';\nimport { Subscription } from '../Subscription';\nimport { OuterSubscriber } from '../OuterSubscriber';\nimport { InnerSubscriber } from '../InnerSubscriber';\nimport { subscribeToResult } from '../util/subscribeToResult';\nimport { OperatorFunction } from '../types';\n\n/**\n * Branch out the source Observable values as a nested Observable starting from\n * an emission from `openings` and ending when the output of `closingSelector`\n * emits.\n *\n * <span class=\"informal\">It's like {@link bufferToggle}, but emits a nested\n * Observable instead of an array.</span>\n *\n * ![](windowToggle.png)\n *\n * Returns an Observable that emits windows of items it collects from the source\n * Observable. The output Observable emits windows that contain those items\n * emitted by the source Observable between the time when the `openings`\n * Observable emits an item and when the Observable returned by\n * `closingSelector` emits an item.\n *\n * ## Example\n * Every other second, emit the click events from the next 500ms\n * ```ts\n * import { fromEvent, interval, EMPTY } from 'rxjs';\n * import { windowToggle, mergeAll } from 'rxjs/operators';\n *\n * const clicks = fromEvent(document, 'click');\n * const openings = interval(1000);\n * const result = clicks.pipe(\n *   windowToggle(openings, i => i % 2 ? interval(500) : EMPTY),\n *   mergeAll()\n * );\n * result.subscribe(x => console.log(x));\n * ```\n *\n * @see {@link window}\n * @see {@link windowCount}\n * @see {@link windowTime}\n * @see {@link windowWhen}\n * @see {@link bufferToggle}\n *\n * @param {Observable<O>} openings An observable of notifications to start new\n * windows.\n * @param {function(value: O): Observable} closingSelector A function that takes\n * the value emitted by the `openings` observable and returns an Observable,\n * which, when it emits (either `next` or `complete`), signals that the\n * associated window should complete.\n * @return {Observable<Observable<T>>} An observable of windows, which in turn\n * are Observables.\n * @method windowToggle\n * @owner Observable\n */\nexport function windowToggle<T, O>(openings: Observable<O>,\n                                   closingSelector: (openValue: O) => Observable<any>): OperatorFunction<T, Observable<T>> {\n  return (source: Observable<T>) => source.lift(new WindowToggleOperator<T, O>(openings, closingSelector));\n}\n\nclass WindowToggleOperator<T, O> implements Operator<T, Observable<T>> {\n\n  constructor(private openings: Observable<O>,\n              private closingSelector: (openValue: O) => Observable<any>) {\n  }\n\n  call(subscriber: Subscriber<Observable<T>>, source: any): any {\n    return source.subscribe(new WindowToggleSubscriber(\n      subscriber, this.openings, this.closingSelector\n    ));\n  }\n}\n\ninterface WindowContext<T> {\n  window: Subject<T>;\n  subscription: Subscription;\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass WindowToggleSubscriber<T, O> extends OuterSubscriber<T, any> {\n  private contexts: WindowContext<T>[] = [];\n  private openSubscription: Subscription;\n\n  constructor(destination: Subscriber<Observable<T>>,\n              private openings: Observable<O>,\n              private closingSelector: (openValue: O) => Observable<any>) {\n    super(destination);\n    this.add(this.openSubscription = subscribeToResult(this, openings, openings as any));\n  }\n\n  protected _next(value: T) {\n    const { contexts } = this;\n    if (contexts) {\n      const len = contexts.length;\n      for (let i = 0; i < len; i++) {\n        contexts[i].window.next(value);\n      }\n    }\n  }\n\n  protected _error(err: any) {\n\n    const { contexts } = this;\n    this.contexts = null;\n\n    if (contexts) {\n      const len = contexts.length;\n      let index = -1;\n\n      while (++index < len) {\n        const context = contexts[index];\n        context.window.error(err);\n        context.subscription.unsubscribe();\n      }\n    }\n\n    super._error(err);\n  }\n\n  protected _complete() {\n    const { contexts } = this;\n    this.contexts = null;\n    if (contexts) {\n      const len = contexts.length;\n      let index = -1;\n      while (++index < len) {\n        const context = contexts[index];\n        context.window.complete();\n        context.subscription.unsubscribe();\n      }\n    }\n    super._complete();\n  }\n\n  /** @deprecated This is an internal implementation detail, do not use. */\n  _unsubscribe() {\n    const { contexts } = this;\n    this.contexts = null;\n    if (contexts) {\n      const len = contexts.length;\n      let index = -1;\n      while (++index < len) {\n        const context = contexts[index];\n        context.window.unsubscribe();\n        context.subscription.unsubscribe();\n      }\n    }\n  }\n\n  notifyNext(outerValue: any, innerValue: any,\n             outerIndex: number, innerIndex: number,\n             innerSub: InnerSubscriber<T, any>): void {\n\n    if (outerValue === this.openings) {\n      let closingNotifier;\n      try {\n        const { closingSelector } = this;\n        closingNotifier = closingSelector(innerValue);\n      } catch (e) {\n        return this.error(e);\n      }\n\n      const window = new Subject<T>();\n      const subscription = new Subscription();\n      const context = { window, subscription };\n      this.contexts.push(context);\n      const innerSubscription = subscribeToResult(this, closingNotifier, context as any);\n\n      if (innerSubscription.closed) {\n        this.closeWindow(this.contexts.length - 1);\n      } else {\n        (<any>innerSubscription).context = context;\n        subscription.add(innerSubscription);\n      }\n\n      this.destination.next(window);\n    } else {\n      this.closeWindow(this.contexts.indexOf(outerValue));\n    }\n  }\n\n  notifyError(err: any): void {\n    this.error(err);\n  }\n\n  notifyComplete(inner: Subscription): void {\n    if (inner !== this.openSubscription) {\n      this.closeWindow(this.contexts.indexOf((<any> inner).context));\n    }\n  }\n\n  private closeWindow(index: number): void {\n    if (index === -1) {\n      return;\n    }\n\n    const { contexts } = this;\n    const context = contexts[index];\n    const { window, subscription } = context;\n    contexts.splice(index, 1);\n    window.complete();\n    subscription.unsubscribe();\n  }\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "a92faa27fc05b5eaebd46148bb5b6575",
+	"cacheData": { "env": {} }
+}

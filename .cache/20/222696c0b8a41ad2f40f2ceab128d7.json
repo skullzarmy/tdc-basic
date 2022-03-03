@@ -1,0 +1,1439 @@
+{
+	"id": "ZHEI",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/retry.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786558
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/retry.ts",
+			"includedInParent": true,
+			"mtime": 1645829787464
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/retry.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subscriber",
+			"loc": { "line": 3, "column": 27 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/retry.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subscriber.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.retry=u;var r=n(require(\"tslib\")),t=require(\"../Subscriber\");function e(){if(\"function\"!=typeof WeakMap)return null;var r=new WeakMap;return e=function(){return r},r}function n(r){if(r&&r.__esModule)return r;var t=e();if(t&&t.has(r))return t.get(r);var n={};if(null!=r){var u=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var i in r)if(Object.prototype.hasOwnProperty.call(r,i)){var o=u?Object.getOwnPropertyDescriptor(r,i):null;o&&(o.get||o.set)?Object.defineProperty(n,i,o):n[i]=r[i]}}return n.default=r,t&&t.set(r,n),n}function u(r){return void 0===r&&(r=-1),function(t){return t.lift(new i(r,t))}}var i=function(){function r(r,t){this.count=r,this.source=t}return r.prototype.call=function(r,t){return t.subscribe(new o(r,this.count,this.source))},r}(),o=function(t){function e(r,e,n){var u=t.call(this,r)||this;return u.count=e,u.source=n,u}return r.__extends(e,t),e.prototype.error=function(r){if(!this.isStopped){var e=this.source,n=this.count;if(0===n)return t.prototype.error.call(this,r);n>-1&&(this.count=n-1),e.subscribe(this._unsubscribeAndRecycle())}},e}(t.Subscriber);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 82 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 84 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 88 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 90 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 92 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 100 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 0 },
+					"generated": { "line": 1, "column": 110 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 0 },
+					"generated": { "line": 1, "column": 112 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 0 },
+					"generated": { "line": 1, "column": 120 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 137 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 146 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 150 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 153 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 172 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 180 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 187 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 192 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 196 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 198 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 202 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 210 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 217 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 219 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 230 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 237 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 240 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 242 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 251 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 253 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 256 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 259 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 262 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 264 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 275 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 282 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 284 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 288 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 290 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 294 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 297 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 300 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 302 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 306 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 309 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 316 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 318 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 322 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 325 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 329 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 331 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 334 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 337 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 343 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 345 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 346 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 350 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 352 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 359 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 375 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 382 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 407 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 411 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 415 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 420 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 422 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 425 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 432 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 442 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 457 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 462 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 464 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 467 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 468 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 472 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 474 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 476 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 483 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 508 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 510 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 513 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 518 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 522 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 524 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 529 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 531 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 536 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 543 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 558 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 560 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 562 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 565 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 567 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 570 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 572 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 576 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 583 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 585 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 593 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 595 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 598 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 600 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 604 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 606 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 609 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 25 },
+					"generated": { "line": 1, "column": 611 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 25 },
+					"generated": { "line": 1, "column": 620 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 53, "column": 25 },
+					"generated": { "line": 1, "column": 622 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 58, "column": 2 },
+					"generated": { "line": 1, "column": 625 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 54, "column": 9 },
+					"generated": { "line": 1, "column": 637 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 54, "column": 2 },
+					"generated": { "line": 1, "column": 641 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 55, "column": 1 },
+					"generated": { "line": 1, "column": 645 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 55, "column": 1 },
+					"generated": { "line": 1, "column": 648 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 58, "column": 2 },
+					"generated": { "line": 1, "column": 651 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 58, "column": 2 },
+					"generated": { "line": 1, "column": 660 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 663 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 670 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 672 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 677 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 681 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 683 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 685 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 690 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 22 },
+					"generated": { "line": 1, "column": 694 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 696 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 60, "column": 3 },
+					"generated": { "line": 1, "column": 707 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 60, "column": 3 },
+					"generated": { "line": 1, "column": 716 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 60, "column": 3 },
+					"generated": { "line": 1, "column": 718 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 60, "column": 3 },
+					"generated": { "line": 1, "column": 720 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 62, "column": 2 },
+					"generated": { "line": 1, "column": 723 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 62, "column": 2 },
+					"generated": { "line": 1, "column": 728 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 62, "column": 2 },
+					"generated": { "line": 1, "column": 734 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 63, "column": 4 },
+					"generated": { "line": 1, "column": 736 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 63, "column": 4 },
+					"generated": { "line": 1, "column": 741 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 63, "column": 18 },
+					"generated": { "line": 1, "column": 748 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 72, "column": 33 },
+					"generated": { "line": 1, "column": 750 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 1, "column": 757 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 0 },
+					"generated": { "line": 1, "column": 759 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 769 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 774 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 783 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 785 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 788 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 795 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 797 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 807 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 811 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 813 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 815 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 820 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 826 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 65, "column": 1 },
+					"generated": { "line": 1, "column": 831 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 72, "column": 33 },
+					"generated": { "line": 1, "column": 841 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 59, "column": 43 },
+					"generated": { "line": 1, "column": 843 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 73, "column": 2 },
+					"generated": { "line": 1, "column": 846 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 848 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 10 },
+					"generated": { "line": 1, "column": 857 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 75, "column": 22 },
+					"generated": { "line": 1, "column": 860 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 75, "column": 22 },
+					"generated": { "line": 1, "column": 869 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 75, "column": 28 },
+					"generated": { "line": 1, "column": 871 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 75, "column": 43 },
+					"generated": { "line": 1, "column": 873 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 75, "column": 43 },
+					"generated": { "line": 1, "column": 875 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 878 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 882 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 884 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 886 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 891 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 896 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 900 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 79, "column": 9 },
+					"generated": { "line": 1, "column": 905 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 77, "column": 3 },
+					"generated": { "line": 1, "column": 912 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 77, "column": 3 },
+					"generated": { "line": 1, "column": 914 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 77, "column": 3 },
+					"generated": { "line": 1, "column": 920 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 922 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 924 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 78, "column": 2 },
+					"generated": { "line": 1, "column": 931 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 79, "column": 9 },
+					"generated": { "line": 1, "column": 933 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 935 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 74, "column": 22 },
+					"generated": { "line": 1, "column": 942 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 74, "column": 22 },
+					"generated": { "line": 1, "column": 944 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 74, "column": 22 },
+					"generated": { "line": 1, "column": 954 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 74, "column": 35 },
+					"generated": { "line": 1, "column": 956 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 81, "column": 10 },
+					"generated": { "line": 1, "column": 959 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 81, "column": 10 },
+					"generated": { "line": 1, "column": 961 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 81, "column": 23 },
+					"generated": { "line": 1, "column": 971 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 81, "column": 23 },
+					"generated": { "line": 1, "column": 977 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 81, "column": 23 },
+					"generated": { "line": 1, "column": 986 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 82, "column": 8 },
+					"generated": { "line": 1, "column": 989 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 82, "column": 8 },
+					"generated": { "line": 1, "column": 993 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 82, "column": 8 },
+					"generated": { "line": 1, "column": 998 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 82, "column": 15 },
+					"generated": { "line": 1, "column": 1008 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1009 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1013 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1015 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1020 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1027 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1029 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 7 },
+					"generated": { "line": 1, "column": 1034 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 17 },
+					"generated": { "line": 1, "column": 1040 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 22 },
+					"generated": { "line": 1, "column": 1043 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 83, "column": 17 },
+					"generated": { "line": 1, "column": 1047 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 13 },
+					"generated": { "line": 1, "column": 1049 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 13 },
+					"generated": { "line": 1, "column": 1056 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 21 },
+					"generated": { "line": 1, "column": 1058 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 31 },
+					"generated": { "line": 1, "column": 1068 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 31 },
+					"generated": { "line": 1, "column": 1074 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 31 },
+					"generated": { "line": 1, "column": 1079 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 84, "column": 31 },
+					"generated": { "line": 1, "column": 1084 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 86, "column": 13 },
+					"generated": { "line": 1, "column": 1087 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 86, "column": 23 },
+					"generated": { "line": 1, "column": 1090 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1094 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1099 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1105 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 87, "column": 5 },
+					"generated": { "line": 1, "column": 1107 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 89, "column": 0 },
+					"generated": { "line": 1, "column": 1110 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 89, "column": 0 },
+					"generated": { "line": 1, "column": 1112 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 89, "column": 1 },
+					"generated": { "line": 1, "column": 1122 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 89, "column": 1 },
+					"generated": { "line": 1, "column": 1127 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 1155 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 1157 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 1158 }
+				},
+				{
+					"source": "../../../src/internal/operators/retry.ts",
+					"name": null,
+					"original": { "line": 76, "column": 4 },
+					"generated": { "line": 1, "column": 1160 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/retry.ts": "import { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { Observable } from '../Observable';\n\nimport { MonoTypeOperatorFunction, TeardownLogic } from '../types';\n\n/**\n * Returns an Observable that mirrors the source Observable with the exception of an `error`. If the source Observable\n * calls `error`, this method will resubscribe to the source Observable for a maximum of `count` resubscriptions (given\n * as a number parameter) rather than propagating the `error` call.\n *\n * ![](retry.png)\n *\n * Any and all items emitted by the source Observable will be emitted by the resulting Observable, even those emitted\n * during failed subscriptions. For example, if an Observable fails at first but emits [1, 2] then succeeds the second\n * time and emits: [1, 2, 3, 4, 5] then the complete stream of emissions and notifications\n * would be: [1, 2, 1, 2, 3, 4, 5, `complete`].\n *\n * ## Example\n * ```ts\n * import { interval, of, throwError } from 'rxjs';\n * import { mergeMap, retry } from 'rxjs/operators';\n *\n * const source = interval(1000);\n * const example = source.pipe(\n *   mergeMap(val => {\n *     if(val > 5){\n *       return throwError('Error!');\n *     }\n *     return of(val);\n *   }),\n *   //retry 2 times on error\n *   retry(2)\n * );\n *\n * const subscribe = example.subscribe({\n *   next: val => console.log(val),\n *   error: val => console.log(`${val}: Retried 2 times then quit!`)\n * });\n *\n * // Output:\n * // 0..1..2..3..4..5..\n * // 0..1..2..3..4..5..\n * // 0..1..2..3..4..5..\n * // \"Error!: Retried 2 times then quit!\"\n * ```\n *\n * @param {number} count - Number of retry attempts before failing.\n * @return {Observable} The source Observable modified with the retry logic.\n * @method retry\n * @owner Observable\n */\nexport function retry<T>(count: number = -1): MonoTypeOperatorFunction<T> {\n  return (source: Observable<T>) => source.lift(new RetryOperator(count, source));\n}\n\nclass RetryOperator<T> implements Operator<T, T> {\n  constructor(private count: number,\n              private source: Observable<T>) {\n  }\n\n  call(subscriber: Subscriber<T>, source: any): TeardownLogic {\n    return source.subscribe(new RetrySubscriber(subscriber, this.count, this.source));\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass RetrySubscriber<T> extends Subscriber<T> {\n  constructor(destination: Subscriber<any>,\n              private count: number,\n              private source: Observable<T>) {\n    super(destination);\n  }\n  error(err: any) {\n    if (!this.isStopped) {\n      const { source, count } = this;\n      if (count === 0) {\n        return super.error(err);\n      } else if (count > -1) {\n        this.count = count - 1;\n      }\n      source.subscribe(this._unsubscribeAndRecycle());\n    }\n  }\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "b252f0fee8375d120f9914a08b3131c0",
+	"cacheData": { "env": {} }
+}

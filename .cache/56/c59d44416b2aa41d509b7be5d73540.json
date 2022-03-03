@@ -1,0 +1,15 @@
+{
+	"id": "../assets/built-with-taquito.png",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		}
+	],
+	"generated": { "js": "module.exports = \"/81580150b754412e5f2ff5e49aa4cea9.png\";" },
+	"sourceMaps": null,
+	"error": null,
+	"hash": "d1dfdb6c59b91bda943b2a3236896dbc",
+	"cacheData": { "env": {} }
+}

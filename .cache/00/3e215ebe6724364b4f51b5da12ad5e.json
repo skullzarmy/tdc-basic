@@ -1,0 +1,1427 @@
+{
+	"id": "JVEz",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/take.js.map",
+			"includedInParent": true,
+			"mtime": 1645829786719
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/src/internal/operators/take.ts",
+			"includedInParent": true,
+			"mtime": 1645829787552
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/package.json",
+			"includedInParent": true,
+			"mtime": 1645829786016
+		},
+		{
+			"name": "tslib",
+			"loc": { "line": 2, "column": 25 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/take.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/tslib/tslib.es6.js"
+		},
+		{
+			"name": "../Subscriber",
+			"loc": { "line": 3, "column": 27 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/take.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/Subscriber.js"
+		},
+		{
+			"name": "../util/ArgumentOutOfRangeError",
+			"loc": { "line": 4, "column": 40 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/take.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/util/ArgumentOutOfRangeError.js"
+		},
+		{
+			"name": "../observable/empty",
+			"loc": { "line": 5, "column": 22 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/operators/take.js",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/node_modules/rxjs/_esm5/internal/observable/empty.js"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.take=o;var t=u(require(\"tslib\")),e=require(\"../Subscriber\"),r=require(\"../util/ArgumentOutOfRangeError\"),n=require(\"../observable/empty\");function i(){if(\"function\"!=typeof WeakMap)return null;var t=new WeakMap;return i=function(){return t},t}function u(t){if(t&&t.__esModule)return t;var e=i();if(e&&e.has(t))return e.get(t);var r={};if(null!=t){var n=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var u in t)if(Object.prototype.hasOwnProperty.call(t,u)){var o=n?Object.getOwnPropertyDescriptor(t,u):null;o&&(o.get||o.set)?Object.defineProperty(r,u,o):r[u]=t[u]}}return r.default=t,e&&e.set(t,r),r}function o(t){return function(e){return 0===t?(0,n.empty)():e.lift(new s(t))}}var s=function(){function t(t){if(this.total=t,this.total<0)throw new r.ArgumentOutOfRangeError}return t.prototype.call=function(t,e){return e.subscribe(new a(t,this.total))},t}(),a=function(e){function r(t,r){var n=e.call(this,t)||this;return n.total=r,n.count=0,n}return t.__extends(r,e),r.prototype._next=function(t){var e=this.total,r=++this.count;r<=e&&(this.destination.next(t),r===e&&(this.destination.complete(),this.unsubscribe()))},r}(e.Subscriber);"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 76 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 81 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 83 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 87 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 89 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 91 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 2, "column": 0 },
+					"generated": { "line": 1, "column": 99 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 109 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 111 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 119 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 136 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 138 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 4, "column": 0 },
+					"generated": { "line": 1, "column": 146 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 181 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 183 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 54, "column": 0 },
+					"generated": { "line": 1, "column": 191 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 214 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 223 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 227 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 230 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 249 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 257 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 264 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 269 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 273 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 275 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 279 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 287 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 294 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 296 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 307 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 314 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 317 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 319 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 328 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 330 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 333 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 336 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 339 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 341 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 352 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 359 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 361 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 365 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 367 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 371 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 374 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 377 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 379 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 383 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 386 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 393 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 395 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 399 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 402 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 406 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 408 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 411 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 414 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 420 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 422 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 423 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 427 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 429 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 436 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 452 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 459 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 484 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 488 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 492 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 497 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 499 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 502 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 509 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 519 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 534 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 539 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 541 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 544 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 545 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 549 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 551 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 553 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 560 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 585 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 587 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 590 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 595 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 599 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 601 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 606 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 608 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 613 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 620 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 635 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 637 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 639 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 642 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 644 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 647 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 649 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 653 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 660 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 662 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 670 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 672 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 675 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 677 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 681 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 683 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 686 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 55, "column": 2 },
+					"generated": { "line": 1, "column": 688 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 55, "column": 9 },
+					"generated": { "line": 1, "column": 697 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 55, "column": 10 },
+					"generated": { "line": 1, "column": 699 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 56, "column": 4 },
+					"generated": { "line": 1, "column": 702 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 56, "column": 4 },
+					"generated": { "line": 1, "column": 709 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 56, "column": 13 },
+					"generated": { "line": 1, "column": 718 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 57, "column": 6 },
+					"generated": { "line": 1, "column": 721 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 57, "column": 13 },
+					"generated": { "line": 1, "column": 728 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 57, "column": 6 },
+					"generated": { "line": 1, "column": 732 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 58, "column": 5 },
+					"generated": { "line": 1, "column": 735 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 58, "column": 5 },
+					"generated": { "line": 1, "column": 737 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 58, "column": 5 },
+					"generated": { "line": 1, "column": 739 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 60, "column": 5 },
+					"generated": { "line": 1, "column": 748 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 60, "column": 5 },
+					"generated": { "line": 1, "column": 750 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 60, "column": 5 },
+					"generated": { "line": 1, "column": 755 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 60, "column": 5 },
+					"generated": { "line": 1, "column": 759 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 60, "column": 5 },
+					"generated": { "line": 1, "column": 761 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 766 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 2 },
+					"generated": { "line": 1, "column": 770 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 35 },
+					"generated": { "line": 1, "column": 772 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 22 },
+					"generated": { "line": 1, "column": 783 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 22 },
+					"generated": { "line": 1, "column": 792 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 27 },
+					"generated": { "line": 1, "column": 794 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 67, "column": 6 },
+					"generated": { "line": 1, "column": 797 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 66, "column": 8 },
+					"generated": { "line": 1, "column": 800 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 66, "column": 8 },
+					"generated": { "line": 1, "column": 805 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 66, "column": 13 },
+					"generated": { "line": 1, "column": 811 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 67, "column": 6 },
+					"generated": { "line": 1, "column": 813 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 67, "column": 6 },
+					"generated": { "line": 1, "column": 818 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 67, "column": 16 },
+					"generated": { "line": 1, "column": 824 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 68, "column": 5 },
+					"generated": { "line": 1, "column": 826 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 68, "column": 5 },
+					"generated": { "line": 1, "column": 832 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 68, "column": 5 },
+					"generated": { "line": 1, "column": 836 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 68, "column": 5 },
+					"generated": { "line": 1, "column": 838 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 74, "column": 1 },
+					"generated": { "line": 1, "column": 862 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 11 },
+					"generated": { "line": 1, "column": 869 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 11 },
+					"generated": { "line": 1, "column": 871 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 18 },
+					"generated": { "line": 1, "column": 881 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 28 },
+					"generated": { "line": 1, "column": 886 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 32 },
+					"generated": { "line": 1, "column": 895 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 72, "column": 47 },
+					"generated": { "line": 1, "column": 897 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 900 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 907 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 909 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 919 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 923 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 925 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 927 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 73, "column": 3 },
+					"generated": { "line": 1, "column": 932 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 74, "column": 1 },
+					"generated": { "line": 1, "column": 941 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 65, "column": 35 },
+					"generated": { "line": 1, "column": 943 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 946 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 948 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 45 },
+					"generated": { "line": 1, "column": 957 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 2 },
+					"generated": { "line": 1, "column": 960 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 2 },
+					"generated": { "line": 1, "column": 969 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 85, "column": 4 },
+					"generated": { "line": 1, "column": 971 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 85, "column": 10 },
+					"generated": { "line": 1, "column": 973 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 50 },
+					"generated": { "line": 1, "column": 976 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 50 },
+					"generated": { "line": 1, "column": 980 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 55 },
+					"generated": { "line": 1, "column": 982 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 55 },
+					"generated": { "line": 1, "column": 984 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 63 },
+					"generated": { "line": 1, "column": 989 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 63 },
+					"generated": { "line": 1, "column": 994 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 63 },
+					"generated": { "line": 1, "column": 998 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 86, "column": 3 },
+					"generated": { "line": 1, "column": 1003 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 82, "column": 10 },
+					"generated": { "line": 1, "column": 1010 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 82, "column": 10 },
+					"generated": { "line": 1, "column": 1012 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 82, "column": 26 },
+					"generated": { "line": 1, "column": 1018 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1020 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1022 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1028 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 86, "column": 3 },
+					"generated": { "line": 1, "column": 1030 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1032 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 2 },
+					"generated": { "line": 1, "column": 1039 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 2 },
+					"generated": { "line": 1, "column": 1041 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 2 },
+					"generated": { "line": 1, "column": 1051 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 84, "column": 14 },
+					"generated": { "line": 1, "column": 1053 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 89, "column": 15 },
+					"generated": { "line": 1, "column": 1056 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 89, "column": 15 },
+					"generated": { "line": 1, "column": 1058 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 89, "column": 23 },
+					"generated": { "line": 1, "column": 1068 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 89, "column": 29 },
+					"generated": { "line": 1, "column": 1074 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 89, "column": 29 },
+					"generated": { "line": 1, "column": 1083 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 90, "column": 10 },
+					"generated": { "line": 1, "column": 1086 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 90, "column": 10 },
+					"generated": { "line": 1, "column": 1090 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 90, "column": 18 },
+					"generated": { "line": 1, "column": 1092 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 90, "column": 20 },
+					"generated": { "line": 1, "column": 1097 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 91, "column": 8 },
+					"generated": { "line": 1, "column": 1103 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 91, "column": 17 },
+					"generated": { "line": 1, "column": 1107 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 91, "column": 22 },
+					"generated": { "line": 1, "column": 1112 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 92, "column": 6 },
+					"generated": { "line": 1, "column": 1118 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 92, "column": 11 },
+					"generated": { "line": 1, "column": 1121 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 93, "column": 10 },
+					"generated": { "line": 1, "column": 1125 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 93, "column": 10 },
+					"generated": { "line": 1, "column": 1130 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 93, "column": 20 },
+					"generated": { "line": 1, "column": 1142 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 93, "column": 27 },
+					"generated": { "line": 1, "column": 1147 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 94, "column": 8 },
+					"generated": { "line": 1, "column": 1150 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 94, "column": 13 },
+					"generated": { "line": 1, "column": 1154 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 95, "column": 13 },
+					"generated": { "line": 1, "column": 1158 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 95, "column": 13 },
+					"generated": { "line": 1, "column": 1163 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 95, "column": 24 },
+					"generated": { "line": 1, "column": 1175 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 96, "column": 7 },
+					"generated": { "line": 1, "column": 1186 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 96, "column": 7 },
+					"generated": { "line": 1, "column": 1191 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1208 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1210 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1211 }
+				},
+				{
+					"source": "../../../src/internal/operators/take.ts",
+					"name": null,
+					"original": { "line": 81, "column": 32 },
+					"generated": { "line": 1, "column": 1213 }
+				}
+			],
+			"sources": {
+				"../../../src/internal/operators/take.ts": "import { Operator } from '../Operator';\nimport { Subscriber } from '../Subscriber';\nimport { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError';\nimport { empty } from '../observable/empty';\nimport { Observable } from '../Observable';\nimport { MonoTypeOperatorFunction, TeardownLogic } from '../types';\n\n/**\n * Emits only the first `count` values emitted by the source Observable.\n *\n * <span class=\"informal\">Takes the first `count` values from the source, then\n * completes.</span>\n *\n * ![](take.png)\n *\n * `take` returns an Observable that emits only the first `count` values emitted\n * by the source Observable. If the source emits fewer than `count` values then\n * all of its values are emitted. After that, it completes, regardless if the\n * source completes.\n *\n * ## Example\n * Take the first 5 seconds of an infinite 1-second interval Observable\n * ```ts\n * import { interval } from 'rxjs';\n * import { take } from 'rxjs/operators';\n *\n * const intervalCount = interval(1000);\n * const takeFive = intervalCount.pipe(take(5));\n * takeFive.subscribe(x => console.log(x));\n *\n * // Logs:\n * // 0\n * // 1\n * // 2\n * // 3\n * // 4\n * ```\n *\n * @see {@link takeLast}\n * @see {@link takeUntil}\n * @see {@link takeWhile}\n * @see {@link skip}\n *\n * @throws {ArgumentOutOfRangeError} When using `take(i)`, it delivers an\n * ArgumentOutOrRangeError to the Observer's `error` callback if `i < 0`.\n *\n * @param {number} count The maximum number of `next` values to emit.\n * @return {Observable<T>} An Observable that emits only the first `count`\n * values emitted by the source Observable, or all of the values from the source\n * if the source emits fewer than `count` values.\n * @method take\n * @owner Observable\n */\nexport function take<T>(count: number): MonoTypeOperatorFunction<T> {\n  return (source: Observable<T>) => {\n    if (count === 0) {\n      return empty();\n    } else {\n      return source.lift(new TakeOperator(count));\n    }\n  };\n}\n\nclass TakeOperator<T> implements Operator<T, T> {\n  constructor(private total: number) {\n    if (this.total < 0) {\n      throw new ArgumentOutOfRangeError;\n    }\n  }\n\n  call(subscriber: Subscriber<T>, source: any): TeardownLogic {\n    return source.subscribe(new TakeSubscriber(subscriber, this.total));\n  }\n}\n\n/**\n * We need this JSDoc comment for affecting ESDoc.\n * @ignore\n * @extends {Ignored}\n */\nclass TakeSubscriber<T> extends Subscriber<T> {\n  private count: number = 0;\n\n  constructor(destination: Subscriber<T>, private total: number) {\n    super(destination);\n  }\n\n  protected _next(value: T): void {\n    const total = this.total;\n    const count = ++this.count;\n    if (count <= total) {\n      this.destination.next(value);\n      if (count === total) {\n        this.destination.complete();\n        this.unsubscribe();\n      }\n    }\n  }\n}\n"
+			},
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "126767a69d6221b7520d0fb91a720601",
+	"cacheData": { "env": {} }
+}

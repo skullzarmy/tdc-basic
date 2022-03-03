@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.a09604ac.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.d2f577a7.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.6eef4654.png" />
+		<link rel="manifest" href="/__/assets/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.613acbfd.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="/favicon.c541301f.ico" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="msapplication-config" content="/browserconfig.9bec2a75.xml" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="/app.ae05fb60.css" />
+		<title>TDC Hodler Dashboard</title>
+		<script src="/app.ae05fb60.js"></script>
+	</head>
+	<body>
+		<img id="main-img" src="/coinlogo.418fcf10.png" />
+		<h1>TDC Hodler Dashboard</h1>
+		<div class="wrapper">
+			<div class="dialog" id="rp-dialog">
+				<div class="header" id="rp-header">
+					Reward Pool -
+					<span id="bcd-link-pool"></span>
+				</div>
+				<div class="content" id="rp-content">
+					<div class="form" id="reward-pool-form">
+						<input
+							id="balance-address-input"
+							type="text"
+							class="address"
+							placeholder="loading wallet address..."
+							disabled="disabled"
+						/>
+					</div>
+					<div class="wrapper info">
+						<div class="error-message" id="balance-error-message"></div>
+						<div id="balance-output" class="show">
+							<span class="output"><span id="balance">0</span>ꜩ Balance</span>
+						</div>
+					</div>
+					<!-- <div class="wrapper info">
+                        <hr />
+                        <div id="withdraw">
+                            <div class="header">Withdraw</div>
+                            <input
+                                id="withdraw-wallet"
+                                type="text"
+                                class="address"
+                                placeholder="enter your wallet address"
+                            />
+                        </div>
+                    </div> -->
+				</div>
+			</div>
+			<div class="dialog" id="flip-dialog">
+				<div class="header" id="flip-header">Coin Flip - <span id="bcd-link-flip"></span></div>
+				<div class="content" id="flip-content">
+					<div class="form" id="flip-form">
+						<input
+							id="flip-address-input"
+							type="text"
+							class="address"
+							placeholder="loading wallet address..."
+							disabled="disabled"
+						/>
+					</div>
+					<div class="wrapper info">
+						<div class="form">
+							<div class="flip-count-wrap output">
+								<span id="flip-count">&nbsp;</span> Games Played
+							</div>
+						</div>
+						<div class="form">
+							<div class="flip-tez-wrap output"><span id="flip-tez">&nbsp;</span>ꜩ Wagered</div>
+						</div>
+						<div class="error-message" id="flip-error-message"></div>
+						<div id="flip-output" class="show">
+							<span class="output"><span id="flip">0</span>ꜩ Balance</span>
+						</div>
+					</div>
+					<div class="wrapper info">
+						<div id="flip-games"></div>
+					</div>
+				</div>
+			</div>
+			<textarea class="dialog hide" id="TheData" rows="5"></textarea>
+		</div>
+		<div id="footer">
+			<a href="https://www.skllzrmy.com/" target="_blank">[Made by skllzrmy.tez with ❤️]</a>
+			<a href="https://github.com/skullzarmy/tdc-basic/issues" target="_blank">
+				[Report a bug / request features]
+			</a>
+			<a href="https://github.com/skullzarmy/tdc-basic" target="_blank">[Contribute on GitHub]</a>
+			<a href="https://tzkt.io/tz1Qi77tcJn9foeHHP1QHj6UX1m1vLVLMbuY/operations/" target="_blank">
+				[Tips appreciated @ skllzrmy.tez 😉]
+			</a>
+		</div>
+		<script src="/main.c39d6dcf.js"></script>
+	</body>
+</html>

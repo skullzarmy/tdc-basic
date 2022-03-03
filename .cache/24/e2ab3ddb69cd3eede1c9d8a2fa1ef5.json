@@ -1,0 +1,30 @@
+{
+	"id": "s8zH",
+	"dependencies": [
+		{
+			"name": "./app.css",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/app.css",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./../assets/coinlogo.png",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/assets/coinlogo.png",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		},
+		{
+			"name": "./main.ts",
+			"dynamic": true,
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/main.ts",
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/index.html"
+		}
+	],
+	"generated": {
+		"html": "<html><head><meta charset=\"UTF-8\"><link rel=\"stylesheet\" type=\"text/css\" href=\"/a4a1075348c18f6b7dcfea46ae05fb60.css\"><title>TDC Hodler Dashboard</title></head><body> <img id=\"main-img\" src=\"/fdec708460a829c794ebedc5418fcf10.png\"> <h1>TDC Hodler Dashboard</h1> <div class=\"wrapper\"> <div class=\"dialog\" id=\"rp-dialog\"> <div class=\"header\" id=\"rp-header\">Reward Pool</div> <div class=\"content\" id=\"rp-content\"> <div class=\"form\" id=\"reward-pool-form\"> <input id=\"balance-address-input\" type=\"text\" class=\"address\" placeholder=\"loading wallet address...\" disabled> </div> <div class=\"wrapper info\"> <div class=\"error-message\" id=\"balance-error-message\"></div> <div id=\"balance-output\" class=\"show\"> <span class=\"output\"><span id=\"balance\">0</span>ꜩ Balance</span> </div> </div>  </div> </div> <div class=\"dialog\" id=\"flip-dialog\"> <div class=\"header\" id=\"flip-header\">Coin Flip</div> <div class=\"content\" id=\"flip-content\"> <div class=\"form\" id=\"flip-form\"> <input id=\"flip-address-input\" type=\"text\" class=\"address\" placeholder=\"loading wallet address...\" disabled> </div> <div class=\"wrapper info\"> <div class=\"form\"> <div class=\"flip-count-wrap output\"><span id=\"flip-count\">&nbsp;</span> Games Played</div> </div> <div class=\"form\"> <div class=\"flip-tez-wrap output\"><span id=\"flip-tez\">&nbsp;</span>ꜩ Wagered</div> </div> <div class=\"error-message\" id=\"flip-error-message\"></div> <div id=\"flip-output\" class=\"show\"> <span class=\"output\"><span id=\"flip\">0</span>ꜩ Balance</span> </div> <div class=\"form\" id=\"bcd-link\"></div> </div> <div class=\"wrapper info\"> <div id=\"flip-games\"></div> </div> </div> </div> <textarea class=\"dialog hide\" id=\"TheData\" rows=\"5\"></textarea> </div> <div id=\"footer\"><a href=\"https://withkoji.com/@skllzrmy.tez\">[Made by skllzrmy.tez with ❤️]</a></div> <script src=\"/6427dc610ec40c788cba04a9c39d6dcf.js\"></script> </body></html>"
+	},
+	"sourceMaps": null,
+	"error": null,
+	"hash": "3679b6b65fda9ffb8a3d406bf8463a2c",
+	"cacheData": {}
+}

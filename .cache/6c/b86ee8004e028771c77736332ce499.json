@@ -1,0 +1,131 @@
+{
+	"id": "ZCfc",
+	"dependencies": [
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/tsconfig.json",
+			"includedInParent": true,
+			"mtime": 1645829368581
+		},
+		{
+			"name": "/Users/joepeterson/development/tdc-dash/tdc-basic/package.json",
+			"includedInParent": true,
+			"mtime": 1645829368579
+		},
+		{
+			"name": "./app",
+			"loc": { "line": 3, "column": 20 },
+			"parent": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/main.ts",
+			"resolved": "/Users/joepeterson/development/tdc-dash/tdc-basic/src/app.ts"
+		}
+	],
+	"generated": {
+		"js": "\"use strict\";Object.defineProperty(exports,\"__esModule\",{value:!0});var e=require(\"./app\");(new e.App).initUI();"
+	},
+	"sourceMaps": {
+		"js": {
+			"mappings": [
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 0 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 13 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 20 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 35 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 43 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 56 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 57 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 64 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 68 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 72 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 74 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 1, "column": 0 },
+					"generated": { "line": 1, "column": 82 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 0 },
+					"generated": { "line": 1, "column": 92 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 4 },
+					"generated": { "line": 1, "column": 96 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 4 },
+					"generated": { "line": 1, "column": 98 }
+				},
+				{
+					"source": "main.ts",
+					"name": null,
+					"original": { "line": 3, "column": 10 },
+					"generated": { "line": 1, "column": 103 }
+				}
+			],
+			"sources": { "main.ts": "import { App } from './app';\n\nnew App().initUI();\n" },
+			"lineCount": null
+		}
+	},
+	"error": null,
+	"hash": "b19940bbf2e2b22b50ba21b47946d156",
+	"cacheData": { "env": {} }
+}
