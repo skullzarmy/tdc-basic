@@ -2,8 +2,9 @@
 
 ## Live Version
 
-This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.com
 [![Netlify Status](https://api.netlify.com/api/v1/badges/643316d9-36d8-4177-80e8-287db4062569/deploy-status)](https://app.netlify.com/sites/vigilant-golick-726bee/deploys)
+
+This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.com
 
 ## Info
 
@@ -11,26 +12,24 @@ This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.c
 
 A minimal dashboard to show stats on TezosDegenClub gaming, made using the basic Taquito template.
 
-## TODO
+## To-Do
 
-1. Migrate to SvelteKit+Tailwind CSS application
-2. Wallet sync + access requires holding TDC NFTs
+1. Migrate to Taquito React boilerplate (in progress, new branch coming soon)
+2. Wallet sync (DONE in React branch) + access requires holding TDC NFTs (?)
 3. Reading BigMap data and reporting on games played (i.e. wins/losses, luckiest player, least lucky, etc.)
 4. Data visualization and charts
-5. Withdraw through app UI
+5. Withdraw for TDC holders through app UI
 
 ## Dependencies
 
 1. jQuery - for simple manipulation and traversal of HTML documents.
 2. parcel-bundler - for packaging web applications quickly.
+3. React & more coming soon
 
 ## Getting Started
 
 1. Fork this repository
 2. Clone your new repository:
-
-    `git clone <YOUR_REPOSITORY_URL>`
-
 3. Change your current working directory to the newly cloned repository directory.
 4. Install dependencies:
 
