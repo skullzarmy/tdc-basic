@@ -81,6 +81,35 @@
                 </div>
             </div>
             <textarea class="dialog hide" id="TheData" rows="5"></textarea>
+            <div class="dialog" id="battle-dialog">
+                <div class="header" id="battle-header">Degen Wars - <span id="bcd-link-battle"></span></div>
+                <div class="content" id="battle-content">
+                    <div class="form" id="battle-form">
+                        <input
+                            id="battle-address-input"
+                            type="text"
+                            class="address"
+                            placeholder="loading wallet address..."
+                            disabled="disabled"
+                        />
+                    </div>
+                    <div class="wrapper info">
+                        <div class="form">
+                            <div class="battle-count-wrap output">
+                                <span id="battle-count">&nbsp;</span> Games Played
+                            </div>
+                        </div>
+                        <div class="form">
+                            <div class="battle-tez-wrap output"><span id="battle-tez">&nbsp;</span>ꜩ Wagered</div>
+                        </div>
+                        <div class="error-message" id="battle-error-message" class="hide"></div>
+                    </div>
+                    <div class="wrapper info">
+                        <div id="battle-games"></div>
+                    </div>
+                </div>
+            </div>
+            <textarea class="dialog hide" id="TheBattleData" rows="5"></textarea>
         </div>
         <div id="footer">
             <a href="https://www.skllzrmy.com/" target="_blank">[Made by skllzrmy.tez with ❤️]</a>

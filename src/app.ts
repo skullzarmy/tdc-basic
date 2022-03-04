@@ -2,6 +2,7 @@ import { TezosToolkit, MichelsonMap } from "@taquito/taquito";
 import $ from "jquery";
 const poolWallet = "KT1K6TyRSsAxukmjDWik1EoExSKsTg9wGEEX";
 const flipWallet = "KT1NkWx47WzJeHCSyB62WjLtFn4tRf3uXBur";
+const battleWallet = "KT1J8uugdkykcDx46ycEBxv3shNioDMvv1ad";
 
 export class App {
     private tk: TezosToolkit;
@@ -13,8 +14,12 @@ export class App {
     public initUI() {
         $("#balance-address-input").val(poolWallet);
         $("#flip-address-input").val(flipWallet);
+        $("#battle-address-input").val(battleWallet);
         $("#bcd-link-flip").html(
             "<a href='https://better-call.dev/mainnet/" + flipWallet + "/storage' target='_blank'>BCD</a>"
+        );
+        $("#bcd-link-battle").html(
+            "<a href='https://better-call.dev/mainnet/" + battleWallet + "/storage' target='_blank'>BCD</a>"
         );
         $("#bcd-link-pool").html(
             "<a href='https://better-call.dev/mainnet/" +
@@ -26,6 +31,7 @@ export class App {
         this.getBalance(poolWallet, "balance");
         this.setupFlip(flipWallet);
         this.getBalance(flipWallet, "flip");
+        this.setupBattle(battleWallet);
     }
 
     private showError(message: string, place: string) {
@@ -55,16 +61,28 @@ export class App {
             .catch((e) => this.showError("Address not found", place));
     }
 
-    private showFlipCount(flips) {
-        console.log(flips);
+    private showFlipCount(d) {
+        console.log(d);
         $("#flip-error-message").removeClass().addClass("hide");
-        $("#flip-count").html(flips);
+        $("#flip-count").html(d);
     }
 
-    private showFlipTez(flips) {
-        console.log(flips);
+    private showFlipTez(d) {
+        console.log(d);
         $("#flip-error-message").removeClass().addClass("hide");
-        $("#flip-tez").html(flips);
+        $("#flip-tez").html(d);
+    }
+
+    private showBattleCount(d) {
+        console.log(d);
+        $("#battle-error-message").removeClass().addClass("hide");
+        $("#battle-count").html(d);
+    }
+
+    private showBattleTez(d) {
+        console.log(d);
+        $("#battle-error-message").removeClass().addClass("hide");
+        $("#battle-tez").html(d);
     }
 
     private setupFlip(address) {
@@ -75,6 +93,24 @@ export class App {
                     this.showFlipCount(myStorage["gamesPlayed"].toNumber());
                     this.showFlipTez(myStorage["flipped"].toNumber() / 1000000);
                     $("#TheData").html(JSON.stringify(myStorage));
+
+                    // console.log(myStorage["games"]);
+
+                    // const tryThis = data.get("games");
+                    // console.log(tryThis);
+                });
+            })
+            .catch((e) => this.showError("data address not found", "flip"));
+    }
+
+    private setupBattle(address) {
+        this.tk.contract
+            .at(address)
+            .then((myContract) => {
+                return myContract.storage().then((myStorage) => {
+                    this.showBattleCount(myStorage["gamesTotal"].toNumber());
+                    this.showBattleTez(myStorage["flipped"].toNumber() / 1000000);
+                    $("#TheBattleData").html(JSON.stringify(myStorage));
 
                     // console.log(myStorage["games"]);
 
