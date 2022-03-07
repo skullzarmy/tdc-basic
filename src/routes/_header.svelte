@@ -1,6 +1,21 @@
-<header
-	class="text-gray-400 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 body-font shadow w-full"
->
+<script>
+	const poolWallet = 'KT1K6TyRSsAxukmjDWik1EoExSKsTg9wGEEX';
+	var poolBalance = null;
+	updatePoolBalance();
+	setInterval(() => {
+		updatePoolBalance();
+	}, 30000);
+	async function updatePoolBalance() {
+		console.log('updating balance');
+		let poolInstance = await fetch('https://api.tzkt.io/v1/contracts/' + poolWallet, {
+			headers: { Accept: 'application/json' }
+		}).catch((e) => console.log(e));
+		let poolData = await poolInstance.json();
+		poolBalance = poolData.balance / 1000000;
+	}
+</script>
+
+<header class="text-gray-400 bg-transparent body-font shadow w-full">
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<a
 			href="/"
@@ -10,11 +25,18 @@
 			<span class="ml-5 text-xl xl:block">TezosDegenClub (unofficial) Dashboard</span>
 		</a>
 		<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" />
-		<a
-			href="/"
-			class="inline-flex items-center bg-zinc-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
-		>
-			Pool Wallet<span class="pl-1">0</span>ꜩ
-		</a>
+		{#if !poolBalance}
+			<button href="/" class="btn btn-outline loading">
+				Pool Wallet<span class="pl-1">loading</span>
+			</button>
+		{:else}
+			<button
+				href="https://better-call.dev/mainnet/{poolWallet}/interact?entrypoint=withdraw"
+				target="_blank"
+				class="btn btn-accent"
+			>
+				Pool Wallet<span class="pl-1">{poolBalance}</span>ꜩ
+			</button>
+		{/if}
 	</div>
 </header>

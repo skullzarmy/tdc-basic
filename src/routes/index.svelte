@@ -1,6 +1,7 @@
 <script context="module">
 	export const prerender = true;
 	import CoinFlip from '../routes/_coinFlip.svelte';
+	import DegenBattle from '../routes/_degenBattle.svelte';
 </script>
 
 <svelte:head>
@@ -22,16 +23,7 @@
 </svelte:head>
 <section class="text-gray-400 body-font">
 	<CoinFlip />
-	<div class="container px-5 py-24 mx-auto">
-		<div class="flex flex-col text-center w-full mb-20">
-			<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-				Master Cleanse Reliac Heirloom
-			</h1>
-			<p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-				Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke
-				farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies
-				heirloom prism food truck ugh squid celiac humblebrag.
-			</p>
-		</div>
-	</div>
+</section>
+<section class="text-gray-400 body-font">
+	<DegenBattle />
 </section>

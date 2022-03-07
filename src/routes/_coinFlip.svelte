@@ -1,55 +1,86 @@
 <script>
-	// import { flipCount, flipTez } from '../routes/_coinFlip.js';
 	import { onMount } from 'svelte';
-	import { TezosToolkit } from '@taquito/taquito';
-	// import { ContractAbstraction, Wallet } from '@taquito/taquito';
-	let flipCount = null;
-	let flipTez = null;
-	const poolWallet = 'KT1K6TyRSsAxukmjDWik1EoExSKsTg9wGEEX';
+	var flipCount = null;
+	var flipTez = null;
+	var flipWins = null;
+	var flipLosses = null;
+	var walletData = Array();
+	var flipBalance = null;
 	const flipWallet = 'KT1NkWx47WzJeHCSyB62WjLtFn4tRf3uXBur';
-	let Tezos = TezosToolkit;
 	onMount(async () => {
-		Tezos = new TezosToolkit('https://mainnet.smartpy.io/');
-		const contract = await Tezos.contract.at(flipWallet);
-		// const storage = await contract.storage();
-		// flipCount = await storage['gamesPlayed'];
+		updateCoinFlip();
+		setInterval(() => {
+			updateCoinFlip();
+		}, 30000);
 	});
-	// let flipStats = getFlipStats();
+	async function updateCoinFlip() {
+		let contractData = await fetch('https://api.tzkt.io/v1/contracts/' + flipWallet, {
+			headers: { Accept: 'application/json' }
+		}).catch((e) => console.log(e));
+		let contract = await contractData.json();
+		flipBalance = contract.balance / 1000000;
+		let flipStore = await fetch('https://api.tzkt.io/v1/contracts/' + flipWallet + '/storage', {
+			headers: { Accept: 'application/json' }
+		}).catch((e) => console.log(e));
+		let flipData = await flipStore.json();
+		flipCount = flipData.gamesPlayed;
+		flipTez = JSON.stringify(flipData.flipped / 1000000);
+		let flipGameStore = await fetch(
+			'https://api.tzkt.io/v1/bigmaps/' + flipData.games + '/keys?limit=10000&sort=id',
+			{
+				headers: { Accept: 'application/json' }
+			}
+		).catch((e) => console.log(e));
+		let flipGames = await flipGameStore.json();
+		// console.log(flipGames);
+		// status 1 = rug & 2 = double
+
+		flipWins = null;
+		flipLosses = null;
+		for (let g of flipGames) {
+			let status = g.value.status;
+			if (status == '2') {
+				flipWins++;
+			} else {
+				flipLosses++;
+			}
+			let playerWallet = g.value.player;
+			let gameInfo = [];
+		}
+	}
+	// let SingleStats = getSingleStats();
+
+	import SingleStat from './_singleStat.svelte';
 </script>
 
 <section class="text-gray-400 body-font">
-	<div class="container px-5 py-24 mx-auto">
-		<div class="flex flex-wrap -m-4 text-center">
-			<div class="p-4 sm:w-1/4 w-1/2">
-				<h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-					{#if !flipCount}
-						"loading"
-					{:else}
-						{flipCount}
-					{/if}
-				</h2>
-				<p class="leading-relaxed">Games Played</p>
-			</div>
-			<div class="p-4 sm:w-1/4 w-1/2">
-				<h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-					<span>
-						{#if !flipTez}
-							"loading"
-						{:else}
-							{flipTez}
-						{/if}
-					</span>ꜩ
-				</h2>
-				<p class="leading-relaxed">Wagered</p>
-			</div>
-			<div class="p-4 sm:w-1/4 w-1/2">
-				<h2 class="title-font font-medium sm:text-4xl text-3xl text-white">0</h2>
-				<p class="leading-relaxed">Doubles (wins)</p>
-			</div>
-			<div class="p-4 sm:w-1/4 w-1/2">
-				<h2 class="title-font font-medium sm:text-4xl text-3xl text-white">0</h2>
-				<p class="leading-relaxed">Rugs (losses)</p>
-			</div>
+	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+		<span
+			class="flex order-first lg:order-none title-font font-medium text-2xl underline items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0"
+			>Coin Flip Stats</span
+		>
+		<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" />
+		{#if !flipBalance}
+			<button href="/" class="btn btn-outline loading">
+				Flip Contract<span class="pl-1">loading</span>
+			</button>
+		{:else}
+			<button
+				href="https://better-call.dev/mainnet/{flipWallet}/storage"
+				target="_blank"
+				class="btn btn-primary md:self-end"
+			>
+				Flip Contract<span class="pl-1">{flipBalance}</span>ꜩ
+			</button>
+		{/if}
+	</div>
+
+	<div class="container px-5 pb-24 pt-0 mx-auto">
+		<div class="flex flex-wrap -m-4 text-center stats">
+			<SingleStat value={flipCount} title="Games Played" />
+			<SingleStat value={flipTez} title="Wagered" isTez="true" />
+			<SingleStat value={flipWins} title="Doubles (wins)" />
+			<SingleStat value={flipLosses} title="Rugs (losses)" />
 		</div>
 	</div>
 </section>
