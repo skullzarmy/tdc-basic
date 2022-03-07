@@ -1,10 +1,11 @@
 # TDC Hodlers Dashboard
 
-## Live Version
+## **DEPRECATED**
+I have decided to leave this repo in place as-is for anyone that may want to use it as a basic starting point, but I have restarted this project from scratch in SvelteKit and decided it belonged in a new repo. I also decided to make the new repo private. This repo will no longer receive any updates.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/643316d9-36d8-4177-80e8-287db4062569/deploy-status)](https://app.netlify.com/sites/vigilant-golick-726bee/deploys)
+The new dashboard is hosted via Netlify and can be viewed at 
 
-This dashboard is hosted via Netlify and can be viewed at https://tdc.skllzrmy.com
+https://tdc.skllzrmy.com  –  [![Netlify Status](https://api.netlify.com/api/v1/badges/643316d9-36d8-4177-80e8-287db4062569/deploy-status)](https://app.netlify.com/sites/vigilant-golick-726bee/deploys)
 
 ## Info
 
